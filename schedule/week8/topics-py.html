@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 5.2.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><title>TEE3201 - Week 8 - Programming Topics</title> <link rel="stylesheet" href="/2024/markbind/css/bootstrap.min.css"> <link rel="stylesheet" href="/2024/markbind/fontawesome/css/all.min.css"> <link rel="stylesheet" href="/2024/markbind/glyphicons/css/bootstrap-glyphicons.min.css"><link rel="stylesheet" href="/2024/markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="/2024/markbind/css/markbind.min.css"><script src="/2024/markbind/js/polyfill.min.js"></script>
+    <script src="/2024/markbind/js/vue.min.js"></script>
+    <script src="/2024/markbind/js/markbind.min.js"></script>
+    <script src="topics-py.page-vue-render.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3.2.0/dist/style.css"><link rel="stylesheet" href="/2024/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="/2024/plugins/markbind-plugin-tree/markbind-plugin-tree.css">
+    
+<link rel="stylesheet" href="/2024/css/main.css">
+<link rel="icon" href="/2024/favicon.ico"></head>
+<script>
+  const baseUrl = '/2024'
+</script>
+<body  data-bs-spy="scroll" data-bs-target="#mb-page-nav" data-bs-offset="100" >
+<div id="app" data-server-rendered="true"><div class="w-100 p-1 bg-warning text-center d-print-none"><span><strong>This is a draft version of the website! The final version will be available near the start of the semester.</strong></span></div> <div class="w-100 p-1 bg-success text-white text-center d-print-none"><span>This course will be delivered in <em>blended learning</em> mode (i.e., a mix of online and F2F activities) this semester.</span></div> <header sticky=""><div placement="top" data-v-73b4aa16><nav class="navbar navbar-expand-md d-print-none navbar-dark bg-dark" data-v-73b4aa16><div class="container-fluid" data-v-73b4aa16><div class="navbar-left" data-v-73b4aa16><a href="/2024/index.html" title="Home" class="navbar-brand" data-v-73b4aa16><span class="badge rounded-pill bg-danger" data-v-73b4aa16>TEE3201 <small data-v-73b4aa16>2024</small></span></a></div> <div class="navbar-default" data-v-73b4aa16><ul class="navbar-nav me-auto mt-2 mt-lg-0" data-v-73b4aa16> <li class="nav-link algolia-no-index dropdown" data-v-12679d7e><a role="button" data-bs-toggle="dropdown" class="dropdown-toggle nav-link" data-v-12679d7e><strong data-v-12679d7e>Schedule</strong></a> <ul class="dropdown-menu" data-v-12679d7e> <li data-v-12679d7e><a href="/2024/schedule/timeline.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Full Timeline</strong></span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week1/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 1</strong> [Mon, Jan 15th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week2/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 2</strong> [Mon, Jan 22nd] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week3/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 3</strong> [Mon, Jan 29th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week4/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 4</strong> [Mon, Feb 5th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week5/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 5</strong> [Mon, Feb 12th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week6/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 6</strong> [Mon, Feb 19th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week7/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 7</strong> [Mon, Feb 26th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week8/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 8</strong> [Mon, Mar 11th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week9/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 9</strong> [Mon, Mar 18th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week10/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 10</strong> [Mon, Mar 25th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week11/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 11</strong> [Mon, Apr 1st] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week12/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 12</strong> [Mon, Apr 8th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week13/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 13</strong> [Mon, Apr 15th] </span></a></li></ul></li> <li class="nav-link algolia-no-index dropdown" data-v-12679d7e><a role="button" data-bs-toggle="dropdown" class="dropdown-toggle nav-link" data-v-12679d7e><strong data-v-12679d7e>Textbook</strong></a> <ul class="dropdown-menu" data-v-12679d7e> <li data-v-12679d7e><a href="/2024/se-book-adapted/index.html" class="dropdown-item" data-v-12679d7e>SE Textbook</a></li> <li data-v-12679d7e><a href="/2024/programming/index.html" class="dropdown-item" data-v-12679d7e>Programming Textbook</a></li></ul></li> <li data-v-73b4aa16><a href="/2024/admin/index.html" class="nav-link" data-v-73b4aa16><span data-v-73b4aa16><strong data-v-73b4aa16>Admin Info</strong></span></a></li> <li class="nav-link algolia-no-index dropdown" data-v-12679d7e><a role="button" data-bs-toggle="dropdown" class="dropdown-toggle nav-link" data-v-12679d7e><strong data-v-12679d7e>Other Links</strong></a> <ul class="dropdown-menu" data-v-12679d7e> <li data-v-12679d7e><a href="https://canvas.nus.edu.sg/courses/n/a/discussion_topics" target="_blank" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><span aria-hidden="true" class="fas fa-comment" data-v-12679d7e></span> Forum</span></a></li> <li data-v-12679d7e><a href="/2024/admin/index.html#instructors" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><span aria-hidden="true" class="fas fa-user-tie" data-v-12679d7e></span> Instructors</span></a></li> <li data-v-12679d7e><a href="https://canvas.nus.edu.sg/courses/n/a/announcements" target="_blank" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><span aria-hidden="true" class="glyphicon glyphicon-bullhorn" data-v-12679d7e></span> Announcements</span></a></li> <li data-v-12679d7e><a href="https://canvas.nus.edu.sg/courses/n/a/files" target="_blank" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><span aria-hidden="true" class="fas fa-file-upload" data-v-12679d7e></span> Files (handouts, submissions etc.)</span></a></li> <li tags="m--tic2002 m--tee3201" data-v-12679d7e><a href="/2024/admin/index.html#project" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><span data-v-12679d7e><span aria-hidden="true" class="fas fa-drafting-compass" data-v-12679d7e></span></span></span> Project Info</a></li> <li tags="m--cs2113 m--tic2002 m--tee3201" data-v-12679d7e><a href="https://coursemology.org/courses/n_a" target="_blank" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><span data-v-12679d7e><span aria-hidden="true" class="fas fa-dumbbell" data-v-12679d7e></span></span></span> Coursemology link</a></li> <li data-v-12679d7e><a href="https://teams.microsoft.com/l/team/19%3ay1YRdPn15i03ivS4qnlQEAKEfXnbj6f9GqIC4MvV3wo1%40thread.tacv2/conversations?groupId=9ed8b011-46d2-4b95-87df-7351a200bb8b&amp;tenantId=5ba5ef5e-3109-4e77-85bd-cfeb0d347e82" target="_blank" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><span aria-hidden="true" class="fas fa-users-cog" data-v-12679d7e></span> MS Teams link</span></a></li></ul></li></ul></div> <ul class="navbar-nav navbar-right" data-v-73b4aa16><li class="nav-link" data-v-73b4aa16><form class="navbar-form" data-v-73b4aa16><div class="dropdown" style="position:relative;" data-v-01e11c9b><input data-bs-toggle="dropdown" type="text" placeholder="Search" autocomplete="off" value="" class="form-control" data-v-01e11c9b> <div class="form-control placeholder-div-hidden" data-v-01e11c9b>
+      Search
+    </div> <ul class="dropdown-menu search-dropdown-menu d-none dropdown-menu-end" data-v-01e11c9b></ul></div></form></li></ul></div></nav> <div class="lower-navbar-container" style="display:none;" data-v-73b4aa16><!----> <!----></div></div></header> <div id="flex-body"><div id="content-wrapper" class="fixed-header-padding"><div class="website-content"><nav><ul class="pagination mt-2"><li class="page-item"><a href="/2024/schedule/week7/index.html" class="page-link"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Prev. Week</strong></span></a></li> <li class="page-item">   </li> <li class="page-item"><a href="/2024/schedule/week8/index.html" class="page-link"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li> <li class="page-item active"><a href="/2024/schedule/week8/topics-py.html" class="page-link"><span><span><span aria-hidden="true" class="fas fa-code"></span></span></span> Programming Topics</a></li> <li class="page-item"><a href="/2024/schedule/week8/topics.html" class="page-link"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> SE Topics</a></li> <li class="page-item"><a href="/2024/schedule/week8/admin.html" class="page-link"><span><span><span aria-hidden="true" class="glyphicon glyphicon-check"></span></span></span> Tasks</a></li> <li class="page-item">   </li><li class="page-item"><a href="/2024/schedule/week9/index.html" class="page-link"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li></ul></nav> <p></p> <h1 id="week-8-mon-mar-11th-programming-topics">Week 8 <small><small><span class="dimmed">[Mon, Mar 11th]</span> - Programming Topics</small></small><a href="#week-8-mon-mar-11th-programming-topics" onclick="event.stopPropagation()" class="fa fa-anchor"></a></h1> <div><div id="week8-toc"><ul><li><p><a href="/2024/programming/chapters/oop.html#object-oriented-programming"><strong>Object-Oriented Programing - Part I</strong></a></p> <ul><li><a href="/2024/programming/chapters/oop.html#classes">Classes</a> <br> <br></li></ul></li> <li><p><a href="/2024/programming/chapters/thirdparty.html#appendix-a-installing-3rd-party-modules"><strong>Installing 3rd Party Modules</strong></a></p></li></ul></div> <div><div class="border border-success pt-0 ps-1 pb-1 pe-1 border-bottom-0 rounded-top" style="background-color:#e6fff2;"><p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p> <div class="indented"><p>So far, we have been using simple objects provided by Python (e.g., str, int, bool) and putting them into lists, dictionaries (which are objects themselves), and combinations of the two (e.g., a list of dictionaries) to arrange our data.</p> <p><strong>It is now time to learn how to define our own classes</strong> so that we can create objects that match our needs e.g., to use <code class="line-numbers hljs inline no-lang">Task</code> objects to represent a task in Monty, instead of using a list such as <code class="line-numbers hljs inline python">[<span class="hljs-string">&quot;read book&quot;</span>, <span class="hljs-literal">True</span>]</code>.</p> <p><mark>Before reading the section below which explains how to write Python classes, read the SE topic <a href="/2024/book/oop/classes/what/index.html">OOP: Basics</a> get a general idea about classes.</mark></p> <div class="algolia-no-index card-container" data-v-28900d6e><div class="card expandable-card border-0" data-v-28900d6e><div class="card-header header-toggle bg-white border-0" data-v-28900d6e><div class="caret-wrapper" data-v-28900d6e><span class="glyphicon glyphicon-chevron-right" data-v-28900d6e></span></div> <div class="header-wrapper card-title bg-white" data-v-28900d6e><div data-v-28900d6e><span class="badge rounded-pill bg-danger" data-v-28900d6e><big data-v-28900d6e><span data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-facetime-video" data-v-28900d6e></span></span> Video</big></span><span data-v-28900d6e></span></div></div> <div class="button-wrapper" data-v-28900d6e><button type="button" class="collapse-button btn btn-outline-secondary" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down"></span></button> <button type="button" class="close-button btn btn-outline-secondary seamless-button" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-28900d6e></span></button> <button type="button" class="popup-button btn btn-outline-secondary seamless-button" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-28900d6e></span></button></div></div> <div class="card-collapse" data-v-28900d6e><!----> <hr style="display:;" data-v-28900d6e></div> <!----></div></div> <p></p></div></div></div> <h2 id="object-oriented-programming"><strong>Object-Oriented Programming</strong><a href="#object-oriented-programming" onclick="event.stopPropagation()" class="fa fa-anchor"></a></h2> <div><h3 id="classes">Classes<a href="#classes" onclick="event.stopPropagation()" class="fa fa-anchor"></a></h3> <p><strong>You can define your own <em>classes</em> (i.e., object types)</strong> in Python, which can then be used alongside the built-in classes such as <code class="line-numbers hljs inline no-lang">list</code>, <code class="line-numbers hljs inline no-lang">int</code>, <code class="line-numbers hljs inline no-lang">str</code>, etc.</p> <p>The syntax for defining a class:</p> <pre><code class="line-numbers hljs python"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ClassName</span>:</span>
+</span><span>  <span class="hljs-comment"># &lt;statement-1&gt;</span>
+</span><span>  .
+</span><span>  .
+</span><span>  .
+</span><span>  <span class="hljs-comment"># &lt;statement-N&gt;</span>
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn">
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><p><span class="badge rounded-pill bg-success text-white"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> It is customary to use <span tabindex="0" class="trigger-click"><span>Upper Camel Case</span></span> for class names.</p> <p>The syntax for <strong>creating (also called <em>instantiating</em>) an object</strong> of the class is <code class="line-numbers hljs inline no-lang">ClassName()</code>.</p> <!----> <div class="alert box-container alert-default" data-v-4d146e2c><!----> <div class="header-and-body" data-v-4d146e2c><!----> <div class="box-body-wrapper" data-v-4d146e2c><!----> <!----> <div class="contents" data-v-4d146e2c><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-cube" data-v-4d146e2c></span></span> The code below defines a class named <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>Employee</code>, creates two employee objects, and prints the class/type of each object.</p> <pre data-v-4d146e2c><code class="line-numbers hljs python" data-v-4d146e2c><span data-v-4d146e2c><span class="hljs-class" data-v-4d146e2c><span class="hljs-keyword" data-v-4d146e2c>class</span> <span class="hljs-title" data-v-4d146e2c>Employee</span>:</span>
+</span><span data-v-4d146e2c>  <span class="hljs-keyword" data-v-4d146e2c>pass</span> <span class="hljs-comment" data-v-4d146e2c># an empty class</span>
+</span><span data-v-4d146e2c>
+</span><span data-v-4d146e2c>john = Employee() <span class="hljs-comment" data-v-4d146e2c># create an Employee object</span>
+</span><span data-v-4d146e2c><span class="hljs-built_in" data-v-4d146e2c>print</span>(<span class="hljs-built_in" data-v-4d146e2c>type</span>(john)) <span class="hljs-comment" data-v-4d146e2c># print type of the john object</span>
+</span><span data-v-4d146e2c>alice = Employee()
+</span><span data-v-4d146e2c><span class="hljs-built_in" data-v-4d146e2c>print</span>(<span class="hljs-built_in" data-v-4d146e2c>type</span>(alice))
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-arrow-down" data-v-4d146e2c></span></span> <span class="dimmed" data-v-4d146e2c>Note how the type of each object is given as <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>&lt;class 'Employee'&gt;</code> i.e., a class with name <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>Employee</code>.</span></p> <pre data-v-4d146e2c><code class="line-numbers hljs" data-v-4d146e2c><span data-v-4d146e2c>&lt;class 'Employee'&gt;
+</span><span data-v-4d146e2c>&lt;class 'Employee'&gt;
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></div> <!----></div></div></div> <p><strong>You can add methods to the class by defining them inside the class definition.</strong> Note that a method of a class always take <code class="line-numbers hljs inline no-lang">self</code> as the first parameter. <code class="line-numbers hljs inline no-lang">self</code> refers to the object itself. When calling the method, there is no need to supply an argument for the <code class="line-numbers hljs inline no-lang">self</code> parameter as the target object is implicitly taken as the argument for that parameter.</p> <div class="alert box-container alert-default" data-v-4d146e2c><!----> <div class="header-and-body" data-v-4d146e2c><!----> <div class="box-body-wrapper" data-v-4d146e2c><!----> <!----> <div class="contents" data-v-4d146e2c><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-cube" data-v-4d146e2c></span></span> Consider the code below:</p> <div data-v-4d146e2c><table data-v-4d146e2c><tbody data-v-4d146e2c><tr data-v-4d146e2c><td valign="top" data-v-4d146e2c><pre data-v-4d146e2c><code class="line-numbers hljs python" data-v-4d146e2c><span data-v-4d146e2c><span class="hljs-class" data-v-4d146e2c><span class="hljs-keyword" data-v-4d146e2c>class</span> <span class="hljs-title" data-v-4d146e2c>Pen</span>:</span>
+</span><span data-v-4d146e2c>  
+</span><span data-v-4d146e2c>  <span class="hljs-function" data-v-4d146e2c><span class="hljs-keyword" data-v-4d146e2c>def</span> <span class="hljs-title" data-v-4d146e2c>write</span>(<span class="hljs-params" data-v-4d146e2c>self, text</span>):</span>
+</span><span data-v-4d146e2c>    <span class="hljs-built_in" data-v-4d146e2c>print</span>(<span class="hljs-string" data-v-4d146e2c>'writing:'</span>, text)
+</span><span data-v-4d146e2c>    
+</span><span data-v-4d146e2c>p = Pen()
+</span><span data-v-4d146e2c>p.write(<span class="hljs-string" data-v-4d146e2c>'It was a dark night ...'</span>)
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td> <td valign="bottom" data-v-4d146e2c> → <br data-v-4d146e2c><br data-v-4d146e2c></td> <td valign="bottom" data-v-4d146e2c><pre data-v-4d146e2c><code class="no-line-numbers hljs" data-v-4d146e2c><span data-v-4d146e2c>writing: It was a dark night ...
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td></tr></tbody></table></div> <p data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>write(self, text)</code> method is called as <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>p.write('It was a dark night ...')</code>.<br data-v-4d146e2c>
+This is how the arguments are matched with the parameters:</p> <ul data-v-4d146e2c><li data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>self</code> → <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>p</code></li> <li data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>text</code> → <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>'It was a dark night ...'</code></li></ul></div> <!----></div></div></div> <p><strong>You can specify how to initialize an object of a class by defining an <code class="line-numbers hljs inline no-lang">__init__()</code> method in the class.</strong> Here are the important things to note about the <code class="line-numbers hljs inline no-lang">__init__()</code> method:</p> <ol><li>There are two underscores in front and two behind the word <code class="line-numbers hljs inline no-lang">init</code>.<br> <span style="color:red;"><span><span aria-hidden="true" class="fas fa-times"></span></span></span> <code class="line-numbers hljs inline no-lang">_init_(self)</code><br> <span style="color:green;"><span><span aria-hidden="true" class="fas fa-check"></span></span></span> <code class="line-numbers hljs inline no-lang">__init__(self)</code></li> <li>It will be called every time you create an instance of the class.</li> <li>If it has parameters, you need to provide arguments for those parameters when you instantiate an object of that class.</li></ol> <div class="alert box-container alert-default" data-v-4d146e2c><!----> <div class="header-and-body" data-v-4d146e2c><!----> <div class="box-body-wrapper" data-v-4d146e2c><!----> <!----> <div class="contents" data-v-4d146e2c><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-cube" data-v-4d146e2c></span></span> This example shows an <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>__init__</code> method added to a <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>Person</code> class.</p> <div data-v-4d146e2c><table data-v-4d146e2c><tbody data-v-4d146e2c><tr data-v-4d146e2c><td valign="top" data-v-4d146e2c><pre data-v-4d146e2c><code class="line-numbers hljs python" data-v-4d146e2c><span data-v-4d146e2c><span class="hljs-class" data-v-4d146e2c><span class="hljs-keyword" data-v-4d146e2c>class</span> <span class="hljs-title" data-v-4d146e2c>Person</span>:</span>
+</span><span data-v-4d146e2c>  
+</span><span data-v-4d146e2c>  <span class="hljs-function" data-v-4d146e2c><span class="hljs-keyword" data-v-4d146e2c>def</span> <span class="hljs-title" data-v-4d146e2c>__init__</span>(<span class="hljs-params" data-v-4d146e2c>self, name</span>):</span>
+</span><span data-v-4d146e2c>    <span class="hljs-built_in" data-v-4d146e2c>print</span>(name, <span class="hljs-string" data-v-4d146e2c>'initialized!'</span>)
+</span><span data-v-4d146e2c>    
+</span><span data-v-4d146e2c>tom = Person(<span class="hljs-string" data-v-4d146e2c>'Tom'</span>)
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td> <td valign="bottom" data-v-4d146e2c> → <br data-v-4d146e2c><br data-v-4d146e2c></td> <td valign="bottom" data-v-4d146e2c><pre data-v-4d146e2c><code class="no-line-numbers hljs" data-v-4d146e2c><span data-v-4d146e2c>Tom initialized!
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td></tr></tbody></table></div></div> <!----></div></div></div> <p><strong>An object can have <em>attributes</em></strong> i.e., values attached to the object, just as an object can have methods. Attributes and methods of an object can be accessed using the <code class="line-numbers hljs inline no-lang">objectname.</code> syntax, as you did with objects of built-in classes.</p> <div class="alert box-container alert-default" data-v-4d146e2c><!----> <div class="header-and-body" data-v-4d146e2c><!----> <div class="box-body-wrapper" data-v-4d146e2c><!----> <!----> <div class="contents" data-v-4d146e2c><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-cube" data-v-4d146e2c></span></span> This example shows accessing the <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>get_age()</code> method and the <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>birthday</code> attribute of an object <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>x</code>.</p> <div data-v-4d146e2c><table data-v-4d146e2c><tbody data-v-4d146e2c><tr data-v-4d146e2c><td valign="top" data-v-4d146e2c><pre data-v-4d146e2c><code class="line-numbers hljs python" data-v-4d146e2c><span data-v-4d146e2c><span class="hljs-built_in" data-v-4d146e2c>print</span>(x.get_age())
+</span><span data-v-4d146e2c><span class="hljs-built_in" data-v-4d146e2c>print</span>(x.birthday)
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td> <td valign="bottom" data-v-4d146e2c> → <br data-v-4d146e2c><br data-v-4d146e2c></td> <td valign="bottom" data-v-4d146e2c><pre data-v-4d146e2c><code class="no-line-numbers hljs" data-v-4d146e2c><span data-v-4d146e2c>12
+</span><span data-v-4d146e2c>01/11/2000
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td></tr></tbody></table></div></div> <!----></div></div></div> <p><strong>The code within a class needs to use the <code class="line-numbers hljs inline no-lang">self.</code> to refer to its own attributes and methods.</strong> Furthermore, the best place to initialize attributes is the <code class="line-numbers hljs inline no-lang">__init__()</code> method.</p> <div class="alert box-container alert-default" data-v-4d146e2c><!----> <div class="header-and-body" data-v-4d146e2c><!----> <div class="box-body-wrapper" data-v-4d146e2c><!----> <!----> <div class="contents" data-v-4d146e2c><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-cube" data-v-4d146e2c></span></span> Note how the <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>__init__()</code> method of the <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>Book</code> class initializes its two attributes and calls another of its own methods i.e., <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>self.describe()</code>.</p> <pre data-v-4d146e2c><code class="line-numbers hljs python" data-v-4d146e2c><span data-v-4d146e2c><span class="hljs-class" data-v-4d146e2c><span class="hljs-keyword" data-v-4d146e2c>class</span> <span class="hljs-title" data-v-4d146e2c>Book</span>:</span>
+</span><span data-v-4d146e2c>  
+</span><span data-v-4d146e2c>  <span class="hljs-function" data-v-4d146e2c><span class="hljs-keyword" data-v-4d146e2c>def</span> <span class="hljs-title" data-v-4d146e2c>__init__</span>(<span class="hljs-params" data-v-4d146e2c>self, book_title, book_author</span>):</span>
+</span><span data-v-4d146e2c>    self.title = book_title <span class="hljs-comment" data-v-4d146e2c># initialize attribute title</span>
+</span><span data-v-4d146e2c>    self.author = book_author <span class="hljs-comment" data-v-4d146e2c># initialize attribute author</span>
+</span><span data-v-4d146e2c>    self.describe() <span class="hljs-comment" data-v-4d146e2c># call another method of the class</span>
+</span><span data-v-4d146e2c>    
+</span><span data-v-4d146e2c>  <span class="hljs-function" data-v-4d146e2c><span class="hljs-keyword" data-v-4d146e2c>def</span> <span class="hljs-title" data-v-4d146e2c>describe</span>(<span class="hljs-params" data-v-4d146e2c>self</span>):</span>
+</span><span data-v-4d146e2c>    <span class="hljs-comment" data-v-4d146e2c># print attributes of the object</span>
+</span><span data-v-4d146e2c>    <span class="hljs-built_in" data-v-4d146e2c>print</span>(<span class="hljs-string" data-v-4d146e2c>'Book info:'</span>, self.title, <span class="hljs-string" data-v-4d146e2c>'/by'</span>, self.author) 
+</span><span data-v-4d146e2c>    
+</span><span data-v-4d146e2c>book1 = Book(<span class="hljs-string" data-v-4d146e2c>'The Jungle Book'</span>, <span class="hljs-string" data-v-4d146e2c>'Leo Tolstoy'</span>)
+</span><span data-v-4d146e2c>book2 = Book(<span class="hljs-string" data-v-4d146e2c>'The Art of War'</span>, <span class="hljs-string" data-v-4d146e2c>'Sun Tzu'</span>)
+</span><span data-v-4d146e2c>
+</span><span data-v-4d146e2c><span class="hljs-built_in" data-v-4d146e2c>print</span>()  <span class="hljs-comment" data-v-4d146e2c># print a blank line</span>
+</span><span data-v-4d146e2c><span class="hljs-built_in" data-v-4d146e2c>print</span>(<span class="hljs-string" data-v-4d146e2c>'Title:'</span>, book1.title) 
+</span><span data-v-4d146e2c><span class="hljs-built_in" data-v-4d146e2c>print</span>(<span class="hljs-string" data-v-4d146e2c>'Author:'</span>, book1.author)
+</span><span data-v-4d146e2c>book1.describe()
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-arrow-down" data-v-4d146e2c></span></span></p> <pre data-v-4d146e2c><code class="line-numbers hljs" data-v-4d146e2c><span data-v-4d146e2c>Book info: The Jungle Book /by Leo Tolstoy
+</span><span data-v-4d146e2c>Book info: The Art of War /by Sun Tzu
+</span><span data-v-4d146e2c>
+</span><span data-v-4d146e2c>Title: The Jungle Book
+</span><span data-v-4d146e2c>Author: Leo Tolstoy
+</span><span data-v-4d146e2c>Book info: The Jungle Book /by Leo Tolstoy
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></div> <!----></div></div></div> <p><strong>You can get your classes to work with each other.</strong></p> <div class="alert box-container alert-default" data-v-4d146e2c><!----> <div class="header-and-body" data-v-4d146e2c><!----> <div class="box-body-wrapper" data-v-4d146e2c><!----> <!----> <div class="contents" data-v-4d146e2c><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-cube" data-v-4d146e2c></span></span> In this example we define a <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>ReadingList</code> class that can store a list of <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>Book</code> objects.</p> <pre data-v-4d146e2c><code class="line-numbers hljs python" data-v-4d146e2c><span data-v-4d146e2c><span class="hljs-class" data-v-4d146e2c><span class="hljs-keyword" data-v-4d146e2c>class</span> <span class="hljs-title" data-v-4d146e2c>ReadingList</span>:</span>
+</span><span data-v-4d146e2c>  
+</span><span data-v-4d146e2c>  <span class="hljs-function" data-v-4d146e2c><span class="hljs-keyword" data-v-4d146e2c>def</span> <span class="hljs-title" data-v-4d146e2c>__init__</span>(<span class="hljs-params" data-v-4d146e2c>self, initial_list</span>):</span>
+</span><span data-v-4d146e2c>    self.books = initial_list
+</span><span data-v-4d146e2c>    
+</span><span data-v-4d146e2c>  <span class="hljs-function" data-v-4d146e2c><span class="hljs-keyword" data-v-4d146e2c>def</span> <span class="hljs-title" data-v-4d146e2c>add_book</span>(<span class="hljs-params" data-v-4d146e2c>self, book</span>):</span>
+</span><span data-v-4d146e2c>    self.books.append(book)
+</span><span data-v-4d146e2c>    
+</span><span data-v-4d146e2c>  <span class="hljs-function" data-v-4d146e2c><span class="hljs-keyword" data-v-4d146e2c>def</span> <span class="hljs-title" data-v-4d146e2c>show_authors</span>(<span class="hljs-params" data-v-4d146e2c>self</span>):</span>
+</span><span data-v-4d146e2c>    <span class="hljs-keyword" data-v-4d146e2c>for</span> b <span class="hljs-keyword" data-v-4d146e2c>in</span> self.books:
+</span><span data-v-4d146e2c>      <span class="hljs-built_in" data-v-4d146e2c>print</span>(b.author)
+</span><span data-v-4d146e2c>      
+</span><span data-v-4d146e2c>my_list = ReadingList([book1]) <span class="hljs-comment" data-v-4d146e2c># book1 defined in a previous example </span>
+</span><span data-v-4d146e2c>my_list.add_book(book2) <span class="hljs-comment" data-v-4d146e2c># book2 defined in a previous example</span>
+</span><span data-v-4d146e2c>my_list.show_authors()
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-arrow-down" data-v-4d146e2c></span></span></p> <pre data-v-4d146e2c><code class="line-numbers hljs" data-v-4d146e2c><span data-v-4d146e2c>Leo Tolstoy
+</span><span data-v-4d146e2c>Sun Tzu
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></div> <!----></div></div></div> <div><div expanded="" no-close="" class="card-container" data-v-28900d6e><div class="card expandable-card border-danger" data-v-28900d6e><div class="card-header header-toggle bg-danger border-danger" data-v-28900d6e><div class="caret-wrapper" data-v-28900d6e><!----></div> <div class="header-wrapper card-title bg-danger text-white" data-v-28900d6e><p data-v-28900d6e><span aria-hidden="true" class="fas fa-dumbbell" data-v-28900d6e></span> Exercise: Create <code class="line-numbers hljs inline no-lang" data-v-28900d6e>StockItem</code> Class</p></div> <div class="button-wrapper" data-v-28900d6e><button type="button" class="collapse-button btn btn-outline-light" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-light" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-28900d6e></span></button> <button type="button" class="popup-button btn btn-outline-light" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-28900d6e></span></button></div></div> <div class="card-collapse" data-v-28900d6e><div class="card-body" data-v-28900d6e> <div data-v-28900d6e><h4 id="exercise-create-stockitem-class" data-v-28900d6e>Exercise : Create <code class="line-numbers hljs inline no-lang" data-v-28900d6e>StockItem</code> Class<a href="#exercise-create-stockitem-class" onclick="event.stopPropagation()" class="fa fa-anchor" data-v-28900d6e></a></h4> <p data-v-28900d6e>Define the <code class="line-numbers hljs inline no-lang" data-v-28900d6e>StockItem</code> class missing in the code below so that the code produces the output given on the right.</p> <table data-v-28900d6e><tbody data-v-28900d6e><tr data-v-28900d6e><td data-v-28900d6e><pre data-v-28900d6e><code class="line-numbers hljs python" data-v-28900d6e><span data-v-28900d6e><span class="hljs-comment" data-v-28900d6e># ADD StockItem class here</span>
+</span><span data-v-28900d6e><span class="hljs-comment" data-v-28900d6e># It should have an attribute: name</span>
+</span><span data-v-28900d6e><span class="hljs-comment" data-v-28900d6e># It should have a method: info()</span>
+</span><span data-v-28900d6e>
+</span><span data-v-28900d6e>a = StockItem(<span class="hljs-string" data-v-28900d6e>'Apple'</span>)
+</span><span data-v-28900d6e><span class="hljs-built_in" data-v-28900d6e>print</span>(a.info())
+</span><span data-v-28900d6e><span class="hljs-built_in" data-v-28900d6e>print</span>(a.name)
+</span><span data-v-28900d6e>b = StockItem(<span class="hljs-string" data-v-28900d6e>'Bag of Beans'</span>)
+</span><span data-v-28900d6e><span class="hljs-built_in" data-v-28900d6e>print</span>(b.info())
+</span><span data-v-28900d6e>b.name = <span class="hljs-string" data-v-28900d6e>'Bananas'</span>
+</span><span data-v-28900d6e><span class="hljs-built_in" data-v-28900d6e>print</span>(b.info())
+</span></code><div class="function-btn-container" data-v-28900d6e><button onclick="copyCodeBlock(this)" class="function-btn" data-v-28900d6e>
+    <div class="function-btn-body" data-v-28900d6e>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-28900d6e>
+    <g id="surface1" data-v-28900d6e>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-28900d6e></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td> <td valign="bottom" data-v-28900d6e> → <br data-v-28900d6e><br data-v-28900d6e></td> <td valign="bottom" data-v-28900d6e><pre data-v-28900d6e><code class="no-line-numbers hljs" data-v-28900d6e><span data-v-28900d6e>Item info: Apple
+</span><span data-v-28900d6e>Apple
+</span><span data-v-28900d6e>Item info: Bag of Beans
+</span><span data-v-28900d6e>Item info: Bananas
+</span></code><div class="function-btn-container" data-v-28900d6e><button onclick="copyCodeBlock(this)" class="function-btn" data-v-28900d6e>
+    <div class="function-btn-body" data-v-28900d6e>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-28900d6e>
+    <g id="surface1" data-v-28900d6e>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-28900d6e></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td></tr></tbody></table> <div class="algolia-no-index card-container" data-v-28900d6e><div class="card expandable-card border-0" data-v-28900d6e><div class="card-header header-toggle bg-white border-0" data-v-28900d6e><div class="caret-wrapper" data-v-28900d6e><span class="glyphicon glyphicon-chevron-right" data-v-28900d6e></span></div> <div class="header-wrapper card-title bg-white" data-v-28900d6e><p data-v-28900d6e><span class="dimmed" data-v-28900d6e><span aria-hidden="true" class="fas fa-battery-quarter" data-v-28900d6e></span> Partial solution</span></p></div> <div class="button-wrapper" data-v-28900d6e><button type="button" class="collapse-button btn btn-outline-secondary" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down"></span></button> <button type="button" class="close-button btn btn-outline-secondary seamless-button" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-28900d6e></span></button> <button type="button" class="popup-button btn btn-outline-secondary seamless-button" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-28900d6e></span></button></div></div> <div class="card-collapse" data-v-28900d6e><!----> <hr style="display:;" data-v-28900d6e></div> <!----></div></div></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:none;" data-v-28900d6e></div> <!----></div></div><p></p></div> <div><div expanded="" no-close="" class="card-container" data-v-28900d6e><div class="card expandable-card border-danger" data-v-28900d6e><div class="card-header header-toggle bg-danger border-danger" data-v-28900d6e><div class="caret-wrapper" data-v-28900d6e><!----></div> <div class="header-wrapper card-title bg-danger text-white" data-v-28900d6e><p data-v-28900d6e><span aria-hidden="true" class="fas fa-dumbbell" data-v-28900d6e></span> Exercise: <code class="line-numbers hljs inline no-lang" data-v-28900d6e>StockItem</code> with Price</p></div> <div class="button-wrapper" data-v-28900d6e><button type="button" class="collapse-button btn btn-outline-light" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-light" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-28900d6e></span></button> <button type="button" class="popup-button btn btn-outline-light" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-28900d6e></span></button></div></div> <div class="card-collapse" data-v-28900d6e><div class="card-body" data-v-28900d6e> <div data-v-28900d6e><h4 id="exercise-stockitem-with-price" data-v-28900d6e>Exercise : <code class="line-numbers hljs inline no-lang" data-v-28900d6e>StockItem</code> with Price<a href="#exercise-stockitem-with-price" onclick="event.stopPropagation()" class="fa fa-anchor" data-v-28900d6e></a></h4> <p data-v-28900d6e>Enhance the <code class="line-numbers hljs inline no-lang" data-v-28900d6e>StockItem</code> class you wrote in the previous exercise so that each <code class="line-numbers hljs inline no-lang" data-v-28900d6e>StockItem</code> object can keep track of its own price and the price can be increased later.</p> <pre data-v-28900d6e><code class="line-numbers hljs python" data-v-28900d6e><span data-v-28900d6e><span class="hljs-comment" data-v-28900d6e># ADD StockItem class here</span>
+</span><span data-v-28900d6e><span class="hljs-comment" data-v-28900d6e># It should have attributes: name, price</span>
+</span><span data-v-28900d6e><span class="hljs-comment" data-v-28900d6e># It should have methods: info, increase_price</span>
+</span><span data-v-28900d6e>
+</span><span data-v-28900d6e>items = []
+</span><span data-v-28900d6e>items.append(StockItem(<span class="hljs-string" data-v-28900d6e>'Pen'</span>, <span class="hljs-number" data-v-28900d6e>5</span>))  <span class="hljs-comment" data-v-28900d6e># a pen worth 5 dollars</span>
+</span><span data-v-28900d6e>items.append(StockItem(<span class="hljs-string" data-v-28900d6e>'Pencil'</span>, <span class="hljs-number" data-v-28900d6e>3</span>))
+</span><span data-v-28900d6e>items.append(StockItem(<span class="hljs-string" data-v-28900d6e>'Cup'</span>, <span class="hljs-number" data-v-28900d6e>1</span>))
+</span><span data-v-28900d6e><span class="hljs-keyword" data-v-28900d6e>for</span> item <span class="hljs-keyword" data-v-28900d6e>in</span> items:
+</span><span data-v-28900d6e>    item.increase_price(<span class="hljs-number" data-v-28900d6e>1</span>)  <span class="hljs-comment" data-v-28900d6e># increase price by 1</span>
+</span><span data-v-28900d6e>    <span class="hljs-built_in" data-v-28900d6e>print</span>(item.info())
+</span></code><div class="function-btn-container" data-v-28900d6e><button onclick="copyCodeBlock(this)" class="function-btn" data-v-28900d6e>
+    <div class="function-btn-body" data-v-28900d6e>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-28900d6e>
+    <g id="surface1" data-v-28900d6e>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-28900d6e></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><p data-v-28900d6e><span data-v-28900d6e><span aria-hidden="true" class="fas fa-arrow-down" data-v-28900d6e></span></span></p> <pre data-v-28900d6e><code class="no-line-numbers hljs" data-v-28900d6e><span data-v-28900d6e>The price of Pen is 6
+</span><span data-v-28900d6e>The price of Pencil is 4
+</span><span data-v-28900d6e>The price of Cup is 2
+</span></code><div class="function-btn-container" data-v-28900d6e><button onclick="copyCodeBlock(this)" class="function-btn" data-v-28900d6e>
+    <div class="function-btn-body" data-v-28900d6e>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-28900d6e>
+    <g id="surface1" data-v-28900d6e>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-28900d6e></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:none;" data-v-28900d6e></div> <!----></div></div><p></p></div></div> <div><div class="border border-success pt-0 ps-1 pb-1 pe-1 border-bottom-0 rounded-top" style="background-color:#e6fff2;"><p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p> <div class="indented"><p><strong>Next, let's learn how to install and use third-party libraries</strong> so that you can use even more functionality than those Python provides by default.</p> <div class="algolia-no-index card-container" data-v-28900d6e><div class="card expandable-card border-0" data-v-28900d6e><div class="card-header header-toggle bg-white border-0" data-v-28900d6e><div class="caret-wrapper" data-v-28900d6e><span class="glyphicon glyphicon-chevron-right" data-v-28900d6e></span></div> <div class="header-wrapper card-title bg-white" data-v-28900d6e><div data-v-28900d6e><span class="badge rounded-pill bg-danger" data-v-28900d6e><big data-v-28900d6e><span data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-facetime-video" data-v-28900d6e></span></span> Video</big></span><span data-v-28900d6e></span></div></div> <div class="button-wrapper" data-v-28900d6e><button type="button" class="collapse-button btn btn-outline-secondary" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down"></span></button> <button type="button" class="close-button btn btn-outline-secondary seamless-button" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-28900d6e></span></button> <button type="button" class="popup-button btn btn-outline-secondary seamless-button" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-28900d6e></span></button></div></div> <div class="card-collapse" data-v-28900d6e><!----> <hr style="display:;" data-v-28900d6e></div> <!----></div></div> <p></p></div></div></div> <div><h2 id="appendix-a-installing-3rd-party-modules">Appendix A: Installing 3rd-Party Modules<a href="#appendix-a-installing-3rd-party-modules" onclick="event.stopPropagation()" class="fa fa-anchor"></a></h2> <p>In addition to built-in modules you get with Python by default, there are many modules written by others that you can make use of. <strong>You can install third-party modules using Python’s <code class="line-numbers hljs inline no-lang">pip</code> tool</strong>. This tool downloads and installs Python modules onto your computer from <a href="https://pypi.python.org/">https://pypi.python.org/</a> (aka <em>PyPi</em> or <em>Python Package Index</em>).</p> <p>First, ensure that you have <code class="line-numbers hljs inline no-lang">pip</code> installed by running this command in a command shell (not Python interpreter shell), which should print out the version of the pip tool you have.</p> <pre><code class="line-numbers hljs"><span>pip --version
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn">
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><p>After that, to install a third-party module (or <em>packages</em> as they are sometimes called), you can run the <code class="line-numbers hljs inline no-lang">pip install {packagename}</code> command.</p> <tip-box><p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The example below shows how to install the <code class="line-numbers hljs inline no-lang">colorama</code> module that allows you to colorize text printed out to the console.</p> <pre><code class="line-numbers hljs bash"><span>pip install colorama
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn">
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p> <pre><code class="line-numbers hljs"><span>Collecting colorama
+</span><span>  Downloading colorama-0.3.9-py2.py3-none-any.whl
+</span><span>Installing collected packages: colorama
+</span><span>Successfully installed colorama-0.3.9
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn">
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><p>After installing colorama, you can import it into your code and use its features to print colorized text.</p> <pre><code class="line-numbers hljs python"><span><span class="hljs-keyword">import</span> colorama
+</span><span>
+</span><span>colorama.init()  <span class="hljs-comment"># one-time initialization</span>
+</span><span>
+</span><span><span class="hljs-built_in">print</span>(colorama.Fore.YELLOW + <span class="hljs-string">' Some yellow text'</span>)
+</span><span><span class="hljs-built_in">print</span>(colorama.Fore.BLUE + colorama.Back.WHITE + <span class="hljs-string">' Some blue text in a white background'</span>)
+</span><span><span class="hljs-built_in">print</span>(colorama.Style.RESET_ALL + <span class="hljs-string">' Back to normal now'</span>)
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn">
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span><br></p> <p><span eager="" class="image-wrapper"><img src="/2024/programming/thirdparty/images/coloramaOutput.png" width="" class="img-fluid rounded"> <span class="image-caption"></span></span></p><p></p></tip-box> <tip-box><p><strong><span class="badge rounded-pill bg-success text-white"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Some useful third-party modules:</strong></p> <ul><li><a href="https://pypi.python.org/pypi/colorama"><code class="line-numbers hljs inline no-lang">colorama</code></a>: For colorizing text printed in the console</li> <li><a href="https://pypi.python.org/pypi/selenium"><code class="line-numbers hljs inline no-lang">selenium</code></a>: For automating the Browser</li> <li><a href="http://www.magiksys.net/pyzmail/"><code class="line-numbers hljs inline no-lang">pyzmail</code></a>: For sending emails</li> <li><a href="https://www.twilio.com/docs/libraries/python"><code class="line-numbers hljs inline no-lang">twilio</code></a>: For sending SMS</li> <li><a href="https://pythonhosted.org/PyPDF2/"><code class="line-numbers hljs inline no-lang">PyPDF2</code></a>: For working with PDF files</li> <li><a href="https://pypi.python.org/pypi/pyperclip/1.6.0"><code class="line-numbers hljs inline no-lang">pyperclip</code></a>: To access the clipboard of the operating system</li> <li><a href="https://pypi.python.org/pypi/dateparser/0.7.0"><code class="line-numbers hljs inline no-lang">dateparser</code></a>: To parse natural language repsentation of dates e.g., <code class="line-numbers hljs inline no-lang">in 2 days</code>, <code class="line-numbers hljs inline no-lang">tomorrow</code></li></ul></tip-box> <p><strong><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</strong>:</p> <ul><li><a href="https://automatetheboringstuff.com/appendixa/">More about installing 3rd-party modules</a></li></ul> <div><div expanded="" no-close="" class="card-container" data-v-28900d6e><div class="card expandable-card border-danger" data-v-28900d6e><div class="card-header header-toggle bg-danger border-danger" data-v-28900d6e><div class="caret-wrapper" data-v-28900d6e><!----></div> <div class="header-wrapper card-title bg-danger text-white" data-v-28900d6e><p data-v-28900d6e><span aria-hidden="true" class="fas fa-dumbbell" data-v-28900d6e></span> Exercise: Print Errors in Red</p></div> <div class="button-wrapper" data-v-28900d6e><button type="button" class="collapse-button btn btn-outline-light" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-light" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-28900d6e></span></button> <button type="button" class="popup-button btn btn-outline-light" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-28900d6e></span></button></div></div> <div class="card-collapse" data-v-28900d6e><div class="card-body" data-v-28900d6e> <div data-v-28900d6e><h4 id="exercise-print-errors-in-red" data-v-28900d6e>Exercise : Print Errors In Red<a href="#exercise-print-errors-in-red" onclick="event.stopPropagation()" class="fa fa-anchor" data-v-28900d6e></a></h4> <p data-v-28900d6e>Update a CLI program you have written in the past to print error messages in red color.</p> <p data-v-28900d6e><span class="badge rounded-pill bg-success text-white" data-v-28900d6e><span aria-hidden="true" class="fas fa-lightbulb" data-v-28900d6e></span></span> Colorama module does not work in Repl.it, or inside PyCharm. You'll need to run the program in a normal command shell to see the colors.</p></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:none;" data-v-28900d6e></div> <!----></div></div><p></p></div></div></div></div></div> <nav id="page-nav" class="fixed-header-padding" data-v-e6005420><div class="nav-component slim-scroll" data-v-e6005420><nav id="mb-page-nav" class="nav nav-pills flex-column my-0 small no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#week-8-mon-mar-11th-programming-topics" data-v-e6005420>Week 8 [Mon, Mar 11th] - Programming Topics‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#object-oriented-programming" data-v-e6005420>Object-Oriented Programming‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#classes" data-v-e6005420>Classes‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#exercise-create-stockitem-class" data-v-e6005420>Exercise : Create StockItem Class‎</a> <a class="nav-link py-1" href="#exercise-stockitem-with-price" data-v-e6005420>Exercise : StockItem with Price‎</a></nav></nav> <a class="nav-link py-1" href="#appendix-a-installing-3rd-party-modules" data-v-e6005420>Appendix A: Installing 3rd-Party Modules‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#exercise-print-errors-in-red" data-v-e6005420>Exercise : Print Errors In Red‎</a></nav></nav> <!----></nav></div> <!----></nav> <div aria-hidden="true" class="scroll-top-button fa-lg d-print-none" style="display:none;bottom:2%;right:2%;position:fixed;"><i class="fas fa-arrow-circle-up"></i></div></div> <footer><div class="text-center"><small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 5.2.0</a>, generated on Wed, 27 Dec 2023, 23:15:52 GMT+8]</small></div></footer></div>
+</body><script src="/2024/markbind/js/bootstrap-utility.min.js"></script>
+<script>
+  MarkBind.setupWithSearch()
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3.2.0/dist/umd/index.js"></script>
+    <script>
+    docsearch({
+      container: "#algolia-search-input",
+      appId: "3DU4XTBX4T",
+      apiKey: "3e2fd3c3b12a363309307794dce54969",
+      indexName: "nus-tic-cs",
+      searchParameters: {"facetFilters":[["site:nus-tee3201.github.io"],["tags:admin","tags:se-book-adapted","tags:schedule"]]}
+    });
+  </script>
+    <script>
+    const style = document.createElement('style');
+    style.innerHTML = ".DocSearch-Container { z-index: 1002; position: fixed; }";
+    document.getElementsByTagName('head')[0].appendChild(style);
+  </script>
+  
+    <script>
+    function copyCodeBlock(element) {
+        const pre = element.parentElement.parentElement;
+        const codeElement = pre.querySelector('code');
+
+        // create dummy text element to select() the text field
+        const textElement = document.createElement('textarea');
+        textElement.value = codeElement.textContent;
+        document.body.appendChild(textElement);
+        textElement.select();
+
+        document.execCommand('copy');
+        document.body.removeChild(textElement);
+    }
+    </script>
+</html>

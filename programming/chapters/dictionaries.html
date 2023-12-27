@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 5.2.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><title>TEE3201 - Python Basics: Dictionaries</title> <link rel="stylesheet" href="/2024/markbind/css/bootstrap.min.css"> <link rel="stylesheet" href="/2024/markbind/fontawesome/css/all.min.css"> <link rel="stylesheet" href="/2024/markbind/glyphicons/css/bootstrap-glyphicons.min.css"><link rel="stylesheet" href="/2024/markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="/2024/markbind/css/markbind.min.css"><script src="/2024/markbind/js/polyfill.min.js"></script>
+    <script src="/2024/markbind/js/vue.min.js"></script>
+    <script src="/2024/markbind/js/markbind.min.js"></script>
+    <script src="dictionaries.page-vue-render.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3.2.0/dist/style.css"><link rel="stylesheet" href="/2024/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="/2024/plugins/markbind-plugin-tree/markbind-plugin-tree.css">
+    
+<link rel="stylesheet" href="/2024/css/main.css">
+<link rel="icon" href="/2024/favicon.ico"></head>
+<script>
+  const baseUrl = '/2024'
+</script>
+<body  data-bs-spy="scroll" data-bs-target="#mb-page-nav" data-bs-offset="100" >
+<div id="app" data-server-rendered="true"><div class="w-100 p-1 bg-warning text-center d-print-none"><span><strong>This is a draft version of the website! The final version will be available near the start of the semester.</strong></span></div> <div class="w-100 p-1 bg-success text-white text-center d-print-none"><span>This course will be delivered in <em>blended learning</em> mode (i.e., a mix of online and F2F activities) this semester.</span></div> <header sticky=""><div placement="top" data-v-73b4aa16><nav class="navbar navbar-expand-md d-print-none navbar-dark bg-dark" data-v-73b4aa16><div class="container-fluid" data-v-73b4aa16><div class="navbar-left" data-v-73b4aa16><a href="/2024/index.html" title="Home" class="navbar-brand" data-v-73b4aa16><span class="badge rounded-pill bg-danger" data-v-73b4aa16>TEE3201 <small data-v-73b4aa16>2024</small></span></a></div> <div class="navbar-default" data-v-73b4aa16><ul class="navbar-nav me-auto mt-2 mt-lg-0" data-v-73b4aa16> <li class="nav-link algolia-no-index dropdown" data-v-12679d7e><a role="button" data-bs-toggle="dropdown" class="dropdown-toggle nav-link" data-v-12679d7e><strong data-v-12679d7e>Schedule</strong></a> <ul class="dropdown-menu" data-v-12679d7e> <li data-v-12679d7e><a href="/2024/schedule/timeline.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Full Timeline</strong></span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week1/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 1</strong> [Mon, Jan 15th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week2/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 2</strong> [Mon, Jan 22nd] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week3/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 3</strong> [Mon, Jan 29th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week4/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 4</strong> [Mon, Feb 5th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week5/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 5</strong> [Mon, Feb 12th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week6/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 6</strong> [Mon, Feb 19th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week7/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 7</strong> [Mon, Feb 26th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week8/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 8</strong> [Mon, Mar 11th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week9/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 9</strong> [Mon, Mar 18th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week10/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 10</strong> [Mon, Mar 25th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week11/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 11</strong> [Mon, Apr 1st] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week12/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 12</strong> [Mon, Apr 8th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week13/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 13</strong> [Mon, Apr 15th] </span></a></li></ul></li> <li class="nav-link algolia-no-index dropdown" data-v-12679d7e><a role="button" data-bs-toggle="dropdown" class="dropdown-toggle nav-link" data-v-12679d7e><strong data-v-12679d7e>Textbook</strong></a> <ul class="dropdown-menu" data-v-12679d7e> <li data-v-12679d7e><a href="/2024/se-book-adapted/index.html" class="dropdown-item" data-v-12679d7e>SE Textbook</a></li> <li data-v-12679d7e><a href="/2024/programming/index.html" class="dropdown-item" data-v-12679d7e>Programming Textbook</a></li></ul></li> <li data-v-73b4aa16><a href="/2024/admin/index.html" class="nav-link" data-v-73b4aa16><span data-v-73b4aa16><strong data-v-73b4aa16>Admin Info</strong></span></a></li> <li class="nav-link algolia-no-index dropdown" data-v-12679d7e><a role="button" data-bs-toggle="dropdown" class="dropdown-toggle nav-link" data-v-12679d7e><strong data-v-12679d7e>Other Links</strong></a> <ul class="dropdown-menu" data-v-12679d7e> <li data-v-12679d7e><a href="https://canvas.nus.edu.sg/courses/n/a/discussion_topics" target="_blank" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><span aria-hidden="true" class="fas fa-comment" data-v-12679d7e></span> Forum</span></a></li> <li data-v-12679d7e><a href="/2024/admin/index.html#instructors" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><span aria-hidden="true" class="fas fa-user-tie" data-v-12679d7e></span> Instructors</span></a></li> <li data-v-12679d7e><a href="https://canvas.nus.edu.sg/courses/n/a/announcements" target="_blank" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><span aria-hidden="true" class="glyphicon glyphicon-bullhorn" data-v-12679d7e></span> Announcements</span></a></li> <li data-v-12679d7e><a href="https://canvas.nus.edu.sg/courses/n/a/files" target="_blank" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><span aria-hidden="true" class="fas fa-file-upload" data-v-12679d7e></span> Files (handouts, submissions etc.)</span></a></li> <li tags="m--tic2002 m--tee3201" data-v-12679d7e><a href="/2024/admin/index.html#project" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><span data-v-12679d7e><span aria-hidden="true" class="fas fa-drafting-compass" data-v-12679d7e></span></span></span> Project Info</a></li> <li tags="m--cs2113 m--tic2002 m--tee3201" data-v-12679d7e><a href="https://coursemology.org/courses/n_a" target="_blank" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><span data-v-12679d7e><span aria-hidden="true" class="fas fa-dumbbell" data-v-12679d7e></span></span></span> Coursemology link</a></li> <li data-v-12679d7e><a href="https://teams.microsoft.com/l/team/19%3ay1YRdPn15i03ivS4qnlQEAKEfXnbj6f9GqIC4MvV3wo1%40thread.tacv2/conversations?groupId=9ed8b011-46d2-4b95-87df-7351a200bb8b&amp;tenantId=5ba5ef5e-3109-4e77-85bd-cfeb0d347e82" target="_blank" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><span aria-hidden="true" class="fas fa-users-cog" data-v-12679d7e></span> MS Teams link</span></a></li></ul></li></ul></div> <ul class="navbar-nav navbar-right" data-v-73b4aa16><li class="nav-link" data-v-73b4aa16><form class="navbar-form" data-v-73b4aa16><div class="dropdown" style="position:relative;" data-v-01e11c9b><input data-bs-toggle="dropdown" type="text" placeholder="Search" autocomplete="off" value="" class="form-control" data-v-01e11c9b> <div class="form-control placeholder-div-hidden" data-v-01e11c9b>
+      Search
+    </div> <ul class="dropdown-menu search-dropdown-menu d-none dropdown-menu-end" data-v-01e11c9b></ul></div></form></li></ul></div></nav> <div class="lower-navbar-container" style="display:none;" data-v-73b4aa16><!----> <!----></div></div></header> <div id="flex-body"><nav id="site-nav" class="fixed-header-padding" data-v-e6005420><div class="site-nav-top" data-v-e6005420><div class="font-weight-bold mb-2" style="font-size:1.25rem;" data-v-e6005420>Python textbook</div></div> <div class="nav-component slim-scroll" data-v-e6005420><div data-v-e6005420><div class="site-nav-root"><ul class="site-nav-list site-nav-list-root" data-v-e6005420><li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/expressions-types-variables.html" data-v-e6005420>Expressions, Data Types, Variables</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/programs.html" data-v-e6005420>Python Programs</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/flowcontrol.html" data-v-e6005420>Program Flow Control</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/functions.html" data-v-e6005420>Functions</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/lists.html" data-v-e6005420>Lists</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/errors.html" data-v-e6005420>Error Handling</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/strings.html" data-v-e6005420>Strings</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/files.html" data-v-e6005420>Files</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/dictionaries.html" data-v-e6005420>Dictionaries</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/oop.html" data-v-e6005420>Object-Oriented Programming</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/gui.html" data-v-e6005420>GUIs</a></div></li> <li class="site-nav-custom-list-item site-nav-list-item-0" data-v-e6005420><hr data-v-e6005420></li> <li class="site-nav-custom-list-item site-nav-list-item-0" data-v-e6005420><span class="dimmed" data-v-e6005420><strong data-v-e6005420>Appendices</strong></span></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/thirdparty.html" data-v-e6005420><strong data-v-e6005420>A.</strong> Installing 3rd Party Modules</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/ide.html" data-v-e6005420><strong data-v-e6005420>B.</strong> Using an IDE</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/organizing.html" data-v-e6005420><strong data-v-e6005420>C.</strong> Organizing Python Code</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/unittesting.html" data-v-e6005420><strong data-v-e6005420>D.</strong> Unit Testing</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/monty.html" data-v-e6005420><strong data-v-e6005420>E.</strong> The Monty Project</a></div></li> <!----></ul></div></div></div> <!----></nav> <div id="content-wrapper" class="fixed-header-padding"><div id="main" class="website-content"><div id="toc"><ul><li><a href="#lists"><strong>Dictionaries</strong></a> <ul><li><a href="#the-dictionary-data-structure">The Dictionary Data Structure</a></li> <li><a href="#working-with-dictionaries">Working with Dictionaries</a></li> <li><a href="#nested-dictionaries">Nested Dictionaries</a></li></ul></li></ul></div> <div id="main"><h1 id="dictionaries">Dictionaries<a href="#dictionaries" onclick="event.stopPropagation()" class="fa fa-anchor"></a></h1> <div><h3 id="the-dictionary-data-structure">The Dictionary Data Structure<a href="#the-dictionary-data-structure" onclick="event.stopPropagation()" class="fa fa-anchor"></a></h3> <p><strong>A <em>dictionary</em> (python type: <code class="line-numbers hljs inline no-lang">dict</code>) is a collection of many values that can be indexed by any object type</strong>, unlike lists that are automatically indexed by integers. <strong>Indexes for dictionaries are called <em>keys</em></strong>, and a key with its associated value is called a <em>key-value pair</em>. Python <strong>dictionaries use the curly braces notation <code class="line-numbers hljs inline no-lang">{ key1: value1, key2: value2, ...}</code></strong>.</p> <div class="alert box-container alert-default" data-v-4d146e2c><!----> <div class="header-and-body" data-v-4d146e2c><!----> <div class="box-body-wrapper" data-v-4d146e2c><!----> <!----> <div class="contents" data-v-4d146e2c><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-cube" data-v-4d146e2c></span></span> A list containing names of animals <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>['cat', 'dog', 'hen', 'fish']</code></p> <div class="table-responsive" data-v-4d146e2c><table class="markbind-table table table-bordered table-striped" data-v-4d146e2c><thead data-v-4d146e2c><tr data-v-4d146e2c><th data-v-4d146e2c>Index</th> <th data-v-4d146e2c>Value</th></tr></thead> <tbody data-v-4d146e2c><tr data-v-4d146e2c><td data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>0</code></td> <td data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>'cat'</code></td></tr> <tr data-v-4d146e2c><td data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>1</code></td> <td data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>'dog'</code></td></tr> <tr data-v-4d146e2c><td data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>2</code></td> <td data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>'hen'</code></td></tr> <tr data-v-4d146e2c><td data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>3</code></td> <td data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>'fish'</code></td></tr></tbody></table></div><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-cube" data-v-4d146e2c></span></span> A dictionary containing ages of three people <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>{'john': 12, 'sara': 14.5, 'colin': 13}</code>. <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>john</code>-<code class="line-numbers hljs inline no-lang" data-v-4d146e2c>12</code> is a key-value pair.</p> <div class="table-responsive" data-v-4d146e2c><table class="markbind-table table table-bordered table-striped" data-v-4d146e2c><thead data-v-4d146e2c><tr data-v-4d146e2c><th data-v-4d146e2c>Key</th> <th data-v-4d146e2c>Value</th></tr></thead> <tbody data-v-4d146e2c><tr data-v-4d146e2c><td data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>'john'</code></td> <td data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>12</code></td></tr> <tr data-v-4d146e2c><td data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>'sara'</code></td> <td data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>14.5</code></td></tr> <tr data-v-4d146e2c><td data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>'colin'</code></td> <td data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>13</code></td></tr></tbody></table></div><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-cube" data-v-4d146e2c></span></span> A dictionary containing details of a person <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>{'name': 'john', 'age': 14.5, 'sex': 'F', 'citizen': True}</code></p> <div class="table-responsive" data-v-4d146e2c><table class="markbind-table table table-bordered table-striped" data-v-4d146e2c><thead data-v-4d146e2c><tr data-v-4d146e2c><th data-v-4d146e2c>Key</th> <th data-v-4d146e2c>Value</th></tr></thead> <tbody data-v-4d146e2c><tr data-v-4d146e2c><td data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>'name'</code></td> <td data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>'john'</code></td></tr> <tr data-v-4d146e2c><td data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>'age'</code></td> <td data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>14.5</code></td></tr> <tr data-v-4d146e2c><td data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>'gender'</code></td> <td data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>'F'</code></td></tr> <tr data-v-4d146e2c><td data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>'citizen'</code></td> <td data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>True</code></td></tr></tbody></table></div></div> <!----></div></div></div> <div class="alert box-container alert-default" data-v-4d146e2c><!----> <div class="header-and-body" data-v-4d146e2c><!----> <div class="box-body-wrapper" data-v-4d146e2c><!----> <!----> <div class="contents" data-v-4d146e2c><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-cube" data-v-4d146e2c></span></span> Some examples of defining dictionaries.</p> <pre data-v-4d146e2c><code class="line-numbers hljs python" data-v-4d146e2c><span data-v-4d146e2c>friends = {} <span class="hljs-comment" data-v-4d146e2c># empty dictionary</span>
+</span><span data-v-4d146e2c>grades = {<span class="hljs-string" data-v-4d146e2c>'TEE3201'</span>: <span class="hljs-string" data-v-4d146e2c>'A'</span>}
+</span><span data-v-4d146e2c>numbers = {<span class="hljs-number" data-v-4d146e2c>1</span>: <span class="hljs-string" data-v-4d146e2c>'one'</span>, <span class="hljs-number" data-v-4d146e2c>2</span>: <span class="hljs-string" data-v-4d146e2c>'two'</span>, <span class="hljs-number" data-v-4d146e2c>3</span>: <span class="hljs-string" data-v-4d146e2c>'three'</span>}
+</span><span data-v-4d146e2c>is_nice = {<span class="hljs-string" data-v-4d146e2c>'jane'</span>: <span class="hljs-literal" data-v-4d146e2c>False</span>, <span class="hljs-string" data-v-4d146e2c>'hakim'</span>: <span class="hljs-literal" data-v-4d146e2c>True</span>, <span class="hljs-string" data-v-4d146e2c>'ravi'</span>: <span class="hljs-literal" data-v-4d146e2c>True</span>}
+</span><span data-v-4d146e2c>prices = {<span class="hljs-string" data-v-4d146e2c>'bread'</span>: <span class="hljs-number" data-v-4d146e2c>3.5</span>, <span class="hljs-string" data-v-4d146e2c>'butter'</span>: <span class="hljs-number" data-v-4d146e2c>5.0</span>, <span class="hljs-string" data-v-4d146e2c>'banana'</span>: <span class="hljs-number" data-v-4d146e2c>0.15</span>}
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></div> <!----></div></div></div> <p>Unlike lists, <strong>you cannot force a key-value pair in a dictionary to be at a specific position</strong>. The order of insertion will be the order of items in a dict.</p> <div><div expanded="" no-close="" class="card-container" data-v-28900d6e><div class="card expandable-card border-danger" data-v-28900d6e><div class="card-header header-toggle bg-danger border-danger" data-v-28900d6e><div class="caret-wrapper" data-v-28900d6e><!----></div> <div class="header-wrapper card-title bg-danger text-white" data-v-28900d6e><p data-v-28900d6e><span aria-hidden="true" class="fas fa-dumbbell" data-v-28900d6e></span> Exercise: Get Subject Info</p></div> <div class="button-wrapper" data-v-28900d6e><button type="button" class="collapse-button btn btn-outline-light" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-light" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-28900d6e></span></button> <button type="button" class="popup-button btn btn-outline-light" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-28900d6e></span></button></div></div> <div class="card-collapse" data-v-28900d6e><div class="card-body" data-v-28900d6e> <div data-v-28900d6e><h4 id="exercise-get-subject-info" data-v-28900d6e>Exercise: Get Subject Info<a href="#exercise-get-subject-info" onclick="event.stopPropagation()" class="fa fa-anchor" data-v-28900d6e></a></h4> <p data-v-28900d6e>Complete the <code class="line-numbers hljs inline no-lang" data-v-28900d6e>get_subject_info</code> function below to return a dictionary such that the code produces the given output.</p> <pre data-v-28900d6e><code class="line-numbers hljs python" data-v-28900d6e><span data-v-28900d6e><span class="hljs-function" data-v-28900d6e><span class="hljs-keyword" data-v-28900d6e>def</span> <span class="hljs-title" data-v-28900d6e>get_subject_info</span>(<span class="hljs-params" data-v-28900d6e>code, name, level, is_core</span>):</span>
+</span><span data-v-28900d6e>  <span class="hljs-keyword" data-v-28900d6e>return</span> {} <span class="hljs-comment" data-v-28900d6e># UPDATE THIS LINE</span>
+</span><span data-v-28900d6e>  
+</span><span data-v-28900d6e><span class="hljs-built_in" data-v-28900d6e>print</span>(get_subject_info(<span class="hljs-string" data-v-28900d6e>'TEE3201'</span>, <span class="hljs-string" data-v-28900d6e>'Software Engineering'</span>, <span class="hljs-number" data-v-28900d6e>3</span>, <span class="hljs-literal" data-v-28900d6e>False</span>))
+</span><span data-v-28900d6e><span class="hljs-built_in" data-v-28900d6e>print</span>(get_subject_info(<span class="hljs-string" data-v-28900d6e>'CS1101'</span>, <span class="hljs-string" data-v-28900d6e>'Programming Basics'</span>, <span class="hljs-number" data-v-28900d6e>1</span>, <span class="hljs-literal" data-v-28900d6e>True</span>))
+</span></code><div class="function-btn-container" data-v-28900d6e><button onclick="copyCodeBlock(this)" class="function-btn" data-v-28900d6e>
+    <div class="function-btn-body" data-v-28900d6e>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-28900d6e>
+    <g id="surface1" data-v-28900d6e>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-28900d6e></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><p data-v-28900d6e><span data-v-28900d6e><span aria-hidden="true" class="fas fa-arrow-down" data-v-28900d6e></span></span></p> <pre data-v-28900d6e><code class="line-numbers hljs" data-v-28900d6e><span data-v-28900d6e>{'code': 'TEE3201', 'name': 'Software Engineering', 'level': 3, 'core?': False}
+</span><span data-v-28900d6e>{'code': 'CS1101', 'name': 'Programming Basics', 'level': 1, 'core?': True}
+</span></code><div class="function-btn-container" data-v-28900d6e><button onclick="copyCodeBlock(this)" class="function-btn" data-v-28900d6e>
+    <div class="function-btn-body" data-v-28900d6e>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-28900d6e>
+    <g id="surface1" data-v-28900d6e>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-28900d6e></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><div class="algolia-no-index card-container" data-v-28900d6e><div class="card expandable-card border-0" data-v-28900d6e><div class="card-header header-toggle bg-white border-0" data-v-28900d6e><div class="caret-wrapper" data-v-28900d6e><span class="glyphicon glyphicon-chevron-right" data-v-28900d6e></span></div> <div class="header-wrapper card-title bg-white" data-v-28900d6e><p data-v-28900d6e><span class="dimmed" data-v-28900d6e><span aria-hidden="true" class="fas fa-battery-quarter" data-v-28900d6e></span> Partial solution</span></p></div> <div class="button-wrapper" data-v-28900d6e><button type="button" class="collapse-button btn btn-outline-secondary" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down"></span></button> <button type="button" class="close-button btn btn-outline-secondary seamless-button" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-28900d6e></span></button> <button type="button" class="popup-button btn btn-outline-secondary seamless-button" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-28900d6e></span></button></div></div> <div class="card-collapse" data-v-28900d6e><!----> <hr style="display:;" data-v-28900d6e></div> <!----></div></div></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:none;" data-v-28900d6e></div> <!----></div></div><p></p></div></div><hr style="border-top:3px double #c5c5c5;"> <div><h3 id="working-with-dictionaries">Working with Dictionaries<a href="#working-with-dictionaries" onclick="event.stopPropagation()" class="fa fa-anchor"></a></h3> <p><strong>You can use keys to access values in a dictionary.</strong></p> <div class="alert box-container alert-default" data-v-4d146e2c><!----> <div class="header-and-body" data-v-4d146e2c><!----> <div class="box-body-wrapper" data-v-4d146e2c><!----> <!----> <div class="contents" data-v-4d146e2c><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-cube" data-v-4d146e2c></span></span> Some examples of retrieving values based on the key:</p> <div data-v-4d146e2c><table data-v-4d146e2c><tbody data-v-4d146e2c><tr data-v-4d146e2c><td valign="top" data-v-4d146e2c><pre data-v-4d146e2c><code class="line-numbers hljs python" data-v-4d146e2c><span data-v-4d146e2c>numbers = {<span class="hljs-number" data-v-4d146e2c>1</span>: <span class="hljs-string" data-v-4d146e2c>'one'</span>, <span class="hljs-number" data-v-4d146e2c>2</span>: <span class="hljs-string" data-v-4d146e2c>'two'</span>, <span class="hljs-number" data-v-4d146e2c>3</span>: <span class="hljs-string" data-v-4d146e2c>'three'</span>}
+</span><span data-v-4d146e2c>prices = {<span class="hljs-string" data-v-4d146e2c>'bread'</span>: <span class="hljs-number" data-v-4d146e2c>3.5</span>, <span class="hljs-string" data-v-4d146e2c>'butter'</span>: <span class="hljs-number" data-v-4d146e2c>5.0</span>, <span class="hljs-string" data-v-4d146e2c>'banana'</span>: <span class="hljs-number" data-v-4d146e2c>0.15</span>}
+</span><span data-v-4d146e2c><span class="hljs-built_in" data-v-4d146e2c>print</span>(<span class="hljs-built_in" data-v-4d146e2c>type</span>(numbers))
+</span><span data-v-4d146e2c><span class="hljs-built_in" data-v-4d146e2c>print</span>(numbers[<span class="hljs-number" data-v-4d146e2c>1</span>])
+</span><span data-v-4d146e2c><span class="hljs-built_in" data-v-4d146e2c>print</span>(prices[<span class="hljs-string" data-v-4d146e2c>'butter'</span>])
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td> <td valign="middle" data-v-4d146e2c> → <br data-v-4d146e2c><br data-v-4d146e2c></td> <td valign="bottom" data-v-4d146e2c><pre data-v-4d146e2c><code class="no-line-numbers hljs" data-v-4d146e2c><span data-v-4d146e2c>&lt;class 'dict'&gt;
+</span><span data-v-4d146e2c>one
+</span><span data-v-4d146e2c>5.0
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td></tr></tbody></table></div> <p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-cube" data-v-4d146e2c></span></span> Examples of adding, updating, and deleting dictionary entries:</p> <pre data-v-4d146e2c><code class="line-numbers hljs python" data-v-4d146e2c><span data-v-4d146e2c>grades = {<span class="hljs-string" data-v-4d146e2c>'TEE3201'</span>: <span class="hljs-string" data-v-4d146e2c>'A'</span>}
+</span><span data-v-4d146e2c>grades[<span class="hljs-string" data-v-4d146e2c>'CS2103'</span>] = <span class="hljs-string" data-v-4d146e2c>'B'</span>
+</span><span data-v-4d146e2c><span class="hljs-built_in" data-v-4d146e2c>print</span>(<span class="hljs-string" data-v-4d146e2c>'After adding:'</span>,grades)
+</span><span data-v-4d146e2c>grades[<span class="hljs-string" data-v-4d146e2c>'TEE3201'</span>] = <span class="hljs-string" data-v-4d146e2c>'A+'</span>
+</span><span data-v-4d146e2c><span class="hljs-built_in" data-v-4d146e2c>print</span>(<span class="hljs-string" data-v-4d146e2c>'After updating:'</span>,grades)
+</span><span data-v-4d146e2c><span class="hljs-keyword" data-v-4d146e2c>del</span> grades[<span class="hljs-string" data-v-4d146e2c>'CS2103'</span>]
+</span><span data-v-4d146e2c><span class="hljs-built_in" data-v-4d146e2c>print</span>(<span class="hljs-string" data-v-4d146e2c>'After deleting:'</span>, grades)
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-arrow-down" data-v-4d146e2c></span></span></p> <pre data-v-4d146e2c><code class="no-line-numbers hljs" data-v-4d146e2c><span data-v-4d146e2c>After adding: {'TEE3201': 'A', 'CS2103': 'B'}
+</span><span data-v-4d146e2c>After updating: {'TEE3201': 'A+', 'CS2103': 'B'}
+</span><span data-v-4d146e2c>After deleting: {'TEE3201': 'A+'}
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></div> <!----></div></div></div> <div><div expanded="" no-close="" class="card-container" data-v-28900d6e><div class="card expandable-card border-danger" data-v-28900d6e><div class="card-header header-toggle bg-danger border-danger" data-v-28900d6e><div class="caret-wrapper" data-v-28900d6e><!----></div> <div class="header-wrapper card-title bg-danger text-white" data-v-28900d6e><p data-v-28900d6e><span aria-hidden="true" class="fas fa-dumbbell" data-v-28900d6e></span> Exercise: Get Set Delete Score</p></div> <div class="button-wrapper" data-v-28900d6e><button type="button" class="collapse-button btn btn-outline-light" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-light" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-28900d6e></span></button> <button type="button" class="popup-button btn btn-outline-light" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-28900d6e></span></button></div></div> <div class="card-collapse" data-v-28900d6e><div class="card-body" data-v-28900d6e> <div data-v-28900d6e><h4 id="exercise-get-set-delete-score" data-v-28900d6e>Exercise: Get, Set, Delete Score<a href="#exercise-get-set-delete-score" onclick="event.stopPropagation()" class="fa fa-anchor" data-v-28900d6e></a></h4> <p data-v-28900d6e>Complete the three function below such that the code produces the given output.</p> <p data-v-28900d6e>Given the parameter<code class="line-numbers hljs inline no-lang" data-v-28900d6e>scores</code> is a dictionary of the format <code class="line-numbers hljs inline no-lang" data-v-28900d6e>{'amy': 35, 'betty': 36, 'charlie': 30}</code> which contains scores of a bunch of players,</p> <ul data-v-28900d6e><li data-v-28900d6e><code class="line-numbers hljs inline no-lang" data-v-28900d6e>get_score(scores, player)</code>: returns the value of the key <code class="line-numbers hljs inline no-lang" data-v-28900d6e>player</code></li> <li data-v-28900d6e><code class="line-numbers hljs inline no-lang" data-v-28900d6e>set_score(scores, player, new_score)</code>: sets the value of the key <code class="line-numbers hljs inline no-lang" data-v-28900d6e>player</code> to the <code class="line-numbers hljs inline no-lang" data-v-28900d6e>new_score</code></li> <li data-v-28900d6e><code class="line-numbers hljs inline no-lang" data-v-28900d6e>delete_score(scores, player)</code>: deletes the value for key <code class="line-numbers hljs inline no-lang" data-v-28900d6e>player</code></li></ul> <pre data-v-28900d6e><code class="line-numbers hljs python" data-v-28900d6e><span data-v-28900d6e><span class="hljs-function" data-v-28900d6e><span class="hljs-keyword" data-v-28900d6e>def</span> <span class="hljs-title" data-v-28900d6e>get_score</span>(<span class="hljs-params" data-v-28900d6e>scores, player</span>):</span>
+</span><span data-v-28900d6e>  <span class="hljs-keyword" data-v-28900d6e>return</span> <span class="hljs-comment" data-v-28900d6e># UPDATE HERE!</span>
+</span><span data-v-28900d6e>    
+</span><span data-v-28900d6e><span class="hljs-function" data-v-28900d6e><span class="hljs-keyword" data-v-28900d6e>def</span> <span class="hljs-title" data-v-28900d6e>set_score</span>(<span class="hljs-params" data-v-28900d6e>scores, player, new_score</span>):</span>
+</span><span data-v-28900d6e>  <span class="hljs-keyword" data-v-28900d6e>pass</span> <span class="hljs-comment" data-v-28900d6e># REPLACE THIS WITH YOUR CODE!</span>
+</span><span data-v-28900d6e>  
+</span><span data-v-28900d6e><span class="hljs-function" data-v-28900d6e><span class="hljs-keyword" data-v-28900d6e>def</span> <span class="hljs-title" data-v-28900d6e>delete_score</span>(<span class="hljs-params" data-v-28900d6e>scores, player</span>):</span>
+</span><span data-v-28900d6e>  <span class="hljs-keyword" data-v-28900d6e>pass</span> <span class="hljs-comment" data-v-28900d6e># REPLACE THIS WITH YOUR CODE!</span>
+</span><span data-v-28900d6e>  
+</span><span data-v-28900d6e>game1_scores = {<span class="hljs-string" data-v-28900d6e>'amy'</span>: <span class="hljs-number" data-v-28900d6e>35</span>, <span class="hljs-string" data-v-28900d6e>'betty'</span>: <span class="hljs-number" data-v-28900d6e>36</span>, <span class="hljs-string" data-v-28900d6e>'charlie'</span>: <span class="hljs-number" data-v-28900d6e>30</span>}
+</span><span data-v-28900d6e><span class="hljs-built_in" data-v-28900d6e>print</span>(get_score(game1_scores, <span class="hljs-string" data-v-28900d6e>'betty'</span>))
+</span><span data-v-28900d6e><span class="hljs-built_in" data-v-28900d6e>print</span>(get_score(game1_scores, <span class="hljs-string" data-v-28900d6e>'amy'</span>))
+</span><span data-v-28900d6e>set_score(game1_scores, <span class="hljs-string" data-v-28900d6e>'charlie'</span>, <span class="hljs-number" data-v-28900d6e>5</span>)
+</span><span data-v-28900d6e>set_score(game1_scores, <span class="hljs-string" data-v-28900d6e>'dan'</span>, <span class="hljs-number" data-v-28900d6e>0</span>)
+</span><span data-v-28900d6e><span class="hljs-built_in" data-v-28900d6e>print</span>(game1_scores)
+</span><span data-v-28900d6e>delete_score(game1_scores, <span class="hljs-string" data-v-28900d6e>'dan'</span>)
+</span><span data-v-28900d6e><span class="hljs-built_in" data-v-28900d6e>print</span>(game1_scores)
+</span></code><div class="function-btn-container" data-v-28900d6e><button onclick="copyCodeBlock(this)" class="function-btn" data-v-28900d6e>
+    <div class="function-btn-body" data-v-28900d6e>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-28900d6e>
+    <g id="surface1" data-v-28900d6e>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-28900d6e></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><p data-v-28900d6e><span data-v-28900d6e><span aria-hidden="true" class="fas fa-arrow-down" data-v-28900d6e></span></span></p> <pre data-v-28900d6e><code class="line-numbers hljs" data-v-28900d6e><span data-v-28900d6e>36
+</span><span data-v-28900d6e>35
+</span><span data-v-28900d6e>{'amy': 35, 'betty': 36, 'charlie': 5, 'dan': 0}
+</span><span data-v-28900d6e>{'amy': 35, 'betty': 36, 'charlie': 5}
+</span></code><div class="function-btn-container" data-v-28900d6e><button onclick="copyCodeBlock(this)" class="function-btn" data-v-28900d6e>
+    <div class="function-btn-body" data-v-28900d6e>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-28900d6e>
+    <g id="surface1" data-v-28900d6e>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-28900d6e></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><div class="algolia-no-index card-container" data-v-28900d6e><div class="card expandable-card border-0" data-v-28900d6e><div class="card-header header-toggle bg-white border-0" data-v-28900d6e><div class="caret-wrapper" data-v-28900d6e><span class="glyphicon glyphicon-chevron-right" data-v-28900d6e></span></div> <div class="header-wrapper card-title bg-white" data-v-28900d6e><p data-v-28900d6e><span class="dimmed" data-v-28900d6e><span aria-hidden="true" class="fas fa-battery-quarter" data-v-28900d6e></span> Partial solution</span></p></div> <div class="button-wrapper" data-v-28900d6e><button type="button" class="collapse-button btn btn-outline-secondary" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down"></span></button> <button type="button" class="close-button btn btn-outline-secondary seamless-button" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-28900d6e></span></button> <button type="button" class="popup-button btn btn-outline-secondary seamless-button" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-28900d6e></span></button></div></div> <div class="card-collapse" data-v-28900d6e><!----> <hr style="display:;" data-v-28900d6e></div> <!----></div></div></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:none;" data-v-28900d6e></div> <!----></div></div><p></p></div> <p><strong>Trying to access a value for a non-existent key raises a <code class="line-numbers hljs inline no-lang">KeyError</code> exception.</strong></p> <div class="alert box-container alert-default" data-v-4d146e2c><!----> <div class="header-and-body" data-v-4d146e2c><!----> <div class="box-body-wrapper" data-v-4d146e2c><!----> <!----> <div class="contents" data-v-4d146e2c><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-cube" data-v-4d146e2c></span></span> This example raises an exception because the key <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>'santa'</code> does not exist in the dictionary <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>is_nice</code>:</p> <div data-v-4d146e2c><table data-v-4d146e2c><tbody data-v-4d146e2c><tr data-v-4d146e2c><td valign="top" data-v-4d146e2c><pre data-v-4d146e2c><code class="no-line-numbers hljs python" data-v-4d146e2c><span data-v-4d146e2c>is_nice = {<span class="hljs-string" data-v-4d146e2c>'jane'</span>: <span class="hljs-literal" data-v-4d146e2c>False</span>, <span class="hljs-string" data-v-4d146e2c>'hakim'</span>: <span class="hljs-literal" data-v-4d146e2c>True</span>}
+</span><span data-v-4d146e2c><span class="hljs-built_in" data-v-4d146e2c>print</span>(is_nice[<span class="hljs-string" data-v-4d146e2c>'santa'</span>])
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td> <td valign="top" data-v-4d146e2c> → <br data-v-4d146e2c><br data-v-4d146e2c></td> <td valign="bottom" data-v-4d146e2c><pre data-v-4d146e2c><code class="no-line-numbers hljs" data-v-4d146e2c><span data-v-4d146e2c>Traceback (most recent call last):
+</span><span data-v-4d146e2c>  File &quot;python&quot;, line 9, in &lt;module&gt;
+</span><span data-v-4d146e2c>KeyError: 'santa'
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td></tr></tbody></table></div></div> <!----></div></div></div> <div><div expanded="" no-close="" class="card-container" data-v-28900d6e><div class="card expandable-card border-danger" data-v-28900d6e><div class="card-header header-toggle bg-danger border-danger" data-v-28900d6e><div class="caret-wrapper" data-v-28900d6e><!----></div> <div class="header-wrapper card-title bg-danger text-white" data-v-28900d6e><p data-v-28900d6e><span aria-hidden="true" class="fas fa-dumbbell" data-v-28900d6e></span> Exercise: Get Score with Error Handling</p></div> <div class="button-wrapper" data-v-28900d6e><button type="button" class="collapse-button btn btn-outline-light" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-light" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-28900d6e></span></button> <button type="button" class="popup-button btn btn-outline-light" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-28900d6e></span></button></div></div> <div class="card-collapse" data-v-28900d6e><div class="card-body" data-v-28900d6e> <div data-v-28900d6e><h4 id="exercise-get-score-with-error-handling" data-v-28900d6e>Exercise: Get Score with Error Handling<a href="#exercise-get-score-with-error-handling" onclick="event.stopPropagation()" class="fa fa-anchor" data-v-28900d6e></a></h4> <p data-v-28900d6e>Update the <code class="line-numbers hljs inline no-lang" data-v-28900d6e>get_score1(scores, player)</code> function to handle error situations, as described below.</p> <p data-v-28900d6e>Given the parameter<code class="line-numbers hljs inline no-lang" data-v-28900d6e>scores</code> is a dictionary of the format <code class="line-numbers hljs inline no-lang" data-v-28900d6e>{'amy': 35, 'betty': 36, 'charlie': 30}</code> which contains scores of a bunch of players,</p> <ul data-v-28900d6e><li data-v-28900d6e><code class="line-numbers hljs inline no-lang" data-v-28900d6e>get_score1(scores, player)</code>: returns the value of the key <code class="line-numbers hljs inline no-lang" data-v-28900d6e>player</code>. <mark data-v-28900d6e>Returns an error message if the <code class="line-numbers hljs inline no-lang" data-v-28900d6e>player</code> is not in <code class="line-numbers hljs inline no-lang" data-v-28900d6e>scores</code></mark>.</li></ul> <pre data-v-28900d6e><code class="line-numbers hljs python" data-v-28900d6e><span data-v-28900d6e><span class="hljs-function" data-v-28900d6e><span class="hljs-keyword" data-v-28900d6e>def</span> <span class="hljs-title" data-v-28900d6e>get_score1</span>(<span class="hljs-params" data-v-28900d6e>scores, player</span>):</span>
+</span><span data-v-28900d6e>  <span class="hljs-keyword" data-v-28900d6e>return</span> scores[player] <span class="hljs-comment" data-v-28900d6e># UPDATE HERE!</span>
+</span><span data-v-28900d6e>    
+</span><span data-v-28900d6e>game1_scores = {<span class="hljs-string" data-v-28900d6e>'amy'</span>: <span class="hljs-number" data-v-28900d6e>35</span>, <span class="hljs-string" data-v-28900d6e>'betty'</span>: <span class="hljs-number" data-v-28900d6e>36</span>, <span class="hljs-string" data-v-28900d6e>'charlie'</span>: <span class="hljs-number" data-v-28900d6e>30</span>}
+</span><span data-v-28900d6e><span class="hljs-built_in" data-v-28900d6e>print</span>(get_score1(game1_scores, <span class="hljs-string" data-v-28900d6e>'charlie'</span>))
+</span><span data-v-28900d6e><span class="hljs-built_in" data-v-28900d6e>print</span>(get_score1(game1_scores, <span class="hljs-string" data-v-28900d6e>'brown'</span>))
+</span></code><div class="function-btn-container" data-v-28900d6e><button onclick="copyCodeBlock(this)" class="function-btn" data-v-28900d6e>
+    <div class="function-btn-body" data-v-28900d6e>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-28900d6e>
+    <g id="surface1" data-v-28900d6e>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-28900d6e></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><p data-v-28900d6e><span data-v-28900d6e><span aria-hidden="true" class="fas fa-arrow-down" data-v-28900d6e></span></span></p> <pre data-v-28900d6e><code class="line-numbers hljs" data-v-28900d6e><span data-v-28900d6e>30
+</span><span data-v-28900d6e>brown is not in the game!
+</span></code><div class="function-btn-container" data-v-28900d6e><button onclick="copyCodeBlock(this)" class="function-btn" data-v-28900d6e>
+    <div class="function-btn-body" data-v-28900d6e>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-28900d6e>
+    <g id="surface1" data-v-28900d6e>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-28900d6e></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><div class="algolia-no-index card-container" data-v-28900d6e><div class="card expandable-card border-0" data-v-28900d6e><div class="card-header header-toggle bg-white border-0" data-v-28900d6e><div class="caret-wrapper" data-v-28900d6e><span class="glyphicon glyphicon-chevron-right" data-v-28900d6e></span></div> <div class="header-wrapper card-title bg-white" data-v-28900d6e><p data-v-28900d6e><span class="dimmed" data-v-28900d6e><span aria-hidden="true" class="fas fa-battery-quarter" data-v-28900d6e></span> Partial solution</span></p></div> <div class="button-wrapper" data-v-28900d6e><button type="button" class="collapse-button btn btn-outline-secondary" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down"></span></button> <button type="button" class="close-button btn btn-outline-secondary seamless-button" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-28900d6e></span></button> <button type="button" class="popup-button btn btn-outline-secondary seamless-button" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-28900d6e></span></button></div></div> <div class="card-collapse" data-v-28900d6e><!----> <hr style="display:;" data-v-28900d6e></div> <!----></div></div></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:none;" data-v-28900d6e></div> <!----></div></div><p></p></div> <p><strong>You can use <code class="line-numbers hljs inline no-lang">keys()</code> and <code class="line-numbers hljs inline no-lang">values()</code> methods to iterate through keys and values of a dictionary, respectively.</strong></p> <div class="alert box-container alert-default" data-v-4d146e2c><!----> <div class="header-and-body" data-v-4d146e2c><!----> <div class="box-body-wrapper" data-v-4d146e2c><!----> <!----> <div class="contents" data-v-4d146e2c><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-cube" data-v-4d146e2c></span></span> The code below shows how to iterate through keys/values of a dictionary.</p> <div data-v-4d146e2c><table data-v-4d146e2c><tbody data-v-4d146e2c><tr data-v-4d146e2c><td valign="top" data-v-4d146e2c><pre data-v-4d146e2c><code class="no-line-numbers hljs python" data-v-4d146e2c><span data-v-4d146e2c>prices = {<span class="hljs-string" data-v-4d146e2c>'bread'</span>: <span class="hljs-number" data-v-4d146e2c>3.5</span>, <span class="hljs-string" data-v-4d146e2c>'butter'</span>: <span class="hljs-number" data-v-4d146e2c>5.0</span>, <span class="hljs-string" data-v-4d146e2c>'banana'</span>: <span class="hljs-number" data-v-4d146e2c>0.15</span>}
+</span><span data-v-4d146e2c><span class="hljs-keyword" data-v-4d146e2c>for</span> k <span class="hljs-keyword" data-v-4d146e2c>in</span> prices.keys():
+</span><span data-v-4d146e2c>  <span class="hljs-built_in" data-v-4d146e2c>print</span>(k, <span class="hljs-string" data-v-4d146e2c>'-&gt;'</span>, prices[k])
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td> <td valign="bottom" data-v-4d146e2c> → <br data-v-4d146e2c><br data-v-4d146e2c></td> <td valign="bottom" data-v-4d146e2c><pre data-v-4d146e2c><code class="no-line-numbers hljs" data-v-4d146e2c><span data-v-4d146e2c>bread -&gt; 3.5
+</span><span data-v-4d146e2c>butter -&gt; 5.0
+</span><span data-v-4d146e2c>banana -&gt; 0.15
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td></tr></tbody></table></div> <div data-v-4d146e2c><table data-v-4d146e2c><tbody data-v-4d146e2c><tr data-v-4d146e2c><td valign="top" data-v-4d146e2c><pre data-v-4d146e2c><code class="no-line-numbers hljs python" data-v-4d146e2c><span data-v-4d146e2c>prices = {<span class="hljs-string" data-v-4d146e2c>'bread'</span>: <span class="hljs-number" data-v-4d146e2c>3.5</span>, <span class="hljs-string" data-v-4d146e2c>'butter'</span>: <span class="hljs-number" data-v-4d146e2c>5.0</span>, <span class="hljs-string" data-v-4d146e2c>'banana'</span>: <span class="hljs-number" data-v-4d146e2c>0.15</span>}
+</span><span data-v-4d146e2c><span class="hljs-keyword" data-v-4d146e2c>for</span> v <span class="hljs-keyword" data-v-4d146e2c>in</span> prices.values():
+</span><span data-v-4d146e2c>  <span class="hljs-built_in" data-v-4d146e2c>print</span>(v)
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td> <td valign="bottom" data-v-4d146e2c> → <br data-v-4d146e2c><br data-v-4d146e2c></td> <td valign="bottom" data-v-4d146e2c><pre data-v-4d146e2c><code class="no-line-numbers hljs" data-v-4d146e2c><span data-v-4d146e2c>3.5
+</span><span data-v-4d146e2c>5.0
+</span><span data-v-4d146e2c>0.15
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td></tr></tbody></table></div></div> <!----></div></div></div> <p>You can <strong>use the <code class="line-numbers hljs inline no-lang">sorted()</code> function to sort the keys/values before iterating through them</strong>.</p> <div class="alert box-container alert-default" data-v-4d146e2c><!----> <div class="header-and-body" data-v-4d146e2c><!----> <div class="box-body-wrapper" data-v-4d146e2c><!----> <!----> <div class="contents" data-v-4d146e2c><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-cube" data-v-4d146e2c></span></span> The code below shows how to iterate through keys/values of a dictionary.</p> <div data-v-4d146e2c><table data-v-4d146e2c><tbody data-v-4d146e2c><tr data-v-4d146e2c><td valign="top" data-v-4d146e2c><pre data-v-4d146e2c><code class="no-line-numbers hljs python" data-v-4d146e2c><span data-v-4d146e2c>prices = {<span class="hljs-string" data-v-4d146e2c>'bread'</span>: <span class="hljs-number" data-v-4d146e2c>3.5</span>, <span class="hljs-string" data-v-4d146e2c>'butter'</span>: <span class="hljs-number" data-v-4d146e2c>5.0</span>, <span class="hljs-string" data-v-4d146e2c>'banana'</span>: <span class="hljs-number" data-v-4d146e2c>0.15</span>}
+</span><span data-v-4d146e2c><span class="hljs-keyword" data-v-4d146e2c>for</span> k <span class="hljs-keyword" data-v-4d146e2c>in</span> <span class="hljs-built_in" data-v-4d146e2c>sorted</span>(prices.keys()):
+</span><span data-v-4d146e2c>  <span class="hljs-built_in" data-v-4d146e2c>print</span>(k, <span class="hljs-string" data-v-4d146e2c>'-&gt;'</span>, prices[k])
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td> <td valign="bottom" data-v-4d146e2c> → <br data-v-4d146e2c><br data-v-4d146e2c></td> <td valign="bottom" data-v-4d146e2c><pre data-v-4d146e2c><code class="no-line-numbers hljs" data-v-4d146e2c><span data-v-4d146e2c>banana -&gt; 0.15
+</span><span data-v-4d146e2c>bread -&gt; 3.5
+</span><span data-v-4d146e2c>butter -&gt; 5.0
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td></tr></tbody></table></div></div> <!----></div></div></div> <div><div expanded="" no-close="" class="card-container" data-v-28900d6e><div class="card expandable-card border-danger" data-v-28900d6e><div class="card-header header-toggle bg-danger border-danger" data-v-28900d6e><div class="caret-wrapper" data-v-28900d6e><!----></div> <div class="header-wrapper card-title bg-danger text-white" data-v-28900d6e><p data-v-28900d6e><span aria-hidden="true" class="fas fa-dumbbell" data-v-28900d6e></span> Exercise: Print Scorecard</p></div> <div class="button-wrapper" data-v-28900d6e><button type="button" class="collapse-button btn btn-outline-light" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-light" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-28900d6e></span></button> <button type="button" class="popup-button btn btn-outline-light" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-28900d6e></span></button></div></div> <div class="card-collapse" data-v-28900d6e><div class="card-body" data-v-28900d6e> <div data-v-28900d6e><h4 id="exercise-print-scorecard" data-v-28900d6e>Exercise: Print Scorecard<a href="#exercise-print-scorecard" onclick="event.stopPropagation()" class="fa fa-anchor" data-v-28900d6e></a></h4> <p data-v-28900d6e>Update the functions in the code to behave as described below such that the code produces the output given below the code.</p> <p data-v-28900d6e>Given the parameter<code class="line-numbers hljs inline no-lang" data-v-28900d6e>scores</code> is a dictionary of the format <code class="line-numbers hljs inline no-lang" data-v-28900d6e>{'amy': 35, 'betty': 36, 'charlie': 30}</code> which contains scores of a bunch of players,</p> <ul data-v-28900d6e><li data-v-28900d6e><code class="line-numbers hljs inline no-lang" data-v-28900d6e>get_team_score(scores)</code>: returns the total of all scores of all players in <code class="line-numbers hljs inline no-lang" data-v-28900d6e>scores</code>.</li> <li data-v-28900d6e><code class="line-numbers hljs inline no-lang" data-v-28900d6e>print_scorecard(scores)</code>: prints scores of each player in the format given, in the alphabetical order of player names.</li></ul> <pre data-v-28900d6e><code class="line-numbers hljs python" data-v-28900d6e><span data-v-28900d6e><span class="hljs-function" data-v-28900d6e><span class="hljs-keyword" data-v-28900d6e>def</span> <span class="hljs-title" data-v-28900d6e>get_team_score</span>(<span class="hljs-params" data-v-28900d6e>scores</span>):</span>
+</span><span data-v-28900d6e>  total = <span class="hljs-number" data-v-28900d6e>0</span>
+</span><span data-v-28900d6e>  <span class="hljs-comment" data-v-28900d6e>#ADD YOUR CODE HERE!</span>
+</span><span data-v-28900d6e>  <span class="hljs-keyword" data-v-28900d6e>return</span> total
+</span><span data-v-28900d6e>  
+</span><span data-v-28900d6e><span class="hljs-function" data-v-28900d6e><span class="hljs-keyword" data-v-28900d6e>def</span> <span class="hljs-title" data-v-28900d6e>print_scorecard</span>(<span class="hljs-params" data-v-28900d6e>scores</span>):</span>
+</span><span data-v-28900d6e>  <span class="hljs-comment" data-v-28900d6e>#pass #REPLACE WITH YOUR CODE!</span>
+</span><span data-v-28900d6e>
+</span><span data-v-28900d6e>game2_scores = {<span class="hljs-string" data-v-28900d6e>'zac'</span>: <span class="hljs-number" data-v-28900d6e>35</span>, <span class="hljs-string" data-v-28900d6e>'betty'</span>: <span class="hljs-number" data-v-28900d6e>30</span>, <span class="hljs-string" data-v-28900d6e>'aaron'</span>: <span class="hljs-number" data-v-28900d6e>10</span>}
+</span><span data-v-28900d6e>print_scorecard(game2_scores)
+</span><span data-v-28900d6e><span class="hljs-built_in" data-v-28900d6e>print</span>(<span class="hljs-string" data-v-28900d6e>'total ='</span>, get_team_score(game2_scores))
+</span></code><div class="function-btn-container" data-v-28900d6e><button onclick="copyCodeBlock(this)" class="function-btn" data-v-28900d6e>
+    <div class="function-btn-body" data-v-28900d6e>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-28900d6e>
+    <g id="surface1" data-v-28900d6e>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-28900d6e></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><p data-v-28900d6e><span data-v-28900d6e><span aria-hidden="true" class="fas fa-arrow-down" data-v-28900d6e></span></span></p> <pre data-v-28900d6e><code class="line-numbers hljs" data-v-28900d6e><span data-v-28900d6e>aaron = 10
+</span><span data-v-28900d6e>betty = 30
+</span><span data-v-28900d6e>zac = 35
+</span><span data-v-28900d6e>total = 75
+</span></code><div class="function-btn-container" data-v-28900d6e><button onclick="copyCodeBlock(this)" class="function-btn" data-v-28900d6e>
+    <div class="function-btn-body" data-v-28900d6e>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-28900d6e>
+    <g id="surface1" data-v-28900d6e>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-28900d6e></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><div class="algolia-no-index card-container" data-v-28900d6e><div class="card expandable-card border-0" data-v-28900d6e><div class="card-header header-toggle bg-white border-0" data-v-28900d6e><div class="caret-wrapper" data-v-28900d6e><span class="glyphicon glyphicon-chevron-right" data-v-28900d6e></span></div> <div class="header-wrapper card-title bg-white" data-v-28900d6e><p data-v-28900d6e><span class="dimmed" data-v-28900d6e><span aria-hidden="true" class="fas fa-battery-quarter" data-v-28900d6e></span> Partial solution</span></p></div> <div class="button-wrapper" data-v-28900d6e><button type="button" class="collapse-button btn btn-outline-secondary" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down"></span></button> <button type="button" class="close-button btn btn-outline-secondary seamless-button" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-28900d6e></span></button> <button type="button" class="popup-button btn btn-outline-secondary seamless-button" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-28900d6e></span></button></div></div> <div class="card-collapse" data-v-28900d6e><!----> <hr style="display:;" data-v-28900d6e></div> <!----></div></div></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:none;" data-v-28900d6e></div> <!----></div></div><p></p></div> <p>As usual, you can <strong>use <code class="line-numbers hljs inline no-lang">in</code> and <code class="line-numbers hljs inline no-lang">not in</code> to check whether a key or a value is in a dictionary</strong>.</p> <div class="alert box-container alert-default" data-v-4d146e2c><!----> <div class="header-and-body" data-v-4d146e2c><!----> <div class="box-body-wrapper" data-v-4d146e2c><!----> <!----> <div class="contents" data-v-4d146e2c><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-cube" data-v-4d146e2c></span></span> The code below shows how to check if a certain key or a value exists in a dictionary.</p> <div data-v-4d146e2c><table data-v-4d146e2c><tbody data-v-4d146e2c><tr data-v-4d146e2c><td valign="top" data-v-4d146e2c><pre data-v-4d146e2c><code class="line-numbers hljs python" data-v-4d146e2c><span data-v-4d146e2c>prices = {<span class="hljs-string" data-v-4d146e2c>'bread'</span>: <span class="hljs-number" data-v-4d146e2c>3.5</span>, <span class="hljs-string" data-v-4d146e2c>'butter'</span>: <span class="hljs-number" data-v-4d146e2c>5.0</span>, <span class="hljs-string" data-v-4d146e2c>'banana'</span>: <span class="hljs-number" data-v-4d146e2c>0.15</span>}
+</span><span data-v-4d146e2c><span class="hljs-built_in" data-v-4d146e2c>print</span>(<span class="hljs-string" data-v-4d146e2c>'bread'</span> <span class="hljs-keyword" data-v-4d146e2c>in</span> prices.keys())
+</span><span data-v-4d146e2c><span class="hljs-built_in" data-v-4d146e2c>print</span>(<span class="hljs-string" data-v-4d146e2c>'sugar'</span> <span class="hljs-keyword" data-v-4d146e2c>not</span> <span class="hljs-keyword" data-v-4d146e2c>in</span> prices.keys())
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td> <td valign="bottom" data-v-4d146e2c> → <br data-v-4d146e2c><br data-v-4d146e2c></td> <td valign="bottom" data-v-4d146e2c><pre data-v-4d146e2c><code class="no-line-numbers hljs" data-v-4d146e2c><span data-v-4d146e2c>True
+</span><span data-v-4d146e2c>True
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td></tr></tbody></table></div> <div data-v-4d146e2c><table data-v-4d146e2c><tbody data-v-4d146e2c><tr data-v-4d146e2c><td valign="top" data-v-4d146e2c><pre data-v-4d146e2c><code class="line-numbers hljs python" data-v-4d146e2c><span data-v-4d146e2c>prices = {<span class="hljs-string" data-v-4d146e2c>'bread'</span>: <span class="hljs-number" data-v-4d146e2c>3.5</span>, <span class="hljs-string" data-v-4d146e2c>'butter'</span>: <span class="hljs-number" data-v-4d146e2c>5.0</span>, <span class="hljs-string" data-v-4d146e2c>'banana'</span>: <span class="hljs-number" data-v-4d146e2c>0.15</span>}
+</span><span data-v-4d146e2c><span class="hljs-built_in" data-v-4d146e2c>print</span>(<span class="hljs-number" data-v-4d146e2c>3.5</span> <span class="hljs-keyword" data-v-4d146e2c>in</span> prices.values())
+</span><span data-v-4d146e2c><span class="hljs-built_in" data-v-4d146e2c>print</span>(<span class="hljs-number" data-v-4d146e2c>6.0</span> <span class="hljs-keyword" data-v-4d146e2c>in</span> prices.values())
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td> <td valign="bottom" data-v-4d146e2c> → <br data-v-4d146e2c><br data-v-4d146e2c></td> <td valign="bottom" data-v-4d146e2c><pre data-v-4d146e2c><code class="no-line-numbers hljs" data-v-4d146e2c><span data-v-4d146e2c>True
+</span><span data-v-4d146e2c>False
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td></tr></tbody></table></div></div> <!----></div></div></div> <div><div expanded="" no-close="" class="card-container" data-v-28900d6e><div class="card expandable-card border-danger" data-v-28900d6e><div class="card-header header-toggle bg-danger border-danger" data-v-28900d6e><div class="caret-wrapper" data-v-28900d6e><!----></div> <div class="header-wrapper card-title bg-danger text-white" data-v-28900d6e><p data-v-28900d6e><span aria-hidden="true" class="fas fa-dumbbell" data-v-28900d6e></span> Exercise: Add Bonus</p></div> <div class="button-wrapper" data-v-28900d6e><button type="button" class="collapse-button btn btn-outline-light" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-light" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-28900d6e></span></button> <button type="button" class="popup-button btn btn-outline-light" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-28900d6e></span></button></div></div> <div class="card-collapse" data-v-28900d6e><div class="card-body" data-v-28900d6e> <div data-v-28900d6e><h4 id="exercise-add-bonus" data-v-28900d6e>Exercise: Add Bonus<a href="#exercise-add-bonus" onclick="event.stopPropagation()" class="fa fa-anchor" data-v-28900d6e></a></h4> <p data-v-28900d6e>Update the functions in the code to behave as described below such that the code produces the output given below the code.</p> <p data-v-28900d6e>Given the parameter<code class="line-numbers hljs inline no-lang" data-v-28900d6e>scores</code> is a dictionary of the format <code class="line-numbers hljs inline no-lang" data-v-28900d6e>{'amy': 35, 'betty': 36, 'charlie': 30}</code> which contains scores of a bunch of players,</p> <ul data-v-28900d6e><li data-v-28900d6e><code class="line-numbers hljs inline no-lang" data-v-28900d6e>add_bonus(scores, player, bonus)</code>: adds the <code class="line-numbers hljs inline no-lang" data-v-28900d6e>bonus</code> to the value of the <code class="line-numbers hljs inline no-lang" data-v-28900d6e>player</code> if player already exists in <code class="line-numbers hljs inline no-lang" data-v-28900d6e>scores</code>. Otherwise, adds the <code class="line-numbers hljs inline no-lang" data-v-28900d6e>player</code> to <code class="line-numbers hljs inline no-lang" data-v-28900d6e>scores</code> with the value <code class="line-numbers hljs inline no-lang" data-v-28900d6e>bonus</code>.</li></ul> <pre data-v-28900d6e><code class="line-numbers hljs python" data-v-28900d6e><span data-v-28900d6e><span class="hljs-function" data-v-28900d6e><span class="hljs-keyword" data-v-28900d6e>def</span> <span class="hljs-title" data-v-28900d6e>add_bonus</span>(<span class="hljs-params" data-v-28900d6e>scores, player, bonus</span>):</span>
+</span><span data-v-28900d6e>  <span class="hljs-keyword" data-v-28900d6e>pass</span> <span class="hljs-comment" data-v-28900d6e>#REPLACE WITH YOUR CODE!</span>
+</span><span data-v-28900d6e>
+</span><span data-v-28900d6e>
+</span><span data-v-28900d6e>game3_scores = {<span class="hljs-string" data-v-28900d6e>'amy'</span>: <span class="hljs-number" data-v-28900d6e>35</span>, <span class="hljs-string" data-v-28900d6e>'betty'</span>: <span class="hljs-number" data-v-28900d6e>36</span>, <span class="hljs-string" data-v-28900d6e>'charlie'</span>: <span class="hljs-number" data-v-28900d6e>30</span>}    
+</span><span data-v-28900d6e>add_bonus(game3_scores, <span class="hljs-string" data-v-28900d6e>'amy'</span>, <span class="hljs-number" data-v-28900d6e>5</span>)
+</span><span data-v-28900d6e>add_bonus(game3_scores, <span class="hljs-string" data-v-28900d6e>'dan'</span>, <span class="hljs-number" data-v-28900d6e>10</span>)
+</span><span data-v-28900d6e><span class="hljs-built_in" data-v-28900d6e>print</span>(game3_scores)
+</span></code><div class="function-btn-container" data-v-28900d6e><button onclick="copyCodeBlock(this)" class="function-btn" data-v-28900d6e>
+    <div class="function-btn-body" data-v-28900d6e>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-28900d6e>
+    <g id="surface1" data-v-28900d6e>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-28900d6e></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><p data-v-28900d6e><span data-v-28900d6e><span aria-hidden="true" class="fas fa-arrow-down" data-v-28900d6e></span></span></p> <pre data-v-28900d6e><code class="line-numbers hljs" data-v-28900d6e><span data-v-28900d6e>{'amy': 40, 'betty': 36, 'charlie': 30, 'dan': 10}
+</span></code><div class="function-btn-container" data-v-28900d6e><button onclick="copyCodeBlock(this)" class="function-btn" data-v-28900d6e>
+    <div class="function-btn-body" data-v-28900d6e>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-28900d6e>
+    <g id="surface1" data-v-28900d6e>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-28900d6e></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><div class="algolia-no-index card-container" data-v-28900d6e><div class="card expandable-card border-0" data-v-28900d6e><div class="card-header header-toggle bg-white border-0" data-v-28900d6e><div class="caret-wrapper" data-v-28900d6e><span class="glyphicon glyphicon-chevron-right" data-v-28900d6e></span></div> <div class="header-wrapper card-title bg-white" data-v-28900d6e><p data-v-28900d6e><span class="dimmed" data-v-28900d6e><span aria-hidden="true" class="fas fa-battery-quarter" data-v-28900d6e></span> Partial solution</span></p></div> <div class="button-wrapper" data-v-28900d6e><button type="button" class="collapse-button btn btn-outline-secondary" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down"></span></button> <button type="button" class="close-button btn btn-outline-secondary seamless-button" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-28900d6e></span></button> <button type="button" class="popup-button btn btn-outline-secondary seamless-button" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-28900d6e></span></button></div></div> <div class="card-collapse" data-v-28900d6e><!----> <hr style="display:;" data-v-28900d6e></div> <!----></div></div></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:none;" data-v-28900d6e></div> <!----></div></div><p></p></div></div><hr style="border-top:3px double #c5c5c5;"> <div><h3 id="nested-dictionaries">Nested Dictionaries<a href="#nested-dictionaries" onclick="event.stopPropagation()" class="fa fa-anchor"></a></h3> <p><strong>Dictionaries and lists can be nested in each other to create more complicated data structures.</strong></p> <div class="alert box-container alert-default" data-v-4d146e2c><!----> <div class="header-and-body" data-v-4d146e2c><!----> <div class="box-body-wrapper" data-v-4d146e2c><!----> <!----> <div class="contents" data-v-4d146e2c><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-cube" data-v-4d146e2c></span></span> This dictionary keeps track of assignments of each subject. Note how the value is a <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>list</code> rather than a simple value such as an <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>int</code> or a <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>string</code>.</p> <pre data-v-4d146e2c><code class="line-numbers hljs python" data-v-4d146e2c><span data-v-4d146e2c>assignments = {<span class="hljs-string" data-v-4d146e2c>'TEE3201'</span>: [<span class="hljs-string" data-v-4d146e2c>'do exercises'</span>, <span class="hljs-string" data-v-4d146e2c>'submit project'</span>],
+</span><span data-v-4d146e2c>               <span class="hljs-string" data-v-4d146e2c>'CS2103'</span>: [],
+</span><span data-v-4d146e2c>               <span class="hljs-string" data-v-4d146e2c>'CS3281'</span>: [<span class="hljs-string" data-v-4d146e2c>'do presentation'</span>]}
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><p data-v-4d146e2c><span class="badge rounded-pill bg-success text-white" data-v-4d146e2c><span aria-hidden="true" class="fas fa-lightbulb" data-v-4d146e2c></span></span> Python ignores line breaks and indentations in the middle of a dictionary/list definition <span class="dimmed" data-v-4d146e2c>which allows you to structure the code into a more readable format (e.g., one key-value pair per line).</span></p> <p data-v-4d146e2c>As the values in this dictionary are lists, you can do list operations on them, e.g., <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>append()</code>, <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>len()</code></p> <pre data-v-4d146e2c><code class="line-numbers hljs python" data-v-4d146e2c><span data-v-4d146e2c><span class="hljs-built_in" data-v-4d146e2c>print</span>(<span class="hljs-string" data-v-4d146e2c>'CS3281 assignments:'</span>, assignments[<span class="hljs-string" data-v-4d146e2c>'CS3281'</span>])
+</span><span data-v-4d146e2c>
+</span><span data-v-4d146e2c>assignments[<span class="hljs-string" data-v-4d146e2c>'CS3281'</span>].append(<span class="hljs-string" data-v-4d146e2c>'study for exams'</span>)
+</span><span data-v-4d146e2c><span class="hljs-built_in" data-v-4d146e2c>print</span>(assignments[<span class="hljs-string" data-v-4d146e2c>'CS3281'</span>])
+</span><span data-v-4d146e2c>
+</span><span data-v-4d146e2c><span class="hljs-built_in" data-v-4d146e2c>print</span>(<span class="hljs-string" data-v-4d146e2c>'How many things to do in TEE3201?'</span>, <span class="hljs-built_in" data-v-4d146e2c>len</span>(assignments[<span class="hljs-string" data-v-4d146e2c>'TEE3201'</span>]))
+</span><span data-v-4d146e2c>
+</span><span data-v-4d146e2c><span class="hljs-comment" data-v-4d146e2c># calculate total assignments</span>
+</span><span data-v-4d146e2c>total = <span class="hljs-number" data-v-4d146e2c>0</span>
+</span><span data-v-4d146e2c><span class="hljs-keyword" data-v-4d146e2c>for</span> a <span class="hljs-keyword" data-v-4d146e2c>in</span> assignments.values():
+</span><span data-v-4d146e2c>  total = total + <span class="hljs-built_in" data-v-4d146e2c>len</span>(a)
+</span><span data-v-4d146e2c><span class="hljs-built_in" data-v-4d146e2c>print</span>(<span class="hljs-string" data-v-4d146e2c>'total tasks to do:'</span>, total)
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-arrow-down" data-v-4d146e2c></span></span></p> <pre data-v-4d146e2c><code class="line-numbers hljs" data-v-4d146e2c><span data-v-4d146e2c>CS3281 assignments: ['do presentation']
+</span><span data-v-4d146e2c>['do presentation', 'study for exams']
+</span><span data-v-4d146e2c>How many things to do in TEE3201? 2
+</span><span data-v-4d146e2c>total tasks to do: 4
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></div> <!----></div></div></div> <div><div expanded="" no-close="" class="card-container" data-v-28900d6e><div class="card expandable-card border-danger" data-v-28900d6e><div class="card-header header-toggle bg-danger border-danger" data-v-28900d6e><div class="caret-wrapper" data-v-28900d6e><!----></div> <div class="header-wrapper card-title bg-danger text-white" data-v-28900d6e><p data-v-28900d6e><span aria-hidden="true" class="fas fa-dumbbell" data-v-28900d6e></span> Exercise: Inning-Scores</p></div> <div class="button-wrapper" data-v-28900d6e><button type="button" class="collapse-button btn btn-outline-light" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-light" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-28900d6e></span></button> <button type="button" class="popup-button btn btn-outline-light" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-28900d6e></span></button></div></div> <div class="card-collapse" data-v-28900d6e><div class="card-body" data-v-28900d6e> <div data-v-28900d6e><h4 id="exercise-inning-scores" data-v-28900d6e>Exercise: Inning-Scores<a href="#exercise-inning-scores" onclick="event.stopPropagation()" class="fa fa-anchor" data-v-28900d6e></a></h4> <p data-v-28900d6e>Assume the game has three innings and a player can play in 0-3 innings. For each inning, a player will have a inning-score which is an integer <span class="dimmed" data-v-28900d6e>e.g., player <code class="line-numbers hljs inline no-lang" data-v-28900d6e>amy</code> scored <code class="line-numbers hljs inline no-lang" data-v-28900d6e>5</code>, <code class="line-numbers hljs inline no-lang" data-v-28900d6e>5</code>, and <code class="line-numbers hljs inline no-lang" data-v-28900d6e>10</code> for the three innings (in order)</span>.</p> <p data-v-28900d6e>Update the <code class="line-numbers hljs inline no-lang" data-v-28900d6e>get_detailed_scores</code> functions in the code below such that it returns a dictionary that stores inning scores of each player as a <mark data-v-28900d6e>list of integers for each player</mark>. Inning-scores of each player is given below.</p> <div class="table-responsive" data-v-28900d6e><table class="markbind-table table table-bordered table-striped" data-v-28900d6e><thead data-v-28900d6e><tr data-v-28900d6e><th data-v-28900d6e>Player</th> <th data-v-28900d6e>Scores in different innings</th></tr></thead> <tbody data-v-28900d6e><tr data-v-28900d6e><td data-v-28900d6e>amy</td> <td data-v-28900d6e>5, 5, 10</td></tr> <tr data-v-28900d6e><td data-v-28900d6e>betty</td> <td data-v-28900d6e>10</td></tr> <tr data-v-28900d6e><td data-v-28900d6e>charile</td> <td data-v-28900d6e>(did not play any innings)</td></tr></tbody></table></div><pre data-v-28900d6e><code class="line-numbers hljs python" data-v-28900d6e><span data-v-28900d6e><span class="hljs-function" data-v-28900d6e><span class="hljs-keyword" data-v-28900d6e>def</span> <span class="hljs-title" data-v-28900d6e>get_detailed_scores</span>():</span>
+</span><span data-v-28900d6e>  <span class="hljs-keyword" data-v-28900d6e>return</span> {<span class="hljs-string" data-v-28900d6e>'amy'</span>: <span class="hljs-number" data-v-28900d6e>20</span>, <span class="hljs-string" data-v-28900d6e>'betty'</span>: <span class="hljs-number" data-v-28900d6e>30</span>, <span class="hljs-string" data-v-28900d6e>'charlie'</span>: <span class="hljs-number" data-v-28900d6e>30</span>} <span class="hljs-comment" data-v-28900d6e>#REPLACE WITH YOUR CODE! </span>
+</span><span data-v-28900d6e>
+</span><span data-v-28900d6e><span class="hljs-built_in" data-v-28900d6e>print</span>(get_detailed_scores())
+</span></code><div class="function-btn-container" data-v-28900d6e><button onclick="copyCodeBlock(this)" class="function-btn" data-v-28900d6e>
+    <div class="function-btn-body" data-v-28900d6e>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-28900d6e>
+    <g id="surface1" data-v-28900d6e>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-28900d6e></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><p data-v-28900d6e><span data-v-28900d6e><span aria-hidden="true" class="fas fa-arrow-down" data-v-28900d6e></span></span></p> <pre data-v-28900d6e><code class="line-numbers hljs" data-v-28900d6e><span data-v-28900d6e>{'amy': [5, 5, 10], 'betty': [10], 'charlie': []}
+</span></code><div class="function-btn-container" data-v-28900d6e><button onclick="copyCodeBlock(this)" class="function-btn" data-v-28900d6e>
+    <div class="function-btn-body" data-v-28900d6e>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-28900d6e>
+    <g id="surface1" data-v-28900d6e>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-28900d6e></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><div class="algolia-no-index card-container" data-v-28900d6e><div class="card expandable-card border-0" data-v-28900d6e><div class="card-header header-toggle bg-white border-0" data-v-28900d6e><div class="caret-wrapper" data-v-28900d6e><span class="glyphicon glyphicon-chevron-right" data-v-28900d6e></span></div> <div class="header-wrapper card-title bg-white" data-v-28900d6e><p data-v-28900d6e><span class="dimmed" data-v-28900d6e><span aria-hidden="true" class="fas fa-battery-quarter" data-v-28900d6e></span> Partial solution</span></p></div> <div class="button-wrapper" data-v-28900d6e><button type="button" class="collapse-button btn btn-outline-secondary" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down"></span></button> <button type="button" class="close-button btn btn-outline-secondary seamless-button" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-28900d6e></span></button> <button type="button" class="popup-button btn btn-outline-secondary seamless-button" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-28900d6e></span></button></div></div> <div class="card-collapse" data-v-28900d6e><!----> <hr style="display:;" data-v-28900d6e></div> <!----></div></div></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:none;" data-v-28900d6e></div> <!----></div></div><p></p></div> <div class="alert box-container alert-default" data-v-4d146e2c><!----> <div class="header-and-body" data-v-4d146e2c><!----> <div class="box-body-wrapper" data-v-4d146e2c><!----> <!----> <div class="contents" data-v-4d146e2c><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-cube" data-v-4d146e2c></span></span> This dictionary uses dictionaries as values (i.e., nesting dictionaries inside dictionaries). It stores details of a group of persons.</p> <pre data-v-4d146e2c><code class="line-numbers hljs python" data-v-4d146e2c><span data-v-4d146e2c>friends = {<span class="hljs-string" data-v-4d146e2c>'john'</span>: {<span class="hljs-string" data-v-4d146e2c>'name'</span>: <span class="hljs-string" data-v-4d146e2c>'John Doe'</span>, <span class="hljs-string" data-v-4d146e2c>'birthday'</span>: <span class="hljs-string" data-v-4d146e2c>'Jan 12'</span>},
+</span><span data-v-4d146e2c>           <span class="hljs-string" data-v-4d146e2c>'sara'</span>: {<span class="hljs-string" data-v-4d146e2c>'name'</span>: <span class="hljs-string" data-v-4d146e2c>'Sara Parker'</span>, <span class="hljs-string" data-v-4d146e2c>'birthday'</span>: <span class="hljs-string" data-v-4d146e2c>'Jun 30'</span>},
+</span><span data-v-4d146e2c>           <span class="hljs-string" data-v-4d146e2c>'betty'</span>: {<span class="hljs-string" data-v-4d146e2c>'name'</span>: <span class="hljs-string" data-v-4d146e2c>'Betsy Sims'</span>, <span class="hljs-string" data-v-4d146e2c>'birthday'</span>: <span class="hljs-string" data-v-4d146e2c>'Jan 12'</span>}}
+</span><span data-v-4d146e2c>           
+</span><span data-v-4d146e2c><span class="hljs-built_in" data-v-4d146e2c>print</span>(friends[<span class="hljs-string" data-v-4d146e2c>'john'</span>][<span class="hljs-string" data-v-4d146e2c>'birthday'</span>])
+</span><span data-v-4d146e2c>
+</span><span data-v-4d146e2c><span class="hljs-comment" data-v-4d146e2c># print friends whose birthday is Jan 12</span>
+</span><span data-v-4d146e2c>
+</span><span data-v-4d146e2c><span class="hljs-keyword" data-v-4d146e2c>for</span> f <span class="hljs-keyword" data-v-4d146e2c>in</span> friends.keys():
+</span><span data-v-4d146e2c>  details = friends[f]
+</span><span data-v-4d146e2c>  <span class="hljs-keyword" data-v-4d146e2c>if</span> details[<span class="hljs-string" data-v-4d146e2c>'birthday'</span>] == <span class="hljs-string" data-v-4d146e2c>'Jan 12'</span>:
+</span><span data-v-4d146e2c>    <span class="hljs-built_in" data-v-4d146e2c>print</span>(details[<span class="hljs-string" data-v-4d146e2c>'name'</span>])
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-arrow-down" data-v-4d146e2c></span></span></p> <pre data-v-4d146e2c><code class="line-numbers hljs" data-v-4d146e2c><span data-v-4d146e2c>Jan 12
+</span><span data-v-4d146e2c>John Doe
+</span><span data-v-4d146e2c>Betsy Sims
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><p data-v-4d146e2c><span class="badge rounded-pill bg-success text-white" data-v-4d146e2c><span aria-hidden="true" class="fas fa-lightbulb" data-v-4d146e2c></span></span> As <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>friends['john']</code> evaluates to a dictionary, you can use the <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>['birthday']</code> notation to find the birthday of that person.<br data-v-4d146e2c> <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>friends['john']['birthday']</code><br data-v-4d146e2c>
+→ <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>{'name': 'John Doe', 'birthday': 'Jan 12'}['birthday']</code><br data-v-4d146e2c>
+→ <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>'Jan 12'</code></p></div> <!----></div></div></div> <div><div expanded="" no-close="" class="card-container" data-v-28900d6e><div class="card expandable-card border-danger" data-v-28900d6e><div class="card-header header-toggle bg-danger border-danger" data-v-28900d6e><div class="caret-wrapper" data-v-28900d6e><!----></div> <div class="header-wrapper card-title bg-danger text-white" data-v-28900d6e><p data-v-28900d6e><span aria-hidden="true" class="fas fa-dumbbell" data-v-28900d6e></span> Exercise: Player Stats</p></div> <div class="button-wrapper" data-v-28900d6e><button type="button" class="collapse-button btn btn-outline-light" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-light" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-28900d6e></span></button> <button type="button" class="popup-button btn btn-outline-light" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-28900d6e></span></button></div></div> <div class="card-collapse" data-v-28900d6e><div class="card-body" data-v-28900d6e> <div data-v-28900d6e><h4 id="exercise-player-stats" data-v-28900d6e>Exercise: Player Stats<a href="#exercise-player-stats" onclick="event.stopPropagation()" class="fa fa-anchor" data-v-28900d6e></a></h4> <p data-v-28900d6e>Assume in each inning a player gets to bat a number of times and each hit can score 0, 1, 4, or 6, which are known as <em data-v-28900d6e>hit sizes</em>. There is a need to keep track of how many times a player achieved each hit size in an inning.</p> <p data-v-28900d6e>Note how the <code class="line-numbers hljs inline no-lang" data-v-28900d6e>player_stats</code> dictionary in the code below uses lists which contain dictionaries to store, for each player, how many times the player scored a certain hit size, for each inning. For example, the player <code class="line-numbers hljs inline no-lang" data-v-28900d6e>amy</code> scored hit size of 0 x 0 times; hit size of 1 x 1 times; hit size of 4 x 1 times; hit size of 6 x 0 time in the first inning (which adds up to a score of <code class="line-numbers hljs inline no-lang" data-v-28900d6e>0*0 + 1*1 + 4*1 + 6*0 = 5</code> for her first inning).</p> <pre data-v-28900d6e><code class="line-numbers hljs python" data-v-28900d6e><span data-v-28900d6e>player_stats = {<span class="hljs-string" data-v-28900d6e>'amy'</span>: [{<span class="hljs-number" data-v-28900d6e>0</span>:<span class="hljs-number" data-v-28900d6e>0</span>, <span class="hljs-number" data-v-28900d6e>1</span>:<span class="hljs-number" data-v-28900d6e>1</span>, <span class="hljs-number" data-v-28900d6e>4</span>:<span class="hljs-number" data-v-28900d6e>1</span>, <span class="hljs-number" data-v-28900d6e>6</span>:<span class="hljs-number" data-v-28900d6e>0</span>},  <span class="hljs-comment" data-v-28900d6e># amy's first inning stats</span>
+</span><span data-v-28900d6e>                        {<span class="hljs-number" data-v-28900d6e>0</span>:<span class="hljs-number" data-v-28900d6e>2</span>, <span class="hljs-number" data-v-28900d6e>1</span>:<span class="hljs-number" data-v-28900d6e>5</span>, <span class="hljs-number" data-v-28900d6e>4</span>:<span class="hljs-number" data-v-28900d6e>0</span>, <span class="hljs-number" data-v-28900d6e>6</span>:<span class="hljs-number" data-v-28900d6e>0</span>},  <span class="hljs-comment" data-v-28900d6e># amy's second inning stats</span>
+</span><span data-v-28900d6e>                        {<span class="hljs-number" data-v-28900d6e>0</span>:<span class="hljs-number" data-v-28900d6e>0</span>, <span class="hljs-number" data-v-28900d6e>1</span>:<span class="hljs-number" data-v-28900d6e>0</span>, <span class="hljs-number" data-v-28900d6e>4</span>:<span class="hljs-number" data-v-28900d6e>1</span>, <span class="hljs-number" data-v-28900d6e>6</span>:<span class="hljs-number" data-v-28900d6e>1</span>}], <span class="hljs-comment" data-v-28900d6e># amy's third inning stats</span>
+</span><span data-v-28900d6e>                <span class="hljs-string" data-v-28900d6e>'betty'</span>: [{<span class="hljs-number" data-v-28900d6e>0</span>:<span class="hljs-number" data-v-28900d6e>2</span>, <span class="hljs-number" data-v-28900d6e>1</span>:<span class="hljs-number" data-v-28900d6e>2</span>, <span class="hljs-number" data-v-28900d6e>4</span>:<span class="hljs-number" data-v-28900d6e>2</span>, <span class="hljs-number" data-v-28900d6e>6</span>:<span class="hljs-number" data-v-28900d6e>0</span>}],
+</span><span data-v-28900d6e>                <span class="hljs-string" data-v-28900d6e>'charlie'</span>: []}
+</span></code><div class="function-btn-container" data-v-28900d6e><button onclick="copyCodeBlock(this)" class="function-btn" data-v-28900d6e>
+    <div class="function-btn-body" data-v-28900d6e>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-28900d6e>
+    <g id="surface1" data-v-28900d6e>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-28900d6e></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><p data-v-28900d6e>Update the <code class="line-numbers hljs inline no-lang" data-v-28900d6e>get_player_hit_count(player_stats, player, inning, hit_size)</code> functions in the code such that it uses the <code class="line-numbers hljs inline no-lang" data-v-28900d6e>player_stats</code> dictionary to return the hit count for the <code class="line-numbers hljs inline no-lang" data-v-28900d6e>player</code> in the <code class="line-numbers hljs inline no-lang" data-v-28900d6e>inning</code> for the given <code class="line-numbers hljs inline no-lang" data-v-28900d6e>hit_size</code>.<br data-v-28900d6e>
+e.g., <code class="line-numbers hljs inline no-lang" data-v-28900d6e>get_player_hit_count(player_stats, 'amy', 2, 6)</code> should return how many times <code class="line-numbers hljs inline no-lang" data-v-28900d6e>amy</code>'s hits in her second inning (i.e., <code class="line-numbers hljs inline no-lang" data-v-28900d6e>inning = 2</code>) scored <code class="line-numbers hljs inline no-lang" data-v-28900d6e>6</code>s; the return value should be <code class="line-numbers hljs inline no-lang" data-v-28900d6e>0</code>.</p> <pre data-v-28900d6e><code class="line-numbers hljs python" data-v-28900d6e><span data-v-28900d6e><span class="hljs-function" data-v-28900d6e><span class="hljs-keyword" data-v-28900d6e>def</span> <span class="hljs-title" data-v-28900d6e>get_player_hit_count</span>(<span class="hljs-params" data-v-28900d6e>stats, player, inning, hit_size</span>):</span>
+</span><span data-v-28900d6e>  <span class="hljs-keyword" data-v-28900d6e>return</span> <span class="hljs-number" data-v-28900d6e>0</span> <span class="hljs-comment" data-v-28900d6e>#REPLACE WITH YOUR CODE!</span>
+</span><span data-v-28900d6e>  
+</span><span data-v-28900d6e><span class="hljs-built_in" data-v-28900d6e>print</span>(get_player_hit_count(player_stats, <span class="hljs-string" data-v-28900d6e>'amy'</span>, <span class="hljs-number" data-v-28900d6e>2</span>, <span class="hljs-number" data-v-28900d6e>1</span>))
+</span><span data-v-28900d6e><span class="hljs-built_in" data-v-28900d6e>print</span>(get_player_hit_count(player_stats, <span class="hljs-string" data-v-28900d6e>'betty'</span>, <span class="hljs-number" data-v-28900d6e>1</span>, <span class="hljs-number" data-v-28900d6e>4</span>))
+</span></code><div class="function-btn-container" data-v-28900d6e><button onclick="copyCodeBlock(this)" class="function-btn" data-v-28900d6e>
+    <div class="function-btn-body" data-v-28900d6e>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-28900d6e>
+    <g id="surface1" data-v-28900d6e>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-28900d6e></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><p data-v-28900d6e><span data-v-28900d6e><span aria-hidden="true" class="fas fa-arrow-down" data-v-28900d6e></span></span></p> <pre data-v-28900d6e><code class="line-numbers hljs" data-v-28900d6e><span data-v-28900d6e>5
+</span><span data-v-28900d6e>2
+</span></code><div class="function-btn-container" data-v-28900d6e><button onclick="copyCodeBlock(this)" class="function-btn" data-v-28900d6e>
+    <div class="function-btn-body" data-v-28900d6e>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-28900d6e>
+    <g id="surface1" data-v-28900d6e>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-28900d6e></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><div class="algolia-no-index card-container" data-v-28900d6e><div class="card expandable-card border-0" data-v-28900d6e><div class="card-header header-toggle bg-white border-0" data-v-28900d6e><div class="caret-wrapper" data-v-28900d6e><span class="glyphicon glyphicon-chevron-right" data-v-28900d6e></span></div> <div class="header-wrapper card-title bg-white" data-v-28900d6e><p data-v-28900d6e><span class="dimmed" data-v-28900d6e><span aria-hidden="true" class="fas fa-battery-quarter" data-v-28900d6e></span> Partial solution</span></p></div> <div class="button-wrapper" data-v-28900d6e><button type="button" class="collapse-button btn btn-outline-secondary" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down"></span></button> <button type="button" class="close-button btn btn-outline-secondary seamless-button" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-28900d6e></span></button> <button type="button" class="popup-button btn btn-outline-secondary seamless-button" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-28900d6e></span></button></div></div> <div class="card-collapse" data-v-28900d6e><!----> <hr style="display:;" data-v-28900d6e></div> <!----></div></div></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:none;" data-v-28900d6e></div> <!----></div></div><p></p></div> <div><div expanded="" no-close="" class="card-container" data-v-28900d6e><div class="card expandable-card border-danger" data-v-28900d6e><div class="card-header header-toggle bg-danger border-danger" data-v-28900d6e><div class="caret-wrapper" data-v-28900d6e><!----></div> <div class="header-wrapper card-title bg-danger text-white" data-v-28900d6e><p data-v-28900d6e><span aria-hidden="true" class="fas fa-dumbbell" data-v-28900d6e></span> Exercise: Grade Report</p></div> <div class="button-wrapper" data-v-28900d6e><button type="button" class="collapse-button btn btn-outline-light" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-light" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-28900d6e></span></button> <button type="button" class="popup-button btn btn-outline-light" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-28900d6e></span></button></div></div> <div class="card-collapse" data-v-28900d6e><div class="card-body" data-v-28900d6e> <div data-v-28900d6e><h4 id="exercise-grade-report" data-v-28900d6e>Exercise: Grade Report<a href="#exercise-grade-report" onclick="event.stopPropagation()" class="fa fa-anchor" data-v-28900d6e></a></h4> <p data-v-28900d6e>Write a program that reads student grades one entry at a time and print a consolidated grade report at the end. Follow the sample output given below.</p> <pre data-v-28900d6e><code class="line-numbers hljs" data-v-28900d6e><span data-v-28900d6e>-----------------------------------------------------
+</span><span data-v-28900d6e>     ~ Welcome to Grade Report System ~
+</span><span data-v-28900d6e>* Enter one entry at a time in the format NAME GRADE
+</span><span data-v-28900d6e>* NAME should be one word
+</span><span data-v-28900d6e>* Enter an empty line to proceed to printing report
+</span><span data-v-28900d6e>-----------------------------------------------------
+</span><span data-v-28900d6e>Student name and grade?amy A
+</span><span data-v-28900d6e>Student name and grade?ben B
+</span><span data-v-28900d6e>Student name and grade?ben
+</span><span data-v-28900d6e>Invalid input! Entry rejected.
+</span><span data-v-28900d6e>Student name and grade?ben C D
+</span><span data-v-28900d6e>Invalid input! Entry rejected.
+</span><span data-v-28900d6e>Student name and grade?ben A
+</span><span data-v-28900d6e>Student name and grade?charlie F
+</span><span data-v-28900d6e>Student name and grade?amy A+
+</span><span data-v-28900d6e>Student name and grade?amy D
+</span><span data-v-28900d6e>Student name and grade?
+</span><span data-v-28900d6e>============ Grade Report ===============
+</span><span data-v-28900d6e>amy : A A+ D
+</span><span data-v-28900d6e>ben : B A
+</span><span data-v-28900d6e>charlie : F
+</span></code><div class="function-btn-container" data-v-28900d6e><button onclick="copyCodeBlock(this)" class="function-btn" data-v-28900d6e>
+    <div class="function-btn-body" data-v-28900d6e>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-28900d6e>
+    <g id="surface1" data-v-28900d6e>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-28900d6e></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><p data-v-28900d6e>The program should be able to accept any name (but you can assume each name is only one word e.g., <code class="line-numbers hljs inline no-lang" data-v-28900d6e>Jane</code> but not <code class="line-numbers hljs inline no-lang" data-v-28900d6e>Jane Doe</code>), not just the three names mentioned in the example above.</p> <div class="algolia-no-index card-container" data-v-28900d6e><div class="card expandable-card border-0" data-v-28900d6e><div class="card-header header-toggle bg-white border-0" data-v-28900d6e><div class="caret-wrapper" data-v-28900d6e><span class="glyphicon glyphicon-chevron-right" data-v-28900d6e></span></div> <div class="header-wrapper card-title bg-white" data-v-28900d6e><p data-v-28900d6e><span class="dimmed" data-v-28900d6e>💡 Python hints</span></p></div> <div class="button-wrapper" data-v-28900d6e><button type="button" class="collapse-button btn btn-outline-secondary" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down"></span></button> <button type="button" class="close-button btn btn-outline-secondary seamless-button" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-28900d6e></span></button> <button type="button" class="popup-button btn btn-outline-secondary seamless-button" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-28900d6e></span></button></div></div> <div class="card-collapse" data-v-28900d6e><!----> <hr style="display:;" data-v-28900d6e></div> <!----></div></div></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:none;" data-v-28900d6e></div> <!----></div></div><p></p></div> <div><div expanded="" no-close="" class="card-container" data-v-28900d6e><div class="card expandable-card border-danger" data-v-28900d6e><div class="card-header header-toggle bg-danger border-danger" data-v-28900d6e><div class="caret-wrapper" data-v-28900d6e><!----></div> <div class="header-wrapper card-title bg-danger text-white" data-v-28900d6e><p data-v-28900d6e><span aria-hidden="true" class="fas fa-dumbbell" data-v-28900d6e></span> Exercise: Inventory Report</p></div> <div class="button-wrapper" data-v-28900d6e><button type="button" class="collapse-button btn btn-outline-light" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-light" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-28900d6e></span></button> <button type="button" class="popup-button btn btn-outline-light" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-28900d6e></span></button></div></div> <div class="card-collapse" data-v-28900d6e><div class="card-body" data-v-28900d6e> <div data-v-28900d6e><h4 id="exercise-inventory-report" data-v-28900d6e>Exercise : Inventory Report<a href="#exercise-inventory-report" onclick="event.stopPropagation()" class="fa fa-anchor" data-v-28900d6e></a></h4> <p data-v-28900d6e>Write a function that prints an inventory report like the examples given below, when the report title (a string), print-width (an int), and list of items (as a suitable data structure, e.g., dictionary) is given to the function.</p> <div class="alert box-container alert-default" data-v-4d146e2c><!----> <div class="header-and-body" data-v-4d146e2c><!----> <div class="box-body-wrapper" data-v-4d146e2c><!----> <!----> <div class="contents" data-v-4d146e2c><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-cube" data-v-4d146e2c></span></span> Kitchen Inventory Report:</p> <ul data-v-4d146e2c><li data-v-4d146e2c>Title: Kitchen</li> <li data-v-4d146e2c>Width: 15</li></ul> <div data-v-4d146e2c><table data-v-4d146e2c><tbody data-v-4d146e2c><tr data-v-4d146e2c><td valign="top" data-v-4d146e2c><div class="table-responsive" data-v-4d146e2c><table class="markbind-table table table-bordered table-striped" data-v-4d146e2c><thead data-v-4d146e2c><tr data-v-4d146e2c><th data-v-4d146e2c>Item</th> <th data-v-4d146e2c>count</th></tr></thead> <tbody data-v-4d146e2c><tr data-v-4d146e2c><td data-v-4d146e2c>pots</td> <td data-v-4d146e2c>5</td></tr> <tr data-v-4d146e2c><td data-v-4d146e2c>eggs</td> <td data-v-4d146e2c>100</td></tr></tbody></table></div></td> <td valign="middle" data-v-4d146e2c> → <br data-v-4d146e2c><br data-v-4d146e2c></td> <td valign="bottom" data-v-4d146e2c><pre data-v-4d146e2c><code class="line-numbers hljs" data-v-4d146e2c><span data-v-4d146e2c>###############
+</span><span data-v-4d146e2c>### KITCHEN ###
+</span><span data-v-4d146e2c>###############
+</span><span data-v-4d146e2c>eggs.......:100
+</span><span data-v-4d146e2c>pots.......:  5
+</span><span data-v-4d146e2c>            ---
+</span><span data-v-4d146e2c>total......:105
+</span><span data-v-4d146e2c>            ===
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td></tr></tbody></table></div></div> <!----></div></div></div> <div class="alert box-container alert-default" data-v-4d146e2c><!----> <div class="header-and-body" data-v-4d146e2c><!----> <div class="box-body-wrapper" data-v-4d146e2c><!----> <!----> <div class="contents" data-v-4d146e2c><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-cube" data-v-4d146e2c></span></span> Bookshop Inventory Report:</p> <ul data-v-4d146e2c><li data-v-4d146e2c>Title: Book Shop</li> <li data-v-4d146e2c>Width: 25</li></ul> <div data-v-4d146e2c><table data-v-4d146e2c><tbody data-v-4d146e2c><tr data-v-4d146e2c><td valign="top" data-v-4d146e2c><div class="table-responsive" data-v-4d146e2c><table class="markbind-table table table-bordered table-striped" data-v-4d146e2c><thead data-v-4d146e2c><tr data-v-4d146e2c><th data-v-4d146e2c>Item</th> <th data-v-4d146e2c>count</th></tr></thead> <tbody data-v-4d146e2c><tr data-v-4d146e2c><td data-v-4d146e2c>pens</td> <td data-v-4d146e2c>85</td></tr> <tr data-v-4d146e2c><td data-v-4d146e2c>books</td> <td data-v-4d146e2c>3</td></tr> <tr data-v-4d146e2c><td data-v-4d146e2c>pencils</td> <td data-v-4d146e2c>22</td></tr></tbody></table></div></td> <td valign="middle" data-v-4d146e2c> → <br data-v-4d146e2c><br data-v-4d146e2c></td> <td valign="bottom" data-v-4d146e2c><pre data-v-4d146e2c><code class="line-numbers hljs" data-v-4d146e2c><span data-v-4d146e2c>#########################
+</span><span data-v-4d146e2c>####### BOOK SHOP #######
+</span><span data-v-4d146e2c>#########################
+</span><span data-v-4d146e2c>books................:  3
+</span><span data-v-4d146e2c>pencils..............: 22
+</span><span data-v-4d146e2c>pens.................: 85
+</span><span data-v-4d146e2c>                      ---
+</span><span data-v-4d146e2c>total................:110
+</span><span data-v-4d146e2c>                      ===
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td></tr></tbody></table></div></div> <!----></div></div></div> <ul data-v-28900d6e><li data-v-28900d6e>Title should be centered and in upper case.</li> <li data-v-28900d6e>Items should be in alphabetical order.</li> <li data-v-28900d6e>Width of the number column is 3. Numbers should be right-justified.</li></ul> <div class="algolia-no-index card-container" data-v-28900d6e><div class="card expandable-card border-0" data-v-28900d6e><div class="card-header header-toggle bg-white border-0" data-v-28900d6e><div class="caret-wrapper" data-v-28900d6e><span class="glyphicon glyphicon-chevron-right" data-v-28900d6e></span></div> <div class="header-wrapper card-title bg-white" data-v-28900d6e><p data-v-28900d6e><span class="dimmed" data-v-28900d6e><span aria-hidden="true" class="fas fa-battery-quarter" data-v-28900d6e></span> Partial solution</span></p></div> <div class="button-wrapper" data-v-28900d6e><button type="button" class="collapse-button btn btn-outline-secondary" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down"></span></button> <button type="button" class="close-button btn btn-outline-secondary seamless-button" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-28900d6e></span></button> <button type="button" class="popup-button btn btn-outline-secondary seamless-button" style="display:none;" data-v-28900d6e><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-28900d6e></span></button></div></div> <div class="card-collapse" data-v-28900d6e><!----> <hr style="display:;" data-v-28900d6e></div> <!----></div></div></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-28900d6e><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:none;" data-v-28900d6e></div> <!----></div></div><p></p></div></div><hr style="border-top:3px double #c5c5c5;"></div></div></div> <nav id="page-nav" class="fixed-header-padding" data-v-e6005420><div class="nav-component slim-scroll" data-v-e6005420><nav id="mb-page-nav" class="nav nav-pills flex-column my-0 small no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#dictionaries" data-v-e6005420>Dictionaries‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#the-dictionary-data-structure" data-v-e6005420>The Dictionary Data Structure‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#exercise-get-subject-info" data-v-e6005420>Exercise: Get Subject Info‎</a></nav> <a class="nav-link py-1" href="#working-with-dictionaries" data-v-e6005420>Working with Dictionaries‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#exercise-get-set-delete-score" data-v-e6005420>Exercise: Get, Set, Delete Score‎</a> <a class="nav-link py-1" href="#exercise-get-score-with-error-handling" data-v-e6005420>Exercise: Get Score with Error Handling‎</a> <a class="nav-link py-1" href="#exercise-print-scorecard" data-v-e6005420>Exercise: Print Scorecard‎</a> <a class="nav-link py-1" href="#exercise-add-bonus" data-v-e6005420>Exercise: Add Bonus‎</a></nav> <a class="nav-link py-1" href="#nested-dictionaries" data-v-e6005420>Nested Dictionaries‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#exercise-inning-scores" data-v-e6005420>Exercise: Inning-Scores‎</a> <a class="nav-link py-1" href="#exercise-player-stats" data-v-e6005420>Exercise: Player Stats‎</a> <a class="nav-link py-1" href="#exercise-grade-report" data-v-e6005420>Exercise: Grade Report‎</a> <a class="nav-link py-1" href="#exercise-inventory-report" data-v-e6005420>Exercise : Inventory Report‎</a></nav></nav> <!----></nav></div> <!----></nav> <div aria-hidden="true" class="scroll-top-button fa-lg d-print-none" style="display:none;bottom:2%;right:2%;position:fixed;"><i class="fas fa-arrow-circle-up"></i></div></div> <footer><div class="text-center"><small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 5.2.0</a>, generated on Wed, 27 Dec 2023, 23:15:52 GMT+8]</small></div></footer></div>
+</body><script src="/2024/markbind/js/bootstrap-utility.min.js"></script>
+<script>
+  MarkBind.setupWithSearch()
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3.2.0/dist/umd/index.js"></script>
+    <script>
+    docsearch({
+      container: "#algolia-search-input",
+      appId: "3DU4XTBX4T",
+      apiKey: "3e2fd3c3b12a363309307794dce54969",
+      indexName: "nus-tic-cs",
+      searchParameters: {"facetFilters":[["site:nus-tee3201.github.io"],["tags:admin","tags:se-book-adapted","tags:schedule"]]}
+    });
+  </script>
+    <script>
+    const style = document.createElement('style');
+    style.innerHTML = ".DocSearch-Container { z-index: 1002; position: fixed; }";
+    document.getElementsByTagName('head')[0].appendChild(style);
+  </script>
+  
+    <script>
+    function copyCodeBlock(element) {
+        const pre = element.parentElement.parentElement;
+        const codeElement = pre.querySelector('code');
+
+        // create dummy text element to select() the text field
+        const textElement = document.createElement('textarea');
+        textElement.value = codeElement.textContent;
+        document.body.appendChild(textElement);
+        textElement.select();
+
+        document.execCommand('copy');
+        document.body.removeChild(textElement);
+    }
+    </script>
+</html>

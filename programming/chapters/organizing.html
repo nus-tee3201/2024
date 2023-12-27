@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 5.2.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><title>TEE3201 - Python Basics: Organizing Python Code</title> <link rel="stylesheet" href="/2024/markbind/css/bootstrap.min.css"> <link rel="stylesheet" href="/2024/markbind/fontawesome/css/all.min.css"> <link rel="stylesheet" href="/2024/markbind/glyphicons/css/bootstrap-glyphicons.min.css"><link rel="stylesheet" href="/2024/markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="/2024/markbind/css/markbind.min.css"><script src="/2024/markbind/js/polyfill.min.js"></script>
+    <script src="/2024/markbind/js/vue.min.js"></script>
+    <script src="/2024/markbind/js/markbind.min.js"></script>
+    <script src="organizing.page-vue-render.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3.2.0/dist/style.css"><link rel="stylesheet" href="/2024/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="/2024/plugins/markbind-plugin-tree/markbind-plugin-tree.css">
+    
+<link rel="stylesheet" href="/2024/css/main.css">
+<link rel="icon" href="/2024/favicon.ico"></head>
+<script>
+  const baseUrl = '/2024'
+</script>
+<body  data-bs-spy="scroll" data-bs-target="#mb-page-nav" data-bs-offset="100" >
+<div id="app" data-server-rendered="true"><div class="w-100 p-1 bg-warning text-center d-print-none"><span><strong>This is a draft version of the website! The final version will be available near the start of the semester.</strong></span></div> <div class="w-100 p-1 bg-success text-white text-center d-print-none"><span>This course will be delivered in <em>blended learning</em> mode (i.e., a mix of online and F2F activities) this semester.</span></div> <header sticky=""><div placement="top" data-v-73b4aa16><nav class="navbar navbar-expand-md d-print-none navbar-dark bg-dark" data-v-73b4aa16><div class="container-fluid" data-v-73b4aa16><div class="navbar-left" data-v-73b4aa16><a href="/2024/index.html" title="Home" class="navbar-brand" data-v-73b4aa16><span class="badge rounded-pill bg-danger" data-v-73b4aa16>TEE3201 <small data-v-73b4aa16>2024</small></span></a></div> <div class="navbar-default" data-v-73b4aa16><ul class="navbar-nav me-auto mt-2 mt-lg-0" data-v-73b4aa16> <li class="nav-link algolia-no-index dropdown" data-v-12679d7e><a role="button" data-bs-toggle="dropdown" class="dropdown-toggle nav-link" data-v-12679d7e><strong data-v-12679d7e>Schedule</strong></a> <ul class="dropdown-menu" data-v-12679d7e> <li data-v-12679d7e><a href="/2024/schedule/timeline.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Full Timeline</strong></span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week1/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 1</strong> [Mon, Jan 15th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week2/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 2</strong> [Mon, Jan 22nd] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week3/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 3</strong> [Mon, Jan 29th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week4/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 4</strong> [Mon, Feb 5th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week5/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 5</strong> [Mon, Feb 12th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week6/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 6</strong> [Mon, Feb 19th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week7/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 7</strong> [Mon, Feb 26th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week8/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 8</strong> [Mon, Mar 11th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week9/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 9</strong> [Mon, Mar 18th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week10/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 10</strong> [Mon, Mar 25th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week11/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 11</strong> [Mon, Apr 1st] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week12/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 12</strong> [Mon, Apr 8th] </span></a></li> <li data-v-12679d7e><a href="/2024/schedule/week13/index.html" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><strong data-v-12679d7e>Week 13</strong> [Mon, Apr 15th] </span></a></li></ul></li> <li class="nav-link algolia-no-index dropdown" data-v-12679d7e><a role="button" data-bs-toggle="dropdown" class="dropdown-toggle nav-link" data-v-12679d7e><strong data-v-12679d7e>Textbook</strong></a> <ul class="dropdown-menu" data-v-12679d7e> <li data-v-12679d7e><a href="/2024/se-book-adapted/index.html" class="dropdown-item" data-v-12679d7e>SE Textbook</a></li> <li data-v-12679d7e><a href="/2024/programming/index.html" class="dropdown-item" data-v-12679d7e>Programming Textbook</a></li></ul></li> <li data-v-73b4aa16><a href="/2024/admin/index.html" class="nav-link" data-v-73b4aa16><span data-v-73b4aa16><strong data-v-73b4aa16>Admin Info</strong></span></a></li> <li class="nav-link algolia-no-index dropdown" data-v-12679d7e><a role="button" data-bs-toggle="dropdown" class="dropdown-toggle nav-link" data-v-12679d7e><strong data-v-12679d7e>Other Links</strong></a> <ul class="dropdown-menu" data-v-12679d7e> <li data-v-12679d7e><a href="https://canvas.nus.edu.sg/courses/n/a/discussion_topics" target="_blank" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><span aria-hidden="true" class="fas fa-comment" data-v-12679d7e></span> Forum</span></a></li> <li data-v-12679d7e><a href="/2024/admin/index.html#instructors" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><span aria-hidden="true" class="fas fa-user-tie" data-v-12679d7e></span> Instructors</span></a></li> <li data-v-12679d7e><a href="https://canvas.nus.edu.sg/courses/n/a/announcements" target="_blank" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><span aria-hidden="true" class="glyphicon glyphicon-bullhorn" data-v-12679d7e></span> Announcements</span></a></li> <li data-v-12679d7e><a href="https://canvas.nus.edu.sg/courses/n/a/files" target="_blank" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><span aria-hidden="true" class="fas fa-file-upload" data-v-12679d7e></span> Files (handouts, submissions etc.)</span></a></li> <li tags="m--tic2002 m--tee3201" data-v-12679d7e><a href="/2024/admin/index.html#project" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><span data-v-12679d7e><span aria-hidden="true" class="fas fa-drafting-compass" data-v-12679d7e></span></span></span> Project Info</a></li> <li tags="m--cs2113 m--tic2002 m--tee3201" data-v-12679d7e><a href="https://coursemology.org/courses/n_a" target="_blank" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><span data-v-12679d7e><span aria-hidden="true" class="fas fa-dumbbell" data-v-12679d7e></span></span></span> Coursemology link</a></li> <li data-v-12679d7e><a href="https://teams.microsoft.com/l/team/19%3ay1YRdPn15i03ivS4qnlQEAKEfXnbj6f9GqIC4MvV3wo1%40thread.tacv2/conversations?groupId=9ed8b011-46d2-4b95-87df-7351a200bb8b&amp;tenantId=5ba5ef5e-3109-4e77-85bd-cfeb0d347e82" target="_blank" class="dropdown-item" data-v-12679d7e><span data-v-12679d7e><span aria-hidden="true" class="fas fa-users-cog" data-v-12679d7e></span> MS Teams link</span></a></li></ul></li></ul></div> <ul class="navbar-nav navbar-right" data-v-73b4aa16><li class="nav-link" data-v-73b4aa16><form class="navbar-form" data-v-73b4aa16><div class="dropdown" style="position:relative;" data-v-01e11c9b><input data-bs-toggle="dropdown" type="text" placeholder="Search" autocomplete="off" value="" class="form-control" data-v-01e11c9b> <div class="form-control placeholder-div-hidden" data-v-01e11c9b>
+      Search
+    </div> <ul class="dropdown-menu search-dropdown-menu d-none dropdown-menu-end" data-v-01e11c9b></ul></div></form></li></ul></div></nav> <div class="lower-navbar-container" style="display:none;" data-v-73b4aa16><!----> <!----></div></div></header> <div id="flex-body"><nav id="site-nav" class="fixed-header-padding" data-v-e6005420><div class="site-nav-top" data-v-e6005420><div class="font-weight-bold mb-2" style="font-size:1.25rem;" data-v-e6005420>Python textbook</div></div> <div class="nav-component slim-scroll" data-v-e6005420><div data-v-e6005420><div class="site-nav-root"><ul class="site-nav-list site-nav-list-root" data-v-e6005420><li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/expressions-types-variables.html" data-v-e6005420>Expressions, Data Types, Variables</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/programs.html" data-v-e6005420>Python Programs</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/flowcontrol.html" data-v-e6005420>Program Flow Control</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/functions.html" data-v-e6005420>Functions</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/lists.html" data-v-e6005420>Lists</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/errors.html" data-v-e6005420>Error Handling</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/strings.html" data-v-e6005420>Strings</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/files.html" data-v-e6005420>Files</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/dictionaries.html" data-v-e6005420>Dictionaries</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/oop.html" data-v-e6005420>Object-Oriented Programming</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/gui.html" data-v-e6005420>GUIs</a></div></li> <li class="site-nav-custom-list-item site-nav-list-item-0" data-v-e6005420><hr data-v-e6005420></li> <li class="site-nav-custom-list-item site-nav-list-item-0" data-v-e6005420><span class="dimmed" data-v-e6005420><strong data-v-e6005420>Appendices</strong></span></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/thirdparty.html" data-v-e6005420><strong data-v-e6005420>A.</strong> Installing 3rd Party Modules</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/ide.html" data-v-e6005420><strong data-v-e6005420>B.</strong> Using an IDE</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/organizing.html" data-v-e6005420><strong data-v-e6005420>C.</strong> Organizing Python Code</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/unittesting.html" data-v-e6005420><strong data-v-e6005420>D.</strong> Unit Testing</a></div></li> <li data-v-e6005420><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e6005420><a href="/2024/programming/chapters/monty.html" data-v-e6005420><strong data-v-e6005420>E.</strong> The Monty Project</a></div></li> <!----></ul></div></div></div> <!----></nav> <div id="content-wrapper" class="fixed-header-padding"><div id="main" class="website-content"><div id="toc"></div> <div id="main"><div><h2 id="appendix-c-organizing-python-code">Appendix C: Organizing Python Code<a href="#appendix-c-organizing-python-code" onclick="event.stopPropagation()" class="fa fa-anchor"></a></h2> <p><strong>You can organize the code as multiple files.</strong> Python considers each file as a <em>module</em>. To use a function/class in one file from another, you need to <code class="line-numbers hljs inline no-lang">import</code> it first.</p> <div class="alert box-container alert-default" data-v-4d146e2c><!----> <div class="header-and-body" data-v-4d146e2c><!----> <div class="box-body-wrapper" data-v-4d146e2c><!----> <!----> <div class="contents" data-v-4d146e2c><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-cube" data-v-4d146e2c></span></span> Consider the following two files residing in the same directory.</p> <p data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>[project_root]/student.py</code>:</p> <pre data-v-4d146e2c><code class="line-numbers hljs python" data-v-4d146e2c><span data-v-4d146e2c><span class="hljs-function" data-v-4d146e2c><span class="hljs-keyword" data-v-4d146e2c>def</span> <span class="hljs-title" data-v-4d146e2c>describe</span>(<span class="hljs-params" data-v-4d146e2c>name</span>):</span>
+</span><span data-v-4d146e2c>    <span class="hljs-built_in" data-v-4d146e2c>print</span>(name, <span class="hljs-string" data-v-4d146e2c>'is a student'</span>)
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><p data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>[project_root]/course.py</code>:</p> <pre data-v-4d146e2c><code class="line-numbers hljs python" data-v-4d146e2c><span data-v-4d146e2c><span class="hljs-keyword" data-v-4d146e2c>import</span> student
+</span><span data-v-4d146e2c>
+</span><span data-v-4d146e2c>student.describe(<span class="hljs-string" data-v-4d146e2c>'Adam'</span>)
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><p data-v-4d146e2c>Notice how the <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>course.py</code> imports the <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>student</code> module and uses the <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>student.describe</code> function defined in the <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>student.py</code> file.</p></div> <!----></div></div></div> <p><strong>You can organize files into sub-directories too.</strong></p> <div class="alert box-container alert-default" data-v-4d146e2c><!----> <div class="header-and-body" data-v-4d146e2c><!----> <div class="box-body-wrapper" data-v-4d146e2c><!----> <!----> <div class="contents" data-v-4d146e2c><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-cube" data-v-4d146e2c></span></span> Consider the following two files.</p> <p data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>[project_root]/utils/print_utils/misc.py</code>:</p> <pre data-v-4d146e2c><code class="line-numbers hljs python" data-v-4d146e2c><span data-v-4d146e2c><span class="hljs-function" data-v-4d146e2c><span class="hljs-keyword" data-v-4d146e2c>def</span> <span class="hljs-title" data-v-4d146e2c>print_as_list</span>(<span class="hljs-params" data-v-4d146e2c>text</span>):</span>
+</span><span data-v-4d146e2c>    <span class="hljs-built_in" data-v-4d146e2c>print</span>(<span class="hljs-built_in" data-v-4d146e2c>list</span>(text))
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><p data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>[project_root]/course.py</code>:</p> <pre data-v-4d146e2c><code class="line-numbers hljs python" data-v-4d146e2c><span data-v-4d146e2c><span class="hljs-keyword" data-v-4d146e2c>from</span> utils.print_utils <span class="hljs-keyword" data-v-4d146e2c>import</span> misc 
+</span><span data-v-4d146e2c>
+</span><span data-v-4d146e2c>misc.print_as_list(<span class="hljs-string" data-v-4d146e2c>'Adam'</span>)
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><p data-v-4d146e2c>Notice how the <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>import</code> statement uses a slightly different syntax and uses <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>.</code> to indicate directory nesting (i.e., <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>utils/print_utils</code> → <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>utils.print_utils</code>). In fact, there are <a href="https://docs.python.org/3/tutorial/modules.html" data-v-4d146e2c>other variations of the <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>import</code> syntax</a>.</p></div> <!----></div></div></div> <p>When you import a module, Python will interpret and execute any code in it.</p> <div class="alert box-container alert-default" data-v-4d146e2c><!----> <div class="header-and-body" data-v-4d146e2c><!----> <div class="box-body-wrapper" data-v-4d146e2c><!----> <!----> <div class="contents" data-v-4d146e2c><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-cube" data-v-4d146e2c></span></span> Consider this <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>student</code> module being imported into the <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>course</code> module.</p> <p data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>[project_root]/student.py</code>:</p> <pre data-v-4d146e2c><code class="line-numbers hljs python" data-v-4d146e2c><span data-v-4d146e2c><span class="hljs-function" data-v-4d146e2c><span class="hljs-keyword" data-v-4d146e2c>def</span> <span class="hljs-title" data-v-4d146e2c>describe</span>(<span class="hljs-params" data-v-4d146e2c>name</span>):</span>
+</span><span data-v-4d146e2c>    <span class="hljs-built_in" data-v-4d146e2c>print</span>(name, <span class="hljs-string" data-v-4d146e2c>'is a student'</span>)
+</span><span data-v-4d146e2c>
+</span><span data-v-4d146e2c>describe(<span class="hljs-string" data-v-4d146e2c>'Betty'</span>)
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre><div data-v-4d146e2c><table data-v-4d146e2c><tbody data-v-4d146e2c><tr data-v-4d146e2c><td valign="top" data-v-4d146e2c><p data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>[project_root]/course.py</code>:</p> <pre data-v-4d146e2c><code class="line-numbers hljs python" data-v-4d146e2c><span data-v-4d146e2c><span class="hljs-keyword" data-v-4d146e2c>import</span> student
+</span><span data-v-4d146e2c>
+</span><span data-v-4d146e2c>student.describe(<span class="hljs-string" data-v-4d146e2c>'Adam'</span>)
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td> <td valign="bottom" data-v-4d146e2c> → <br data-v-4d146e2c><br data-v-4d146e2c></td> <td valign="bottom" data-v-4d146e2c><pre data-v-4d146e2c><code class="no-line-numbers hljs" data-v-4d146e2c><span data-v-4d146e2c>Betty is a student
+</span><span data-v-4d146e2c>Adam is a student
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td></tr></tbody></table></div> <p data-v-4d146e2c>Notice how the output contains <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>Betty is a student</code>. That is because the line <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>describe('Betty')</code> in <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>student.py</code> is being executed as the <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>student</code> module is being imported.</p></div> <!----></div></div></div> <p>To prevent execution of statements in an imported module, nest such statements under a <code class="line-numbers hljs inline python"><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:</code> block.</p> <div class="alert box-container alert-default" data-v-4d146e2c><!----> <div class="header-and-body" data-v-4d146e2c><!----> <div class="box-body-wrapper" data-v-4d146e2c><!----> <!----> <div class="contents" data-v-4d146e2c><p data-v-4d146e2c><span data-v-4d146e2c><span aria-hidden="true" class="fas fa-cube" data-v-4d146e2c></span></span> In the code below, the <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>student</code> module can be executed to get the following output.</p> <div data-v-4d146e2c><table data-v-4d146e2c><tbody data-v-4d146e2c><tr data-v-4d146e2c><td valign="top" data-v-4d146e2c><p data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>[project_root]/student.py</code>:</p> <pre data-v-4d146e2c><code class="line-numbers hljs python" data-v-4d146e2c><span data-v-4d146e2c><span class="hljs-function" data-v-4d146e2c><span class="hljs-keyword" data-v-4d146e2c>def</span> <span class="hljs-title" data-v-4d146e2c>describe</span>(<span class="hljs-params" data-v-4d146e2c>name</span>):</span>
+</span><span data-v-4d146e2c>    <span class="hljs-built_in" data-v-4d146e2c>print</span>(name, <span class="hljs-string" data-v-4d146e2c>'is a student'</span>)
+</span><span data-v-4d146e2c>
+</span><span data-v-4d146e2c><span class="hljs-keyword" data-v-4d146e2c>if</span> __name__ == <span class="hljs-string" data-v-4d146e2c>&quot;__main__&quot;</span>:
+</span><span data-v-4d146e2c>    describe(<span class="hljs-string" data-v-4d146e2c>'Betty'</span>)
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td> <td valign="bottom" data-v-4d146e2c> → <br data-v-4d146e2c><br data-v-4d146e2c></td> <td valign="bottom" data-v-4d146e2c><pre data-v-4d146e2c><code class="no-line-numbers hljs" data-v-4d146e2c><span data-v-4d146e2c>Betty is a student
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td></tr></tbody></table></div> <p data-v-4d146e2c>When the <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>student</code> module is imported to another module, <code class="line-numbers hljs inline no-lang" data-v-4d146e2c>describe('Betty')</code> line is no longer executed.</p> <div data-v-4d146e2c><table data-v-4d146e2c><tbody data-v-4d146e2c><tr data-v-4d146e2c><td valign="top" data-v-4d146e2c><p data-v-4d146e2c><code class="line-numbers hljs inline no-lang" data-v-4d146e2c>[project_root]/course.py</code>:</p> <pre data-v-4d146e2c><code class="line-numbers hljs python" data-v-4d146e2c><span data-v-4d146e2c><span class="hljs-keyword" data-v-4d146e2c>import</span> student
+</span><span data-v-4d146e2c>
+</span><span data-v-4d146e2c>student.describe(<span class="hljs-string" data-v-4d146e2c>'Adam'</span>)
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td> <td valign="bottom" data-v-4d146e2c> → <br data-v-4d146e2c><br data-v-4d146e2c></td> <td valign="bottom" data-v-4d146e2c><pre data-v-4d146e2c><code class="no-line-numbers hljs" data-v-4d146e2c><span data-v-4d146e2c>Adam is a student
+</span></code><div class="function-btn-container" data-v-4d146e2c><button onclick="copyCodeBlock(this)" class="function-btn" data-v-4d146e2c>
+    <div class="function-btn-body" data-v-4d146e2c>
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1" data-v-4d146e2c>
+    <g id="surface1" data-v-4d146e2c>
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 " data-v-4d146e2c></path>
+    </g>
+</svg>
+
+    </div>
+    </button></div></pre></td></tr></tbody></table></div></div> <!----></div></div></div></div><hr style="border-top:3px double #c5c5c5;"></div></div></div> <nav id="page-nav" class="fixed-header-padding" data-v-e6005420><div class="nav-component slim-scroll" data-v-e6005420><nav id="mb-page-nav" class="nav nav-pills flex-column my-0 small no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#appendix-c-organizing-python-code" data-v-e6005420>Appendix C: Organizing Python Code‎</a> <!----></nav></div> <!----></nav> <div aria-hidden="true" class="scroll-top-button fa-lg d-print-none" style="display:none;bottom:2%;right:2%;position:fixed;"><i class="fas fa-arrow-circle-up"></i></div></div> <footer><div class="text-center"><small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 5.2.0</a>, generated on Wed, 27 Dec 2023, 23:15:52 GMT+8]</small></div></footer></div>
+</body><script src="/2024/markbind/js/bootstrap-utility.min.js"></script>
+<script>
+  MarkBind.setupWithSearch()
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3.2.0/dist/umd/index.js"></script>
+    <script>
+    docsearch({
+      container: "#algolia-search-input",
+      appId: "3DU4XTBX4T",
+      apiKey: "3e2fd3c3b12a363309307794dce54969",
+      indexName: "nus-tic-cs",
+      searchParameters: {"facetFilters":[["site:nus-tee3201.github.io"],["tags:admin","tags:se-book-adapted","tags:schedule"]]}
+    });
+  </script>
+    <script>
+    const style = document.createElement('style');
+    style.innerHTML = ".DocSearch-Container { z-index: 1002; position: fixed; }";
+    document.getElementsByTagName('head')[0].appendChild(style);
+  </script>
+  
+    <script>
+    function copyCodeBlock(element) {
+        const pre = element.parentElement.parentElement;
+        const codeElement = pre.querySelector('code');
+
+        // create dummy text element to select() the text field
+        const textElement = document.createElement('textarea');
+        textElement.value = codeElement.textContent;
+        document.body.appendChild(textElement);
+        textElement.select();
+
+        document.execCommand('copy');
+        document.body.removeChild(textElement);
+    }
+    </script>
+</html>
