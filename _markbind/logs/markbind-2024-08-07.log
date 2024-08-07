@@ -1,0 +1,38 @@
+2024-08-06T16:06:21.436Z - info: [12:06:21 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\admin\courseBriefings.md
+2024-08-06T16:06:21.444Z - info: Synchronizing opened pages list before reload
+2024-08-06T16:06:21.445Z - info: Current opened pages, from most-to-least recent:
+2024-08-06T16:06:21.445Z - info: 1. schedule/week1/topics
+2024-08-06T16:06:21.445Z - info: 2. schedule/week1/index
+2024-08-06T16:06:22.451Z - info: Rebuilding 1 pages
+2024-08-06T16:06:23.190Z - info: Site data built
+2024-08-06T16:06:23.190Z - info: Pages rebuilt
+2024-08-06T16:06:23.190Z - info: Website regeneration complete! Total build time: 0.74s
+2024-08-06T16:07:15.200Z - info: [12:07:15 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\admin\courseBriefings.md
+2024-08-06T16:07:15.201Z - info: Synchronizing opened pages list before reload
+2024-08-06T16:07:15.201Z - info: Current opened pages, from most-to-least recent:
+2024-08-06T16:07:15.201Z - info: 1. schedule/week1/index
+2024-08-06T16:07:16.214Z - info: Rebuilding 1 pages
+2024-08-06T16:07:16.881Z - info: Site data built
+2024-08-06T16:07:16.881Z - info: Pages rebuilt
+2024-08-06T16:07:16.881Z - info: Website regeneration complete! Total build time: 0.669s
+2024-08-06T16:07:40.650Z - info: [12:07:40 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\admin\courseBriefings.md
+2024-08-06T16:07:40.651Z - info: Synchronizing opened pages list before reload
+2024-08-06T16:07:40.651Z - info: Current opened pages, from most-to-least recent:
+2024-08-06T16:07:40.651Z - info: 1. schedule/week1/index
+2024-08-06T16:07:41.664Z - info: Rebuilding 1 pages
+2024-08-06T16:07:42.259Z - info: Site data built
+2024-08-06T16:07:42.259Z - info: Pages rebuilt
+2024-08-06T16:07:42.259Z - info: Website regeneration complete! Total build time: 0.596s
+2024-08-06T16:08:28.577Z - info: [12:08:28 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\admin\courseBriefings.md
+2024-08-06T16:08:28.578Z - info: Synchronizing opened pages list before reload
+2024-08-06T16:08:28.578Z - info: Current opened pages, from most-to-least recent:
+2024-08-06T16:08:28.579Z - info: 1. schedule/week1/index
+2024-08-06T16:08:29.589Z - info: Rebuilding 1 pages
+2024-08-06T16:08:30.258Z - info: Site data built
+2024-08-06T16:08:30.259Z - info: Pages rebuilt
+2024-08-06T16:08:30.259Z - info: Website regeneration complete! Total build time: 0.672s
+2024-08-06T18:12:06.695Z - info: Building C:\repos\nus-cs2103\cs2103-website-base\schedule\week2\index as some of its dependencies were changed since the last visit
+2024-08-06T18:12:08.036Z - info: Site data built
+2024-08-06T18:12:08.037Z - info: Lazy website regeneration complete! Total build time: 1.343s
+2024-08-07T03:52:32.435Z - info: Website generation started at 11:52:13 am
+2024-08-07T03:52:42.443Z - info: Building assets...

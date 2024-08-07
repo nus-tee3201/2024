@@ -80,6 +80,6 @@ with(this){return _c('ul',[_c('li',[_v("Rule 1: "),_c('strong',[_v("Local scopes
 with(this){return _c('p',[_c('strong',[_v("To modify a global variable within a local scope, use the "),_c('code',{pre:true,attrs:{"class":"line-numbers hljs inline no-lang"}},[_v("global")]),_v(" statement on that variable.")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.2")]),_v(", generated on Fri, 19 Jul 2024, 12:02:07 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.2")]),_v(", generated on Wed, 7 Aug 2024, 11:52:49 GMT+8]")])])])}
 }];
   
