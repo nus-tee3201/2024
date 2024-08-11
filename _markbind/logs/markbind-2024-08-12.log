@@ -1,0 +1,78 @@
+2024-08-11T16:06:09.728Z - info: [12:06:09 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\book\index.md
+2024-08-11T16:06:09.739Z - info: Synchronizing opened pages list before reload
+2024-08-11T16:06:09.739Z - info: Current opened pages, from most-to-least recent:
+2024-08-11T16:06:09.739Z - info: 1. schedule/week2/topics
+2024-08-11T16:06:10.756Z - info: No pages needed to be rebuilt
+2024-08-11T16:06:21.861Z - info: Building C:\repos\nus-cs2103\cs2103-website-base\se-book-adapted\index as some of its dependencies were changed since the last visit
+2024-08-11T16:06:22.181Z - info: Site data built
+2024-08-11T16:06:22.182Z - info: Lazy website regeneration complete! Total build time: 0.322s
+2024-08-11T16:07:51.640Z - info: Website generation (lazy) started at 12:07:37 am
+2024-08-11T16:08:01.607Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\cache\gh-pages\https!github.com!nus-tee3201!2024.git\book\_markbind\variables.md'
+2024-08-11T16:08:01.608Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\cache\gh-pages\https!github.com!nus-tee3201!2024.git\_markbind\variables.md'
+2024-08-11T16:08:01.672Z - info: Building assets...
+2024-08-11T16:08:38.347Z - info: Assets built
+2024-08-11T16:08:38.348Z - info: Generating landing page...
+2024-08-11T16:08:40.142Z - info: Landing page built, other pages will be built as you navigate to them!
+2024-08-11T16:08:41.305Z - info: Site data built
+2024-08-11T16:08:41.306Z - info: Website generation (lazy) complete! Total build time: 63.537s
+2024-08-11T16:08:41.348Z - info: Serving "C:\repos\nus-cs2103\cs2103-website-base\_site" at http://127.0.0.1:8080
+2024-08-11T16:08:41.349Z - info: Press CTRL+C to stop ...
+2024-08-11T16:37:59.533Z - info: Building C:\repos\nus-cs2103\cs2103-website-base\se-book-adapted\index as some of its dependencies were changed since the last visit
+2024-08-11T16:37:59.933Z - info: Site data built
+2024-08-11T16:37:59.934Z - info: Lazy website regeneration complete! Total build time: 0.402s
+2024-08-11T16:39:57.500Z - info: [12:39:57 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\book\index.md
+2024-08-11T16:39:57.501Z - info: Synchronizing opened pages list before reload
+2024-08-11T16:39:57.501Z - info: Current opened pages, from most-to-least recent:
+2024-08-11T16:39:57.502Z - info: 1. se-book-adapted/index
+2024-08-11T16:39:58.511Z - info: No pages needed to be rebuilt
+2024-08-11T16:40:15.890Z - info: [12:40:15 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\book\index.md
+2024-08-11T16:40:15.890Z - info: Synchronizing opened pages list before reload
+2024-08-11T16:40:15.891Z - info: Current opened pages, from most-to-least recent:
+2024-08-11T16:40:15.891Z - info: 1. se-book-adapted/index
+2024-08-11T16:40:16.904Z - info: No pages needed to be rebuilt
+2024-08-11T16:42:31.073Z - info: [12:42:31 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\se-book-adapted\index.md
+2024-08-11T16:42:31.074Z - info: Synchronizing opened pages list before reload
+2024-08-11T16:42:31.074Z - info: Current opened pages, from most-to-least recent:
+2024-08-11T16:42:31.074Z - info: 1. se-book-adapted/index
+2024-08-11T16:42:32.091Z - info: Rebuilding 1 pages
+2024-08-11T16:42:32.272Z - info: Site data built
+2024-08-11T16:42:32.273Z - info: Pages rebuilt
+2024-08-11T16:42:32.274Z - info: Website regeneration complete! Total build time: 0.183s
+2024-08-11T16:43:21.522Z - info: [12:43:21 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\se-book-adapted\index.md
+2024-08-11T16:43:21.522Z - info: Synchronizing opened pages list before reload
+2024-08-11T16:43:21.523Z - info: Current opened pages, from most-to-least recent:
+2024-08-11T16:43:21.524Z - info: 1. se-book-adapted/index
+2024-08-11T16:43:22.533Z - info: Rebuilding 1 pages
+2024-08-11T16:43:22.675Z - info: Site data built
+2024-08-11T16:43:22.675Z - info: Pages rebuilt
+2024-08-11T16:43:22.676Z - info: Website regeneration complete! Total build time: 0.144s
+2024-08-11T16:43:44.499Z - info: Building C:\repos\nus-cs2103\cs2103-website-base\se-book-adapted\common\exercises as some of its dependencies were changed since the last visit
+2024-08-11T16:43:53.972Z - debug:  
+2024-08-11T16:43:54.021Z - debug:  
+2024-08-11T16:43:54.068Z - debug:  
+2024-08-11T16:43:54.109Z - debug:  
+2024-08-11T16:43:54.189Z - debug:  
+2024-08-11T16:43:54.299Z - debug:  
+2024-08-11T16:43:54.447Z - info: Site data built
+2024-08-11T16:43:54.448Z - info: Lazy website regeneration complete! Total build time: 9.948s
+2024-08-11T16:44:35.698Z - info: [12:44:35 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\se-book-adapted\index.md
+2024-08-11T16:44:35.698Z - info: Synchronizing opened pages list before reload
+2024-08-11T16:44:35.699Z - info: Current opened pages, from most-to-least recent:
+2024-08-11T16:44:35.699Z - info: 1. se-book-adapted/common/exercises
+2024-08-11T16:44:36.713Z - info: No pages needed to be rebuilt
+2024-08-11T16:44:45.760Z - info: Building C:\repos\nus-cs2103\cs2103-website-base\se-book-adapted\index as some of its dependencies were changed since the last visit
+2024-08-11T16:44:45.914Z - info: Site data built
+2024-08-11T16:44:45.914Z - info: Lazy website regeneration complete! Total build time: 0.154s
+2024-08-11T16:44:49.134Z - info: Building C:\repos\nus-cs2103\cs2103-website-base\se-book-adapted\common\definitions as some of its dependencies were changed since the last visit
+2024-08-11T16:44:49.688Z - info: Site data built
+2024-08-11T16:44:49.689Z - info: Lazy website regeneration complete! Total build time: 0.555s
+2024-08-11T16:45:14.271Z - info: [12:45:14 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\se-book-adapted\index.md
+2024-08-11T16:45:14.271Z - info: Synchronizing opened pages list before reload
+2024-08-11T16:45:14.272Z - info: Current opened pages, from most-to-least recent:
+2024-08-11T16:45:14.272Z - info: 1. se-book-adapted/common/definitions
+2024-08-11T16:45:15.289Z - info: No pages needed to be rebuilt
+2024-08-11T16:45:21.564Z - info: Building C:\repos\nus-cs2103\cs2103-website-base\se-book-adapted\index as some of its dependencies were changed since the last visit
+2024-08-11T16:45:21.790Z - info: Site data built
+2024-08-11T16:45:21.790Z - info: Lazy website regeneration complete! Total build time: 0.226s
+2024-08-11T16:46:33.034Z - info: Website generation started at 12:46:16 am
+2024-08-11T16:46:43.411Z - info: Building assets...
