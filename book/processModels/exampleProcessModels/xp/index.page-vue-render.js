@@ -23,6 +23,6 @@ with(this){return _c('p',[_v("The following description was adapted from the "),
 with(this){return _c('p',[_c('strong',[_c('em',[_v("Pair programming, CRC cards, project velocity")]),_v(", and "),_c('em',[_v("standup meetings")]),_v(" are some interesting topics related to XP.")]),_v(" Refer to extremeprogramming.org to find out more about XP.")])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.2")]),_v(", generated on Wed, 14 Aug 2024, 18:11:15 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.2")]),_v(", generated on Fri, 16 Aug 2024, 13:33:36 GMT+8]")])])])}
 }];
   
