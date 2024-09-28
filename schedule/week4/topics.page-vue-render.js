@@ -20,6 +20,6 @@ with(this){return _c('p',[_c('span',{staticClass:"text-success"},[_c('small',[_c
 with(this){return _c('p',[_v("Now that you know all the different ways of specifying requirements, "),_c('strong',[_v("here is an example that shows how all techniques of specifying requirements can work together")]),_v(":")])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Wed, 18 Sept 2024, 19:58:43 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Sun, 29 Sept 2024, 0:47:51 GMT+8]")])])])}
 }];
   

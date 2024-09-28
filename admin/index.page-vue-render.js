@@ -29,7 +29,7 @@ with(this){return _c('div',[_c('h3',{staticClass:"text-white bg-secondary p-2",a
 with(this){return _c('h3',{staticClass:"text-white bg-secondary p-2",attrs:{"id":"information-layers"}},[_v("Information layers"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#information-layers","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
-with(this){return _c('p',[_v("We try to "),_c('em',[_v("layer")]),_v(" information so that readers can decide to omit less important layers if they wish to. Some 'layering' techniques used are explained below:")])}
+with(this){return _c('p',[_v("We try to "),_c('em',[_v("layer")]),_v(" information so that readers have the freedom to omit less important layers if they wish to. Some 'layering' techniques used are explained below:")])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_c('span',{staticClass:"fas fa-layer-group",attrs:{"aria-hidden":"true"}}),_v(" More important information are in bold")]),_v(" or "),_c('mark',[_v("highlighted")]),_v(" while "),_c('span',{staticClass:"dimmed"},[_v("less important information are dimmed")]),_v(" or in collapsed panels such as the below.")])}
@@ -296,6 +296,6 @@ with(this){return _c('h2',{attrs:{"id":"final-exam-part-2-essay"}},[_v("Final Ex
 with(this){return _c('ul',[_c('li',[_v("Some examples of the nature of questions you can expect:\n"),_c('ul',[_c('li',[_v("Draw UML diagrams to match the given code/description")]),_v(" "),_c('li',[_v("Specify requirements for a given project using various formats covered in the course")]),_v(" "),_c('li',[_v("Review a given piece of Java code to identify areas to improve (e.g., detect coding standard violations)")])])]),_v(" "),_c('li',[_c('strong',[_v("Yes, you may use pencils")]),_v(" when answering part 2.")]),_v(" "),_c('li',[_v("If you have any queries during this part of the exam, you may ask the invigilator for clarifications.")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Wed, 18 Sept 2024, 19:58:43 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Sun, 29 Sept 2024, 0:47:51 GMT+8]")])])])}
 }];
   

@@ -47,6 +47,6 @@ with(this){return _c('code',{pre:true,attrs:{"class":"no-line-numbers hljs"}},[_
 with(this){return _c('ul',[_c('li',[_v("More on unit testing: "),_c('a',{attrs:{"href":"https://docs.python.org/3/library/unittest.html"}},[_v("https://docs.python.org/3/library/unittest.html")])]),_v(" "),_c('li',[_v("Unit testing in the PyCharm IDE: "),_c('a',{attrs:{"href":"https://www.youtube.com/watch?v=-VzJvNLooj4"}},[_v("https://www.youtube.com/watch?v=-VzJvNLooj4")])])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Wed, 18 Sept 2024, 19:58:43 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Sun, 29 Sept 2024, 0:47:51 GMT+8]")])])])}
 }];
   

@@ -26,6 +26,6 @@ with(this){return _c('ul',[_c('li',[_c('p',[_v("["),_c('a',{attrs:{"href":"/2024
 with(this){return _c('div',{staticClass:"row",staticStyle:{"border-top":"1px dotted lightgrey"}},[_c('div',{staticClass:"col-sm"},[_c('h4',{attrs:{"id":"tasks"}},[_c('a',{staticClass:"badge bg-light text-dark mt-2",attrs:{"href":"/2024/schedule/week7/admin.html"}},[_c('span',{staticClass:"fas fa-tasks",attrs:{"aria-hidden":"true"}}),_v(" Tasks")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#tasks","onclick":"event.stopPropagation()"}})]),_v(" "),_c('div',[_c('ol',[_c('li',[_v("Submit weekly quiz")]),_v(" "),_c('li',[_v("Submit weekly exercises")]),_v(" "),_c('li',[_v("Submit weekly project increment "),_c('code',{pre:true,attrs:{"class":"line-numbers hljs inline no-lang"}},[_v("Level 8. Support Deadlines")])])])])])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Wed, 18 Sept 2024, 19:58:43 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Sun, 29 Sept 2024, 0:47:51 GMT+8]")])])])}
 }];
   
