@@ -1,0 +1,31 @@
+2024-10-01T13:39:35.503Z - info: Website generation started at 9:38:50 pm
+2024-10-01T13:40:03.438Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\book\_markbind\variables.md'
+2024-10-01T13:40:03.442Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\book\_markbind\variables.md'
+2024-10-01T13:40:03.446Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\_markbind\variables.md'
+2024-10-01T13:40:03.450Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\_markbind\variables.md'
+2024-10-01T13:40:03.719Z - info: Building assets...
+2024-10-01T13:43:04.170Z - info: Assets built
+2024-10-01T13:43:04.173Z - info: Generating pages...
+2024-10-01T13:43:42.564Z - debug:  
+2024-10-01T13:43:42.569Z - debug:  
+2024-10-01T13:43:42.570Z - debug:  
+2024-10-01T13:43:42.571Z - debug:  
+2024-10-01T13:43:42.572Z - debug:  
+2024-10-01T13:43:42.572Z - debug:  
+2024-10-01T13:43:42.573Z - debug:  
+2024-10-01T13:43:42.573Z - debug:  
+2024-10-01T13:43:42.574Z - debug:  
+2024-10-01T13:43:42.574Z - debug:  
+2024-10-01T13:43:45.774Z - debug:  
+2024-10-01T13:43:45.783Z - debug:  
+2024-10-01T13:43:45.783Z - debug:  
+2024-10-01T13:43:45.783Z - debug:  
+2024-10-01T13:43:45.784Z - debug:  
+2024-10-01T13:43:55.192Z - debug:  
+2024-10-01T13:44:38.565Z - debug:  
+2024-10-01T13:45:09.524Z - debug:  
+2024-10-01T13:47:19.099Z - info: Pages built
+2024-10-01T13:47:21.111Z - info: Site data built
+2024-10-01T13:47:21.112Z - info: Website generation complete! Total build time: 510.371s
+2024-10-01T13:47:21.113Z - info: Build success!
+2024-10-01T13:51:42.855Z - info: The website has been deployed at: https://nus-tic2002-ay2425s1.github.io/website
