@@ -1,0 +1,351 @@
+2024-10-15T17:01:07.341Z - info: Website generation (lazy) started at 1:00:37 am
+2024-10-15T17:01:26.585Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\cache\gh-pages\https!github.com!nus-tic2002-AY2425S1!website.git\book\_markbind\variables.md'
+2024-10-15T17:01:26.587Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\cache\gh-pages\https!github.com!nus-tic2002-AY2425S1!website.git\_markbind\variables.md'
+2024-10-15T17:01:26.588Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\book\_markbind\variables.md'
+2024-10-15T17:01:26.589Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\book\_markbind\variables.md'
+2024-10-15T17:01:26.590Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\_markbind\variables.md'
+2024-10-15T17:01:26.591Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\_markbind\variables.md'
+2024-10-15T17:01:26.664Z - info: Building assets...
+2024-10-15T17:03:19.772Z - info: Assets built
+2024-10-15T17:03:19.774Z - info: Generating landing page...
+2024-10-15T17:03:21.130Z - info: Landing page built, other pages will be built as you navigate to them!
+2024-10-15T17:03:22.419Z - info: Site data built
+2024-10-15T17:03:22.419Z - info: Website generation (lazy) complete! Total build time: 164.933s
+2024-10-15T17:03:22.499Z - info: Serving "C:\repos\nus-cs2103\cs2103-website-base\_site" at http://127.0.0.1:8080
+2024-10-15T17:03:22.499Z - info: Press CTRL+C to stop ...
+2024-10-15T17:14:00.888Z - info: Building C:\repos\nus-cs2103\cs2103-website-base\schedule\week10\index as some of its dependencies were changed since the last visit
+2024-10-15T17:14:02.222Z - info: Site data built
+2024-10-15T17:14:02.222Z - info: Lazy website regeneration complete! Total build time: 1.336s
+2024-10-15T17:15:35.053Z - info: Building C:\repos\nus-cs2103\cs2103-website-base\schedule\week11\index as some of its dependencies were changed since the last visit
+2024-10-15T17:15:36.430Z - info: Site data built
+2024-10-15T17:15:36.430Z - info: Lazy website regeneration complete! Total build time: 1.378s
+2024-10-15T17:16:23.980Z - info: Building C:\repos\nus-cs2103\cs2103-website-base\schedule\week10\admin as some of its dependencies were changed since the last visit
+2024-10-15T17:16:24.244Z - info: Site data built
+2024-10-15T17:16:24.245Z - info: Lazy website regeneration complete! Total build time: 0.265s
+2024-10-15T17:16:53.762Z - info: Building C:\repos\nus-cs2103\cs2103-website-base\schedule\week10\topics as some of its dependencies were changed since the last visit
+2024-10-15T17:16:57.567Z - debug:  
+2024-10-15T17:16:57.836Z - info: Site data built
+2024-10-15T17:16:57.837Z - info: Lazy website regeneration complete! Total build time: 4.075s
+2024-10-15T17:18:41.466Z - info: Building C:\repos\nus-cs2103\cs2103-website-base\schedule\week10\project as some of its dependencies were changed since the last visit
+2024-10-15T17:18:43.569Z - info: Site data built
+2024-10-15T17:18:43.570Z - info: Lazy website regeneration complete! Total build time: 2.104s
+2024-10-15T17:20:18.839Z - info: [1:20:18 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\admin\tp-timeline.md
+2024-10-15T17:20:18.840Z - info: Synchronizing opened pages list before reload
+2024-10-15T17:20:18.841Z - info: Current opened pages, from most-to-least recent:
+2024-10-15T17:20:18.842Z - info: 1. schedule/week10/project
+2024-10-15T17:20:19.848Z - info: Rebuilding 1 pages
+2024-10-15T17:20:21.744Z - info: Site data built
+2024-10-15T17:20:21.744Z - info: Pages rebuilt
+2024-10-15T17:20:21.744Z - info: Website regeneration complete! Total build time: 1.897s
+2024-10-15T17:21:44.933Z - info: [1:21:44 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\admin\tp-tasks-fragment.md
+2024-10-15T17:21:44.934Z - info: Synchronizing opened pages list before reload
+2024-10-15T17:21:44.934Z - info: Current opened pages, from most-to-least recent:
+2024-10-15T17:21:44.935Z - info: 1. schedule/week10/project
+2024-10-15T17:21:45.953Z - info: Rebuilding 1 pages
+2024-10-15T17:21:47.716Z - info: Site data built
+2024-10-15T17:21:47.717Z - info: Pages rebuilt
+2024-10-15T17:21:47.717Z - info: Website regeneration complete! Total build time: 1.765s
+2024-10-15T17:32:48.546Z - info: [1:32:48 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\admin\tp-tasks-fragment.md
+2024-10-15T17:32:48.547Z - info: Synchronizing opened pages list before reload
+2024-10-15T17:32:48.548Z - info: Current opened pages, from most-to-least recent:
+2024-10-15T17:32:48.548Z - info: 1. schedule/week10/project
+2024-10-15T17:32:49.554Z - info: Rebuilding 1 pages
+2024-10-15T17:32:51.421Z - info: Site data built
+2024-10-15T17:32:51.422Z - info: Pages rebuilt
+2024-10-15T17:32:51.422Z - info: Website regeneration complete! Total build time: 1.87s
+2024-10-15T17:33:28.085Z - info: [1:33:28 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\admin\tp-tasks-fragment.md
+2024-10-15T17:33:28.086Z - info: Synchronizing opened pages list before reload
+2024-10-15T17:33:28.086Z - info: Current opened pages, from most-to-least recent:
+2024-10-15T17:33:28.086Z - info: 1. schedule/week10/project
+2024-10-15T17:33:29.095Z - info: Rebuilding 1 pages
+2024-10-15T17:33:30.860Z - info: Site data built
+2024-10-15T17:33:30.861Z - info: Pages rebuilt
+2024-10-15T17:33:30.862Z - info: Website regeneration complete! Total build time: 1.767s
+2024-10-15T17:39:16.688Z - info: [1:39:16 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\admin\tp-tasks-fragment.md
+2024-10-15T17:39:16.689Z - info: Synchronizing opened pages list before reload
+2024-10-15T17:39:16.690Z - info: Current opened pages, from most-to-least recent:
+2024-10-15T17:39:16.690Z - info: 1. schedule/week10/project
+2024-10-15T17:39:17.693Z - info: Rebuilding 1 pages
+2024-10-15T17:39:20.048Z - info: Site data built
+2024-10-15T17:39:20.049Z - info: Pages rebuilt
+2024-10-15T17:39:20.049Z - info: Website regeneration complete! Total build time: 2.358s
+2024-10-15T17:39:48.487Z - info: [1:39:48 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\admin\tp-tasks-fragment.md
+2024-10-15T17:39:48.487Z - info: Synchronizing opened pages list before reload
+2024-10-15T17:39:48.488Z - info: Current opened pages, from most-to-least recent:
+2024-10-15T17:39:48.488Z - info: 1. schedule/week10/project
+2024-10-15T17:39:49.502Z - info: Rebuilding 1 pages
+2024-10-15T17:39:51.257Z - info: Site data built
+2024-10-15T17:39:51.257Z - info: Pages rebuilt
+2024-10-15T17:39:51.257Z - info: Website regeneration complete! Total build time: 1.756s
+2024-10-15T17:42:52.396Z - info: [1:42:52 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\admin\tp-tasks-fragment.md
+2024-10-15T17:42:52.397Z - info: Synchronizing opened pages list before reload
+2024-10-15T17:42:52.397Z - info: Current opened pages, from most-to-least recent:
+2024-10-15T17:42:52.397Z - info: 1. schedule/week10/project
+2024-10-15T17:42:53.415Z - info: Rebuilding 1 pages
+2024-10-15T17:42:55.145Z - info: Site data built
+2024-10-15T17:42:55.146Z - info: Pages rebuilt
+2024-10-15T17:42:55.146Z - info: Website regeneration complete! Total build time: 1.732s
+2024-10-15T17:43:55.766Z - info: [1:43:55 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\admin\tp-tasks-fragment.md
+2024-10-15T17:43:55.766Z - info: Synchronizing opened pages list before reload
+2024-10-15T17:43:55.767Z - info: Current opened pages, from most-to-least recent:
+2024-10-15T17:43:55.768Z - info: 1. schedule/week10/project
+2024-10-15T17:43:56.776Z - info: Rebuilding 1 pages
+2024-10-15T17:43:58.477Z - info: Site data built
+2024-10-15T17:43:58.478Z - info: Pages rebuilt
+2024-10-15T17:43:58.478Z - info: Website regeneration complete! Total build time: 1.703s
+2024-10-15T17:47:07.106Z - info: [1:47:07 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\admin\tp-tasks-fragment.md
+2024-10-15T17:47:07.107Z - info: Synchronizing opened pages list before reload
+2024-10-15T17:47:07.107Z - info: Current opened pages, from most-to-least recent:
+2024-10-15T17:47:07.107Z - info: 1. schedule/week10/project
+2024-10-15T17:47:08.122Z - info: Rebuilding 1 pages
+2024-10-15T17:47:10.249Z - info: Site data built
+2024-10-15T17:47:10.250Z - info: Pages rebuilt
+2024-10-15T17:47:10.250Z - info: Website regeneration complete! Total build time: 2.129s
+2024-10-15T17:54:57.385Z - info: [1:54:57 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\admin\tp-tasks-fragment.md
+2024-10-15T17:54:57.385Z - info: Synchronizing opened pages list before reload
+2024-10-15T17:54:57.386Z - info: Current opened pages, from most-to-least recent:
+2024-10-15T17:54:57.386Z - info: 1. schedule/week10/project
+2024-10-15T17:54:58.401Z - info: Rebuilding 1 pages
+2024-10-15T17:55:00.419Z - info: Site data built
+2024-10-15T17:55:00.419Z - info: Pages rebuilt
+2024-10-15T17:55:00.419Z - info: Website regeneration complete! Total build time: 2.019s
+2024-10-15T17:56:51.080Z - info: [1:56:51 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\admin\tp-tasks-fragment.md
+2024-10-15T17:56:51.081Z - info: Synchronizing opened pages list before reload
+2024-10-15T17:56:51.081Z - info: Current opened pages, from most-to-least recent:
+2024-10-15T17:56:51.081Z - info: 1. schedule/week10/project
+2024-10-15T17:56:52.085Z - info: Rebuilding 1 pages
+2024-10-15T17:56:53.740Z - info: Site data built
+2024-10-15T17:56:53.740Z - info: Pages rebuilt
+2024-10-15T17:56:53.740Z - info: Website regeneration complete! Total build time: 1.656s
+2024-10-15T17:57:35.547Z - info: [1:57:35 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\admin\tp-tasks-fragment.md
+2024-10-15T17:57:35.547Z - info: Synchronizing opened pages list before reload
+2024-10-15T17:57:35.548Z - info: Current opened pages, from most-to-least recent:
+2024-10-15T17:57:35.548Z - info: 1. schedule/week10/project
+2024-10-15T17:57:36.566Z - info: Rebuilding 1 pages
+2024-10-15T17:57:38.520Z - info: Site data built
+2024-10-15T17:57:38.521Z - info: Pages rebuilt
+2024-10-15T17:57:38.521Z - info: Website regeneration complete! Total build time: 1.956s
+2024-10-15T18:32:37.219Z - info: [2:32:37 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\admin\faq-fragment.md
+2024-10-15T18:32:37.231Z - info: Synchronizing opened pages list before reload
+2024-10-15T18:32:37.234Z - info: Current opened pages, from most-to-least recent:
+2024-10-15T18:32:37.235Z - info: 1. schedule/week10/project
+2024-10-15T18:32:37.278Z - info: [2:32:37 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\admin\tp-deliverables-dg-fragment.md
+2024-10-15T18:32:37.278Z - info: Synchronizing opened pages list before reload
+2024-10-15T18:32:37.279Z - info: Current opened pages, from most-to-least recent:
+2024-10-15T18:32:37.279Z - info: 1. schedule/week10/project
+2024-10-15T18:32:38.263Z - info: Rebuilding 1 pages
+2024-10-15T18:32:40.077Z - info: Site data built
+2024-10-15T18:32:40.077Z - info: Pages rebuilt
+2024-10-15T18:32:40.078Z - info: Website regeneration complete! Total build time: 1.822s
+2024-10-15T18:35:04.981Z - info: [2:35:04 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\admin\faq-fragment.md
+2024-10-15T18:35:04.983Z - info: Synchronizing opened pages list before reload
+2024-10-15T18:35:04.983Z - info: Current opened pages, from most-to-least recent:
+2024-10-15T18:35:04.983Z - info: 1. schedule/week10/project
+2024-10-15T18:35:05.006Z - info: [2:35:05 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\admin\tp-deliverables-dg-fragment.md
+2024-10-15T18:35:05.006Z - info: Synchronizing opened pages list before reload
+2024-10-15T18:35:05.006Z - info: Current opened pages, from most-to-least recent:
+2024-10-15T18:35:05.007Z - info: 1. schedule/week10/project
+2024-10-15T18:35:05.999Z - info: Rebuilding 1 pages
+2024-10-15T18:35:07.978Z - info: Site data built
+2024-10-15T18:35:07.978Z - info: Pages rebuilt
+2024-10-15T18:35:07.979Z - info: Website regeneration complete! Total build time: 1.98s
+2024-10-15T18:36:35.798Z - info: [2:36:35 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\admin\appendixC-faq.md
+2024-10-15T18:36:35.798Z - info: Synchronizing opened pages list before reload
+2024-10-15T18:36:35.798Z - info: Current opened pages, from most-to-least recent:
+2024-10-15T18:36:35.798Z - info: 1. schedule/week10/project
+2024-10-15T18:36:36.806Z - info: No pages needed to be rebuilt
+2024-10-15T18:36:43.719Z - info: Building C:\repos\nus-cs2103\cs2103-website-base\admin\index as some of its dependencies were changed since the last visit
+2024-10-15T18:36:44.173Z - info: Site data built
+2024-10-15T18:36:44.173Z - info: Lazy website regeneration complete! Total build time: 0.454s
+2024-10-15T18:36:48.659Z - info: Building C:\repos\nus-cs2103\cs2103-website-base\admin\appendixC-faq as some of its dependencies were changed since the last visit
+2024-10-15T18:36:50.329Z - info: Site data built
+2024-10-15T18:36:50.330Z - info: Lazy website regeneration complete! Total build time: 1.672s
+2024-10-15T18:37:47.503Z - info: Building C:\repos\nus-cs2103\cs2103-website-base\index as some of its dependencies were changed since the last visit
+2024-10-15T18:37:48.760Z - info: Site data built
+2024-10-15T18:37:48.761Z - info: Lazy website regeneration complete! Total build time: 1.258s
+2024-10-15T18:37:51.712Z - info: Building C:\repos\nus-cs2103\cs2103-website-base\schedule\week9\tutorial as some of its dependencies were changed since the last visit
+2024-10-15T18:37:52.204Z - info: Site data built
+2024-10-15T18:37:52.205Z - info: Lazy website regeneration complete! Total build time: 0.493s
+2024-10-15T18:37:57.907Z - info: Building C:\repos\nus-cs2103\cs2103-website-base\schedule\week10\index as some of its dependencies were changed since the last visit
+2024-10-15T18:37:58.943Z - info: Site data built
+2024-10-15T18:37:58.943Z - info: Lazy website regeneration complete! Total build time: 1.036s
+2024-10-15T18:38:01.166Z - info: Building C:\repos\nus-cs2103\cs2103-website-base\schedule\week10\tutorial as some of its dependencies were changed since the last visit
+2024-10-15T18:38:01.486Z - info: Site data built
+2024-10-15T18:38:01.487Z - info: Lazy website regeneration complete! Total build time: 0.32s
+2024-10-15T18:39:48.382Z - info: [2:39:48 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\schedule\week11\notices-cs2103-fragment.md
+2024-10-15T18:39:48.383Z - info: Synchronizing opened pages list before reload
+2024-10-15T18:39:48.383Z - info: Current opened pages, from most-to-least recent:
+2024-10-15T18:39:48.383Z - info: 1. schedule/week10/tutorial
+2024-10-15T18:39:48.416Z - info: [2:39:48 am] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\schedule\week10\tutorial-cs2103-fragment.md
+2024-10-15T18:39:48.417Z - info: Synchronizing opened pages list before reload
+2024-10-15T18:39:48.417Z - info: Current opened pages, from most-to-least recent:
+2024-10-15T18:39:48.417Z - info: 1. schedule/week10/tutorial
+2024-10-15T18:39:49.394Z - info: Rebuilding 1 pages
+2024-10-15T18:39:49.865Z - info: Site data built
+2024-10-15T18:39:49.865Z - info: Pages rebuilt
+2024-10-15T18:39:49.866Z - info: Website regeneration complete! Total build time: 0.472s
+2024-10-15T18:40:43.573Z - info: Building C:\repos\nus-cs2103\cs2103-website-base\schedule\week11\tutorial as some of its dependencies were changed since the last visit
+2024-10-15T18:40:43.853Z - info: Site data built
+2024-10-15T18:40:43.853Z - info: Lazy website regeneration complete! Total build time: 0.281s
+2024-10-15T18:43:26.973Z - info: Website generation started at 2:42:41 am
+2024-10-15T18:43:40.728Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\book\_markbind\variables.md'
+2024-10-15T18:43:40.729Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\book\_markbind\variables.md'
+2024-10-15T18:43:40.731Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\_markbind\variables.md'
+2024-10-15T18:43:40.732Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\_markbind\variables.md'
+2024-10-15T18:43:40.813Z - info: Building assets...
+2024-10-15T18:44:49.294Z - info: Assets built
+2024-10-15T18:44:49.296Z - info: Generating pages...
+2024-10-15T18:45:07.934Z - debug:  
+2024-10-15T18:45:07.936Z - debug:  
+2024-10-15T18:45:08.052Z - debug:  
+2024-10-15T18:45:08.150Z - debug:  
+2024-10-15T18:45:08.150Z - debug:  
+2024-10-15T18:45:08.154Z - debug:  
+2024-10-15T18:45:08.193Z - debug:  
+2024-10-15T18:45:08.262Z - debug:  
+2024-10-15T18:45:08.262Z - debug:  
+2024-10-15T18:45:08.282Z - debug:  
+2024-10-15T18:45:08.297Z - debug:  
+2024-10-15T18:45:08.297Z - debug:  
+2024-10-15T18:45:08.322Z - debug:  
+2024-10-15T18:45:10.278Z - debug:  
+2024-10-15T18:45:10.278Z - debug:  
+2024-10-15T18:45:10.278Z - debug:  
+2024-10-15T18:45:10.278Z - debug:  
+2024-10-15T18:45:36.928Z - debug:  
+2024-10-15T18:47:19.279Z - error:  Template render error: (C:\repos\nus-cs2103\cs2103-website-base\schedule\week11\notices-cs2103-fragment.md) [Line 15, Column 10]
+  Template render error: (C:\repos\nus-cs2103\cs2103-website-base\schedule\week11\notices-cs2103-fragment.md)
+  Template render error: (C:\repos\nus-cs2103\cs2103-website-base\schedule\week11\notices-cs2103-fragment.md)
+  Template render error: (C:\repos\nus-cs2103\cs2103-website-base\schedule\week11\notices-cs2103-fragment.md)
+  Error: Unable to call `panopto`, which is undefined or falsey
+    at Object._prettifyError (C:\Users\dcsdcr\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\nunjucks\src\lib.js:32:11)
+    at C:\Users\dcsdcr\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\patches\nunjucks\context-overrides-frame.js:383:17
+    at Template.root [as rootRenderFunc] (eval at _compile (C:\Users\dcsdcr\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\nunjucks\src\environment.js:527:18), <anonymous>:58:3)
+    at Template.render (C:\Users\dcsdcr\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\patches\nunjucks\context-overrides-frame.js:372:8)
+    at C:\Users\dcsdcr\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\patches\nunjucks\context-overrides-frame.js:54:25
+    at createTemplate (C:\Users\dcsdcr\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\patches\nunjucks\load-event.js:121:7)
+    at handle (C:\Users\dcsdcr\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\patches\nunjucks\load-event.js:133:9)
+    at C:\Users\dcsdcr\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\patches\nunjucks\load-event.js:145:7
+    at next (C:\Users\dcsdcr\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\nunjucks\src\lib.js:258:7)
+    at Object.asyncIter (C:\Users\dcsdcr\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\nunjucks\src\lib.js:263:3)
+    at Environment.getTemplate (C:\Users\dcsdcr\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\patches\nunjucks\load-event.js:127:7)
+    at Environment.render (C:\Users\dcsdcr\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\patches\nunjucks\context-overrides-frame.js:48:8)
+    at VariableRenderer.renderFile (C:\Users\dcsdcr\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\variables\VariableRenderer.js:73:24)
+    at VariableProcessor.renderWithSiteVariables (C:\Users\dcsdcr\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\variables\VariableProcessor.js:154:57)
+    at VariableProcessor.renderIncludeFile (C:\Users\dcsdcr\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\variables\VariableProcessor.js:231:38)
+    at processInclude (C:\Users\dcsdcr\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\includePanelProcessor.js:198:68)
+2024-10-15T18:47:32.362Z - debug:  
+2024-10-15T18:47:51.962Z - debug:  
+2024-10-15T18:47:52.128Z - debug:  
+2024-10-15T18:48:06.636Z - info: Pages built
+2024-10-15T18:48:07.932Z - info: Site data built
+2024-10-15T18:48:07.932Z - info: Website generation complete! Total build time: 326.049s
+2024-10-15T18:48:07.933Z - info: Build success!
+2024-10-15T18:51:45.954Z - info: Website generation started at 2:51:19 am
+2024-10-15T18:51:58.231Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\book\_markbind\variables.md'
+2024-10-15T18:51:58.233Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\book\_markbind\variables.md'
+2024-10-15T18:51:58.234Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\_markbind\variables.md'
+2024-10-15T18:51:58.235Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\_markbind\variables.md'
+2024-10-15T18:51:58.305Z - info: Building assets...
+2024-10-15T18:53:06.112Z - info: Assets built
+2024-10-15T18:53:06.113Z - info: Generating pages...
+2024-10-15T18:53:25.005Z - debug:  
+2024-10-15T18:53:25.011Z - debug:  
+2024-10-15T18:53:25.011Z - debug:  
+2024-10-15T18:53:25.013Z - debug:  
+2024-10-15T18:53:25.014Z - debug:  
+2024-10-15T18:53:25.014Z - debug:  
+2024-10-15T18:53:25.014Z - debug:  
+2024-10-15T18:53:25.016Z - debug:  
+2024-10-15T18:53:25.016Z - debug:  
+2024-10-15T18:53:25.063Z - debug:  
+2024-10-15T18:53:25.095Z - debug:  
+2024-10-15T18:53:25.107Z - debug:  
+2024-10-15T18:53:25.108Z - debug:  
+2024-10-15T18:53:25.132Z - debug:  
+2024-10-15T18:53:25.135Z - debug:  
+2024-10-15T18:53:27.197Z - debug:  
+2024-10-15T18:53:27.197Z - debug:  
+2024-10-15T18:53:54.756Z - debug:  
+2024-10-15T18:55:53.583Z - debug:  
+2024-10-15T18:56:15.642Z - debug:  
+2024-10-15T18:56:15.670Z - debug:  
+2024-10-15T18:56:30.185Z - info: Pages built
+2024-10-15T18:56:31.444Z - info: Site data built
+2024-10-15T18:56:31.444Z - info: Website generation complete! Total build time: 312.19s
+2024-10-15T18:56:31.444Z - info: Build success!
+2024-10-15T19:00:10.004Z - info: The website has been deployed at: https://nus-cs2103-ay2425s1.github.io/website
+2024-10-16T07:17:07.891Z - info: Website generation (lazy) started at 3:16:32 pm
+2024-10-16T07:17:25.735Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\book\_markbind\variables.md'
+2024-10-16T07:17:25.737Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\_markbind\variables.md'
+2024-10-16T07:17:25.738Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\book\_markbind\variables.md'
+2024-10-16T07:17:25.741Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\book\_markbind\variables.md'
+2024-10-16T07:17:25.744Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\_markbind\variables.md'
+2024-10-16T07:17:25.747Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\_markbind\variables.md'
+2024-10-16T07:17:26.036Z - info: Building assets...
+2024-10-16T07:19:38.452Z - info: Assets built
+2024-10-16T07:19:38.454Z - info: Generating landing page...
+2024-10-16T07:19:39.979Z - info: Landing page built, other pages will be built as you navigate to them!
+2024-10-16T07:19:41.303Z - info: Site data built
+2024-10-16T07:19:41.304Z - info: Website generation (lazy) complete! Total build time: 188.81s
+2024-10-16T07:19:41.744Z - info: Serving "C:\repos\nus-cs2103\cs2103-website-base\_site" at http://127.0.0.1:8080
+2024-10-16T07:19:41.744Z - info: Press CTRL+C to stop ...
+2024-10-16T07:27:38.234Z - info: Building C:\repos\nus-cs2103\cs2103-website-base\schedule\week9\project as some of its dependencies were changed since the last visit
+2024-10-16T07:27:41.042Z - info: Site data built
+2024-10-16T07:27:41.043Z - info: Lazy website regeneration complete! Total build time: 2.811s
+2024-10-16T07:30:55.308Z - info: [3:30:55 pm] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\admin\tp-tasks-fragment.md
+2024-10-16T07:30:55.308Z - info: Synchronizing opened pages list before reload
+2024-10-16T07:30:55.309Z - info: Current opened pages, from most-to-least recent:
+2024-10-16T07:30:55.309Z - info: 1. schedule/week9/project
+2024-10-16T07:30:56.328Z - info: Rebuilding 1 pages
+2024-10-16T07:30:58.591Z - info: Site data built
+2024-10-16T07:30:58.592Z - info: Pages rebuilt
+2024-10-16T07:30:58.593Z - info: Website regeneration complete! Total build time: 2.266s
+2024-10-16T07:32:24.067Z - info: [3:32:24 pm] Reload for file change: C:\repos\nus-cs2103\cs2103-website-base\admin\tp-tasks-fragment.md
+2024-10-16T07:32:24.068Z - info: Synchronizing opened pages list before reload
+2024-10-16T07:32:24.068Z - info: Current opened pages, from most-to-least recent:
+2024-10-16T07:32:24.068Z - info: 1. schedule/week9/project
+2024-10-16T07:32:25.077Z - info: Rebuilding 1 pages
+2024-10-16T07:32:26.894Z - info: Site data built
+2024-10-16T07:32:26.895Z - info: Pages rebuilt
+2024-10-16T07:32:26.895Z - info: Website regeneration complete! Total build time: 1.818s
+2024-10-16T07:34:35.810Z - info: Website generation started at 3:33:52 pm
+2024-10-16T07:34:51.705Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\book\_markbind\variables.md'
+2024-10-16T07:34:51.708Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\book\_markbind\variables.md'
+2024-10-16T07:34:51.710Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\_markbind\variables.md'
+2024-10-16T07:34:51.713Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\_markbind\variables.md'
+2024-10-16T07:34:51.804Z - info: Building assets...
+2024-10-16T07:36:04.884Z - info: Assets built
+2024-10-16T07:36:04.885Z - info: Generating pages...
+2024-10-16T07:36:27.913Z - debug:  
+2024-10-16T07:36:28.597Z - debug:  
+2024-10-16T07:36:28.599Z - debug:  
+2024-10-16T07:36:28.600Z - debug:  
+2024-10-16T07:36:28.600Z - debug:  
+2024-10-16T07:36:28.601Z - debug:  
+2024-10-16T07:36:28.602Z - debug:  
+2024-10-16T07:36:28.602Z - debug:  
+2024-10-16T07:36:28.603Z - debug:  
+2024-10-16T07:36:28.603Z - debug:  
+2024-10-16T07:36:28.604Z - debug:  
+2024-10-16T07:36:28.613Z - debug:  
+2024-10-16T07:36:28.614Z - debug:  
+2024-10-16T07:36:28.645Z - debug:  
+2024-10-16T07:36:28.709Z - debug:  
+2024-10-16T07:36:31.682Z - debug:  
+2024-10-16T07:36:31.683Z - debug:  
+2024-10-16T07:37:07.182Z - debug:  
+2024-10-16T07:39:14.680Z - debug:  
+2024-10-16T07:39:36.343Z - debug:  
+2024-10-16T07:39:36.484Z - debug:  
+2024-10-16T07:39:51.934Z - info: Pages built
+2024-10-16T07:39:53.291Z - info: Site data built
+2024-10-16T07:39:53.291Z - info: Website generation complete! Total build time: 360.568s
+2024-10-16T07:39:53.291Z - info: Build success!
+2024-10-16T07:42:42.898Z - info: The website has been deployed at: https://nus-cs2103-ay2425s1.github.io/website
+2024-10-16T11:24:00.807Z - info: Website generation started at 7:23:26 pm
+2024-10-16T11:24:19.052Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\book\_markbind\variables.md'
+2024-10-16T11:24:19.054Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\book\_markbind\variables.md'
+2024-10-16T11:24:19.056Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\_markbind\variables.md'
+2024-10-16T11:24:19.058Z - warn: ENOENT: no such file or directory, open 'C:\repos\nus-cs2103\cs2103-website-base\node_modules\.cache\gh-pages\https!github.com!nus-cs2103-AY2425S1!website.git\_markbind\variables.md'
+2024-10-16T11:24:19.131Z - info: Building assets...
