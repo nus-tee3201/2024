@@ -83,6 +83,6 @@ with(this){return _c('p',[_c('strong',[_v("A class can inherit from multiple cla
 with(this){return _c('p',[_c('strong',[_v("You need to use inheritance when you create user-defined exceptions because")]),_v(" all such exceptions need to inherit from a built-in "),_c('code',{pre:true,attrs:{"class":"line-numbers hljs inline no-lang"}},[_v("Exception")]),_v(" class.")])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Wed, 23 Oct 2024, 19:53:01 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Tue, 29 Oct 2024, 1:44:17 GMT+8]")])])])}
 }];
   

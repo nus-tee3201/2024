@@ -1,0 +1,53 @@
+2024-10-28T17:34:59.545Z - info: Website generation (lazy) started at 01:34:58
+2024-10-28T17:34:59.809Z - warn: ENOENT: no such file or directory, open '/Users/damithch/Repos/nus-cs2103/cs2103-website-base/node_modules/.cache/gh-pages/https!github.com!nus-cs2103-AY2425S1!website.git/book/_markbind/variables.md'
+2024-10-28T17:34:59.809Z - warn: ENOENT: no such file or directory, open '/Users/damithch/Repos/nus-cs2103/cs2103-website-base/node_modules/.cache/gh-pages/https!github.com!nus-cs2103-AY2425S1!website.git/_markbind/variables.md'
+2024-10-28T17:34:59.827Z - info: Building assets...
+2024-10-28T17:35:01.133Z - info: Assets built
+2024-10-28T17:35:01.133Z - info: Generating landing page...
+2024-10-28T17:35:01.329Z - info: Landing page built, other pages will be built as you navigate to them!
+2024-10-28T17:35:01.404Z - info: Site data built
+2024-10-28T17:35:01.404Z - info: Website generation (lazy) complete! Total build time: 2.772s
+2024-10-28T17:35:01.414Z - info: Serving "/Users/damithch/Repos/nus-cs2103/cs2103-website-base/_site" at http://127.0.0.1:8080
+2024-10-28T17:35:01.414Z - info: Press CTRL+C to stop ...
+2024-10-28T17:35:10.240Z - info: Building /Users/damithch/Repos/nus-cs2103/cs2103-website-base/se-book-adapted/index as some of its dependencies were changed since the last visit
+2024-10-28T17:35:10.354Z - info: Site data built
+2024-10-28T17:35:10.354Z - info: Lazy website regeneration complete! Total build time: 0.115s
+2024-10-28T17:35:16.862Z - info: Building /Users/damithch/Repos/nus-cs2103/cs2103-website-base/se-book-adapted/chapters/oop as some of its dependencies were changed since the last visit
+2024-10-28T17:35:17.179Z - info: Site data built
+2024-10-28T17:35:17.179Z - info: Lazy website regeneration complete! Total build time: 0.317s
+2024-10-28T17:38:35.419Z - info: [01:38:35] Reload for file change: /Users/damithch/Repos/nus-cs2103/cs2103-website-base/book/oop/inheritance/overriding/text.md
+2024-10-28T17:38:35.421Z - info: Synchronizing opened pages list before reload
+2024-10-28T17:38:35.422Z - info: Current opened pages, from most-to-least recent:
+2024-10-28T17:38:35.422Z - info: 1. se-book-adapted/chapters/oop
+2024-10-28T17:38:36.436Z - info: Rebuilding 1 pages
+2024-10-28T17:38:36.747Z - info: Site data built
+2024-10-28T17:38:36.747Z - info: Pages rebuilt
+2024-10-28T17:38:36.747Z - info: Website regeneration complete! Total build time: 0.314s
+2024-10-28T17:41:07.106Z - info: [01:41:07] Reload for file change: /Users/damithch/Repos/nus-cs2103/cs2103-website-base/book/oop/inheritance/overloading/text.md
+2024-10-28T17:41:07.107Z - info: Synchronizing opened pages list before reload
+2024-10-28T17:41:07.107Z - info: Current opened pages, from most-to-least recent:
+2024-10-28T17:41:07.107Z - info: 1. se-book-adapted/chapters/oop
+2024-10-28T17:41:08.124Z - info: Rebuilding 1 pages
+2024-10-28T17:41:08.426Z - info: Site data built
+2024-10-28T17:41:08.426Z - info: Pages rebuilt
+2024-10-28T17:41:08.426Z - info: Website regeneration complete! Total build time: 0.304s
+2024-10-28T17:42:38.427Z - info: [01:42:38] Reload for file change: /Users/damithch/Repos/nus-cs2103/cs2103-website-base/book/oop/inheritance/overloading/text.md
+2024-10-28T17:42:38.428Z - info: Synchronizing opened pages list before reload
+2024-10-28T17:42:38.428Z - info: Current opened pages, from most-to-least recent:
+2024-10-28T17:42:38.428Z - info: 1. se-book-adapted/chapters/oop
+2024-10-28T17:42:39.437Z - info: Rebuilding 1 pages
+2024-10-28T17:42:39.754Z - info: Site data built
+2024-10-28T17:42:39.754Z - info: Pages rebuilt
+2024-10-28T17:42:39.754Z - info: Website regeneration complete! Total build time: 0.32s
+2024-10-28T17:43:44.425Z - info: [01:43:44] Reload for file change: /Users/damithch/Repos/nus-cs2103/cs2103-website-base/book/oop/inheritance/overriding/text.md
+2024-10-28T17:43:44.426Z - info: Synchronizing opened pages list before reload
+2024-10-28T17:43:44.426Z - info: Current opened pages, from most-to-least recent:
+2024-10-28T17:43:44.426Z - info: 1. se-book-adapted/chapters/oop
+2024-10-28T17:43:45.430Z - info: Rebuilding 1 pages
+2024-10-28T17:43:45.739Z - info: Site data built
+2024-10-28T17:43:45.739Z - info: Pages rebuilt
+2024-10-28T17:43:45.739Z - info: Website regeneration complete! Total build time: 0.311s
+2024-10-28T17:44:16.332Z - info: Website generation started at 01:44:15
+2024-10-28T17:44:16.591Z - warn: ENOENT: no such file or directory, open '/Users/damithch/Repos/nus-cs2103/cs2103-website-base/node_modules/.cache/gh-pages/https!github.com!nus-cs2103-AY2425S1!website.git/book/_markbind/variables.md'
+2024-10-28T17:44:16.592Z - warn: ENOENT: no such file or directory, open '/Users/damithch/Repos/nus-cs2103/cs2103-website-base/node_modules/.cache/gh-pages/https!github.com!nus-cs2103-AY2425S1!website.git/_markbind/variables.md'
+2024-10-28T17:44:16.610Z - info: Building assets...
